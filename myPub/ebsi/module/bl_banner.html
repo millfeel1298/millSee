@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .bl_eveBnr_wrap {
+      padding: 0 0 2.4rem;
+      box-shadow: 2px 8px 15px 0 rgb(0 0 0 / 15%);
+    }
+
+    .bl_eveBnr_link {
+      display: block;
+      position: relative;
+      padding-top: 40.241%;
+    }
+
+    .bl_eveBnr_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .bl_eveBnr_nav .swiper-pagination-bullet {
+      border-radius: 10px;
+      transition: 0.3s width;
+    }
+
+    .bl_eveBnr_nav .swiper-pagination-bullet-active {
+      width: 2em;
+      background: #adadad;
+    }
+
+    @media (min-width: 720px) {
+      .bl_eveBnr_link {
+        padding-top: 0;
+        text-align: center;
+      }
+
+      .bl_eveBnr_img {
+        position: static;
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bl_eveBnr_wrap swiper">
+    <ul class="bl_eveBnr swiper-wrapper">
+      <li class="bl_eveBnr_item swiper-slide">
+        <a class="bl_eveBnr_link" href="">
+          <img class="bl_eveBnr_img" src="/image/upload/497x200[20210729164132931].jpg" alt="">
+        </a>
+      </li>
+      <li class="bl_eveBnr_item swiper-slide">
+        <a class="bl_eveBnr_link" href="">
+          <img class="bl_eveBnr_img" src="/image/upload/497x200[20210729164132931].jpg" alt="">
+        </a>
+      </li>
+      <li class="bl_eveBnr_item swiper-slide">
+        <a class="bl_eveBnr_link" href="">
+          <img class="bl_eveBnr_img" src="/image/upload/497x200[20210729164132931].jpg" alt="">
+        </a>
+      </li>
+    </ul>
+    <div class="bl_eveBnr_nav_wrap">
+      <div class="bl_eveBnr_nav">
+        <div class="bl_eveBnr_pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    let bl_eveBnr_wrap__swiper = new Swiper(".bl_eveBnr_wrap", {
+      loop: true,
+      loopedSlides: 3,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>

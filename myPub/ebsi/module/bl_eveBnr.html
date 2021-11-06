@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_eveBnr */
+    .bl_eveBnr {
+      position: relative;
+      padding: 0 0 2.4rem;
+      background: #fff;
+      box-shadow: 2px 8px 15px 0 rgb(0 0 0 / 15%);
+    }
+
+    .bl_eveBnr_link {
+      display: block;
+      position: relative;
+      padding-top: 40.241%;
+    }
+
+    .bl_eveBnr_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .bl_eveBnr_nav .swiper-pagination-bullet {
+      border-radius: 10px;
+      transition: 0.3s width;
+    }
+
+    .bl_eveBnr_nav .swiper-pagination-bullet-active {
+      width: 2em;
+      background: #adadad;
+    }
+
+    .bl_eveBnr_dotWrap {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      bottom: 2.2rem;
+      line-height: 0;
+      transform: translateX(-50%);
+    }
+
+    .bl_eveBnr_dotWrap li {
+      margin-right: 0.8rem;
+    }
+
+    .bl_eveBnr_dotWrap li:last-child {
+      margin-right: 0;
+    }
+
+    .bl_eveBnr_dotWrap button {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      font-size: 0;
+      background: #d6d6d6;
+      transition: 0.2s;
+    }
+
+    .bl_eveBnr_dotWrap button[aria-selected="true"] {
+      width: 3rem;
+      border-radius: 0.8rem;
+      background: #adadad;
+    }
+
+    @media (min-width: 720px) {
+      .bl_eveBnr_link {
+        padding-top: 0;
+        text-align: center;
+      }
+
+      img.bl_eveBnr_img {
+        display: inline-block;
+        position: static;
+        height: 200px;
+      }
+    }
+
+    /* //bl_eveBnr */
+  </style>
+</head>
+
+<body>
+  <div class="bl_eveBnr">
+    <div class="bl_eveBnr_item">
+      <a class="bl_eveBnr_link" href="">
+        <img class="bl_eveBnr_img" src="/image/upload/497x200[20210729164132931].jpg"
+          alt="수능 만점으로 가는 지름길! EBS 모의고사 로드맵 장학금 이벤트 2021.07.23(금) ~ 11.17(수) 수능전일">
+      </a>
+    </div>
+    <div class="bl_eveBnr_item">
+      <a class="bl_eveBnr_link" href="">
+        <img class="bl_eveBnr_img" src="/image/upload/497x200[20210909164910513].jpg"
+          alt="EBS X 교보문고 교보문고 가입하고 오천원 혜택받자!">
+      </a>
+    </div>
+    <div class="bl_eveBnr_item">
+      <a class="bl_eveBnr_link" href="">
+        <img class="bl_eveBnr_img" src="/image/upload/20211014092449986.jpg"
+          alt="인공지능 단추 물풀 이벤트 S2. 단추와 함께하면 문풀백점 x2 2021.10.14(목)~11.04(목)">
+      </a>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+
+  </script>
+</body>
+
+</html>

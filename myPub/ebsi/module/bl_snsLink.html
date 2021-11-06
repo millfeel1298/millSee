@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    .bl_snsLink_wrap {
+      display: flex;
+    }
+
+    .bl_snsLink_wrap>*:last-child {
+      margin-right: 0;
+    }
+
+    .bl_snsLink {
+      display: block;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      color: #334075;
+      text-align: center;
+    }
+
+    .bl_snsLink::before {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto;
+      border-radius: 100%;
+      background: #334075 url(/image/common/ico_sns_all.png) no-repeat;
+      background-size: auto 1.6rem;
+      content: '';
+    }
+
+    .bl_snsLink__facebook::before {
+      background-position: 0.6rem center;
+    }
+
+    .bl_snsLink__instagram::before {
+      background-position: -4.5rem center;
+    }
+
+    .bl_snsLink__blog::before {
+      background-position: -9.7rem center;
+    }
+
+    .bl_snsLink__youtube::before {
+      background-position: -7.1rem center;
+    }
+
+    .bl_snsLink__band::before {
+      background-position: -12.2rem center;
+    }
+
+
+    @media (min-width: 720px) {
+      .bl_snsLink {
+        margin-right: 2rem;
+      }
+
+      .bl_snsLink::before {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .bl_snsLink::before {
+        background-size: auto 2.8rem;
+      }
+
+      .bl_snsLink__facebook::before {
+        background-position: 0.8rem center;
+      }
+
+      .bl_snsLink__instagram::before {
+        background-position: -8rem center;
+      }
+
+      .bl_snsLink__blog::before {
+        background-position: -17.1rem center;
+      }
+
+      .bl_snsLink__youtube::before {
+        background-position: -12.5rem center;
+      }
+
+      .bl_snsLink__band::before {
+        background-position: -21.5rem center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bl_snsLink {
+        margin-right: 3rem;
+      }
+
+      .bl_snsLink::before {
+        width: 5.4rem;
+        height: 5.4rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .bl_snsLink::before {
+        background-size: auto 2.8rem;
+      }
+
+      .bl_snsLink__facebook::before {
+        background-position: 1.1rem center;
+      }
+
+      .bl_snsLink__instagram::before {
+        background-position: -7.7rem center;
+      }
+
+      .bl_snsLink__blog::before {
+        background-position: -16.8rem center;
+      }
+
+      .bl_snsLink__youtube::before {
+        background-position: -12.2rem center;
+      }
+
+      .bl_snsLink__band::before {
+        background-position: -21.2rem center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bl_snsLink_wrap">
+    <a class="bl_snsLink bl_snsLink__facebook" href="">
+      <div class="bl_snsLink_txt hp_a11y__lg_none">페이스북</div>
+    </a>
+    <a class="bl_snsLink bl_snsLink__instagram" href="">
+      <div class="bl_snsLink_txt hp_a11y__lg_none">인스타그램</div>
+    </a>
+    <a class="bl_snsLink bl_snsLink__blog" href="">
+      <div class="bl_snsLink_txt hp_a11y__lg_none">블로그</div>
+    </a>
+    <a class="bl_snsLink bl_snsLink__youtube" href="">
+      <div class="bl_snsLink_txt hp_a11y__lg_none">유튜브</div>
+    </a>
+    <a class="bl_snsLink bl_snsLink__band" href="">
+      <div class="bl_snsLink_txt hp_a11y__lg_none">밴드</div>
+    </a>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_siteFamily */
+    .bl_siteFamily_wrap {
+      padding: 2rem 0;
+      border-top: 1px solid #d6d6d6;
+      border-bottom: 1px solid #d6d6d6;
+    }
+
+    .bl_siteFamily_item {
+      margin: 0 2.5rem;
+    }
+
+    .bl_siteFamily_link {
+      display: block;
+      height: 3rem;
+      background: url(/image/common/family_banner_all.png) no-repeat;
+      background-size: 182rem 10rem;
+    }
+
+    .bl_siteFamily_item__ebs {
+      width: 6.4rem;
+    }
+
+    .bl_siteFamily_item__teacher {
+      width: 10.7rem;
+    }
+
+    .bl_siteFamily_item__english {
+      width: 9rem;
+    }
+
+    .bl_siteFamily_item__math {
+      width: 10rem;
+    }
+
+    .bl_siteFamily_item__lang {
+      width: 8.1rem;
+    }
+
+    .bl_siteFamily_item__primary {
+      width: 10.6rem;
+    }
+
+    .bl_siteFamily_item__mid {
+      width: 10.3rem;
+    }
+
+    .bl_siteFamily_item__ebssw {
+      width: 10rem;
+    }
+
+    .bl_siteFamily_item__space {
+      width: 9.2rem;
+    }
+
+    .bl_siteFamily_item__eidf {
+      width: 7rem;
+    }
+
+    .bl_siteFamily_item__land {
+      width: 9.2rem;
+    }
+
+    .bl_siteFamily_item__ebs .bl_siteFamily_link{
+      width: 6.4rem;
+      background-position: -3.7rem -1rem;
+    }
+
+    .bl_siteFamily_item__teacher .bl_siteFamily_link{
+      width: 10.7rem;
+      background-position: -29.7rem -1rem;
+    }
+
+    .bl_siteFamily_item__english .bl_siteFamily_link{
+      width: 9rem;
+      background-position: -72.5rem -1rem;
+    }
+
+    .bl_siteFamily_item__math .bl_siteFamily_link{
+      width: 10rem;
+      background-position: -85.9rem -1rem;
+    }
+
+    .bl_siteFamily_item__lang .bl_siteFamily_link{
+      width: 8.1rem;
+      background-position: -114.8rem -1rem;
+    }
+
+    .bl_siteFamily_item__primary .bl_siteFamily_link{
+      width: 10.6rem;
+      background-position: -43.6rem -1rem;
+    }
+
+    .bl_siteFamily_item__mid .bl_siteFamily_link{
+      width: 10.3rem;
+      background-position: -57.7rem -1rem;
+    }
+
+    .bl_siteFamily_item__ebssw .bl_siteFamily_link{
+      width: 10rem;
+      background-position: -100rem -1rem;
+    }
+
+    .bl_siteFamily_item__space .bl_siteFamily_link{
+      width: 9.2rem;
+      background-position: -128.3rem -1rem;
+    }
+
+    .bl_siteFamily_item__eidf .bl_siteFamily_link{
+      width: 7rem;
+      background-position: -143.5rem -1rem;
+    }
+
+    .bl_siteFamily_item__land .bl_siteFamily_link{
+      width: 9.2rem;
+      background-position: -170.4rem -1rem;
+    }
+
+    .bl_siteFamily_item__ebs:hover .bl_siteFamily_link{
+      background-position: -3.7rem -6rem;
+    }
+
+    .bl_siteFamily_item__teacher:hover .bl_siteFamily_link{
+      background-position: -29.7rem -6rem;
+    }
+
+    .bl_siteFamily_item__english:hover .bl_siteFamily_link{
+      background-position: -72.5rem -6rem;
+    }
+
+    .bl_siteFamily_item__math:hover .bl_siteFamily_link{
+      background-position: -85.9rem -6rem;
+    }
+
+    .bl_siteFamily_item__lang:hover .bl_siteFamily_link{
+      background-position: -114.8rem -6rem;
+    }
+
+    .bl_siteFamily_item__primary:hover .bl_siteFamily_link{
+      background-position: -43.6rem -6rem;
+    }
+
+    .bl_siteFamily_item__mid:hover .bl_siteFamily_link{
+      background-position: -57.7rem -6rem;
+    }
+
+    .bl_siteFamily_item__ebssw:hover .bl_siteFamily_link{
+      background-position: -100rem -6rem;
+    }
+
+    .bl_siteFamily_item__space:hover .bl_siteFamily_link{
+      background-position: -128.3rem -6rem;
+    }
+
+    .bl_siteFamily_item__eidf:hover .bl_siteFamily_link{
+      background-position: -143.5rem -6rem;
+    }
+
+    .bl_siteFamily_item__land:hover .bl_siteFamily_link{
+      background-position: -170.4rem -6rem;
+    }
+
+    .bl_siteFamily_btn {
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      width: 3rem;
+      height: 100%;
+      margin: 0;
+    }
+
+    .bl_siteFamily_btn::after {
+      width: 100%;
+      height: 100%;
+      background: url(/image/common/ico_fo_fam_slide.png) no-repeat;
+    }
+
+    .bl_siteFamily_btn_prev {
+      left: 0;
+    }
+
+    .bl_siteFamily_btn_prev::after {
+      background-position: 0.7rem center;
+      content: '';
+    }
+
+    .bl_siteFamily_btn_next {
+      right: 0;
+    }
+
+    .bl_siteFamily_btn_next::after {
+      background-position: -1.3rem center;
+      content: '';
+    }
+
+    /* //bl_siteFamily */
+  </style>
+</head>
+
+<body>
+  <div class="bl_siteFamily_wrap swiper">
+    <ul class="bl_siteFamily swiper-wrapper">
+      <li class="bl_siteFamily_item bl_siteFamily_item__ebs swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__teacher swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 교사지원센터</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__english swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS english</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__math swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS Math</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__lang swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS lang</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__primary swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 초등</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__mid swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 중학</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__ebssw swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 이솦 소프트웨어교육</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__space swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 스페이스 공감</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__eidf swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS EIDF</span></a>
+      </li>
+      <li class="bl_siteFamily_item bl_siteFamily_item__land swiper-slide">
+        <a class="bl_siteFamily_link" href=""><span class="hp_a11y">EBS 직업</span></a>
+      </li>
+    </ul>
+    <div class="bl_siteFamily_navigation">
+      <div class="bl_siteFamily_btn bl_siteFamily_btn_prev swiper-button-prev"></div>
+      <div class="bl_siteFamily_btn bl_siteFamily_btn_next swiper-button-next"></div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const mySwiper_siteFamily_wrap = new Swiper(".bl_siteFamily_wrap", {
+      slidesPerView: 'auto',
+      freeMode: true,
+      slideToClickedSlide: true,
+      navigation: {
+          nextEl: ".bl_siteFamily_btn_next",
+          prevEl: ".bl_siteFamily_btn_prev",
+        },
+    });
+  </script>
+</body>
+
+</html>

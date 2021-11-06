@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clone EBSi</title>
+  <link rel="stylesheet" href=/myPub/whale/css/base.css">
+  <link rel="stylesheet" href=/myPub/whale/css/style.css">
+  <style>
+    /* un_danchoo */
+    .un_danchoo {
+      position: fixed;
+      right: 4rem;
+      bottom: 4rem;
+    }
+
+    .un_danchoo_btn {
+      width: 6rem;
+      height: 5.4rem;
+    }
+
+    .un_danchoo.is_active .un_danchoo_list {
+      height: 380%;
+      opacity: 1;
+    }
+
+    .un_danchoo_btn {
+      display: block;
+      position: relative;
+      background: url(/image/common/ico_danchoo.png) no-repeat center / contain;
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: scale(1);
+      z-index: 10;
+    }
+
+    .un_danchoo_btn:hover {
+      transform: scale(1.2);
+    }
+
+    .un_danchoo_check {
+      display: none;
+    }
+
+    .un_danchoo.is_active .un_danchoo_btn {
+      transform: scale(0.8);
+    }
+
+    .un_danchoo_list {
+      position: absolute;
+      left: 50%;
+      bottom: 100%;
+      width: 5.6rem;
+      height: 0;
+      transform: translateX(-50%);
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+    }
+
+    .un_danchoo_item {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 5.6rem;
+      margin-bottom: 0;
+      border-radius: 50%;
+    }
+
+    .un_danchoo_item__lecture {
+      z-index: 1;
+      top: 0;
+    }
+
+    .un_danchoo_item__question {
+      z-index: 2;
+      top: 33.333%;
+    }
+
+    .un_danchoo_item__search {
+      z-index: 3;
+      top: 66.666%;
+    }
+
+    .un_danchoo_deco {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      background: url(/image/common/floating_bg.png) no-repeat center / cover;
+    }
+
+    .un_danchoo_deco:hover::before {
+      opacity: 0;
+      transform: rotate3d(1, 0, 0, -90deg);
+    }
+
+    .un_danchoo_deco::before {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center 0;
+      background-size: 88%;
+      opacity: 1;
+      transform-origin: top center;
+      transform: perspective(100px) rotate3d(1, 0, 0, 0deg);
+      transition: 0.6s ease;
+      content: '';
+    }
+
+    .un_danchoo_item__lecture .un_danchoo_deco::before {
+      background-image: url(/image/common/floating_img01.png);
+    }
+
+    .un_danchoo_item__question .un_danchoo_deco::before {
+      background-image: url(/image/common/floating_img02.png);
+    }
+
+    .un_danchoo_item__search .un_danchoo_deco::before {
+      background-image: url(/image/common/floating_img03.png);
+    }
+
+    .un_danchoo_ttl {
+      position: absolute;
+      left: 0;
+      bottom: 1.1rem;
+      width: 100%;
+      font-size: 1rem;
+      color: #fff;
+      transform-origin: top center;
+      transform: perspective(100px);
+      transition: 0.6s ease;
+    }
+
+    .un_danchoo_deco:hover .un_danchoo_ttl {
+      bottom: 50%;
+      font-weight: bold;
+      font-size: 1.6rem;
+      transform: translateY(50%);
+    }
+
+    @media (min-width: 720px) {
+      .un_danchoo_btn {
+        width: 12rem;
+        height: 10.8rem;
+      }
+
+      .un_danchoo_list {
+        width: 10rem;
+      }
+
+      .un_danchoo.is_active .un_danchoo_list {
+        height: 330%;
+      }
+
+      .un_danchoo_item {
+        height: 10rem;
+      }
+
+      .un_danchoo_ttl {
+        bottom: 2rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .un_danchoo_btn {
+        width: 10rem;
+        height: 9rem;
+      }
+
+      .un_danchoo_list {
+        width: 8rem;
+      }
+
+      .un_danchoo_item {
+        height: 8rem;
+      }
+
+      .un_danchoo_ttl {
+        bottom: 1.6rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* //un_danchoo */
+  </style>
+</head>
+
+<body>
+  <div class="un_danchoo">
+    <input class="un_danchoo_check" id="un_danchoo_btn" type="checkbox">
+    <label class="un_danchoo_btn" for="un_danchoo_btn"></label>
+    <ul class="un_danchoo_list">
+      <li class="un_danchoo_item un_danchoo_item__lecture">
+        <a class="un_danchoo_deco" href="">
+          <span class="un_danchoo_ttl">강좌추천</span>
+        </a>
+      </li>
+      <li class="un_danchoo_item un_danchoo_item__question">
+        <a class="un_danchoo_deco" href="">
+          <span class="un_danchoo_ttl">문제추천</span>
+        </a>
+      </li>
+      <li class="un_danchoo_item un_danchoo_item__search">
+        <button class="un_danchoo_deco" href="" type="button">
+          <span class="un_danchoo_ttl">문제검색</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const $un_danchoo_btn = document.querySelector('.un_danchoo_btn');
+
+    $un_danchoo_btn.addEventListener('click', function (e) {
+      const target = e.target;
+      const parentElem = target.closest('.un_danchoo');
+      parentElem.classList.toggle('is_active')
+    })
+  </script>
+</body>
+
+</html>

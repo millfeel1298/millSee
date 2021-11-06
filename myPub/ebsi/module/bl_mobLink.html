@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    .bl_mobLink_wrap {
+      display: flex;
+    }
+
+    .bl_mobLink_wrap>*:last-child {
+      margin-right: 0;
+    }
+
+    .bl_mobLink {
+      display: block;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      color: #334075;
+      text-align: center;
+    }
+
+    .bl_mobLink::before {
+      display: block;
+      width: 3rem;
+      height: 3rem;
+      margin: 0 auto;
+      background: url(/image/common/ico_footer_mob_link.png) no-repeat;
+      background-size: auto 2.8rem;
+      content: '';
+    }
+
+    .bl_mobLink__highSchoolApp::before {
+      background-position: 0 center;
+    }
+
+    .bl_mobLink__guide::before {
+      background-position: -3.3rem center;
+    }
+
+    .bl_mobLink__bookgoing::before {
+      background-position: -6.8rem center;
+    }
+
+    @media (min-width: 720px) {
+      .bl_mobLink {
+        margin-right: 2rem;
+      }
+
+      .bl_mobLink::before {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      .bl_mobLink::before {
+        background-size: auto 4.9rem;
+      }
+
+      .bl_mobLink__highSchoolApp::before {
+        background-position: 0 center;
+      }
+
+      .bl_mobLink__guide::before {
+        background-position: -6.1rem center;
+      }
+
+      .bl_mobLink__bookgoing::before {
+        background-position: -12.1rem center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bl_mobLink {
+        margin-right: 3rem;
+      }
+
+      .bl_mobLink::before {
+        width: 5.4rem;
+        height: 5.4rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .bl_mobLink::before {
+        background-size: auto 5.4rem;
+      }
+
+      .bl_mobLink__highSchoolApp::before {
+        background-position: 0 center;
+      }
+
+      .bl_mobLink__guide::before {
+        background-position: -6.7rem center;
+      }
+
+      .bl_mobLink__bookgoing::before {
+        background-position: -13.4rem center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bl_mobLink_wrap">
+    <a class="bl_mobLink bl_mobLink__highSchoolApp" href="">
+      <div class="bl_mobLink_txt hp_a11y__lg_none">고교강의앱</div>
+    </a>
+    <a class="bl_mobLink bl_mobLink__guide" href="">
+      <div class="bl_mobLink_txt hp_a11y__lg_none">이용가이드</div>
+    </a>
+    <a class="bl_mobLink bl_mobLink__bookgoing" href="">
+      <div class="bl_mobLink_txt hp_a11y__lg_none">EBS북고잉</div>
+    </a>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>로그인 | EBSi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="/myPub/ebsi/css/base.css">
+  <link rel="stylesheet" href="/myPub/ebsi/css/style.css">
+</head>
+<body>
+  <div id="wrap" class="sub_login">
+    <header class="ly_header">
+      <h1 class="bl_companyLogo">
+        <a class="bl_companyLogo_link" href=""><span class="hp_a11y">EBSi</span></a>
+        <span class="el_pageName">로그인</span>
+      </h1>
+    </header>
+    <main class="ly_cont">
+      <div class="ly_cont_inner">
+        <form action="#none" method="post">
+          <fieldset class="bl_login">
+            <legend class="hp_a11y">회원 로그인</legend>
+            <div class="bl_confUnit">
+              <label class="bl_conf"><input class="bl_conf_input" name="userId" placeholder="아이디" autocomplete="on" required autofocus type="text"></label>
+              <label class="bl_conf bl_conf__border_blue"><input class="bl_conf_input" name="userPw" placeholder="비밀번호" autocomplete="on" required type="password"></label>
+            </div>
+            <div class="bl_login_row">
+              <div class="bl_checkBox_wrap">
+                <input class="bl_checkBox" id="userIdSave" name="userIdSave" type="checkbox">
+                <label class="bl_checkBox_label" for="userIdSave">아이디 저장</label>
+              </div>
+              <div class="bl_login_link_wrap">
+                <a class="bl_login_link" href="">아이디</a><!--
+              --><a class="bl_login_link" href="">비밀번호</a><!--
+            --><a class="bl_login_link" href="">회원가입</a>
+              </div>
+            </div>
+            <button class="el_btn" type="submit">로그인</button>
+          </fieldset>
+          <fieldset class="bl_snsLogin">
+            <div class="bl_snsLogin_inner">
+              <legend class="bl_snsLogin_ttl">SNS 로그인</legend>
+              <div class="bl_snsLogin_linkUnit">
+                <a class="bl_snsLogin_link bl_snsLogin_link__naver" href=""><span class="hp_a11y">네이버</span></a>
+                <a class="bl_snsLogin_link bl_snsLogin_link__facebook" href=""><span class="hp_a11y">페이스북</span></a>
+                <a class="bl_snsLogin_link bl_snsLogin_link__kakao" href=""><span class="hp_a11y">카카오톡</span></a>
+                <a class="bl_snsLogin_link bl_snsLogin_link__apple" href=""><span class="hp_a11y">애플</span></a>
+              </div>
+            </div>
+            
+          </fieldset>
+        </form>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html>

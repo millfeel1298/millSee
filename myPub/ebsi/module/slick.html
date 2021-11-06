@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .bl_slide_item.slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 10vw;
+    }
+
+    .bl_slide_item.one {
+      background: pink;
+    }
+
+    .bl_slide_item.two {
+      background: lightblue;
+    }
+
+    .bl_slide_item.three {
+      background: lightslategray;
+    }
+
+    .slick-dots {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <span class="pagination"></span>
+
+  <div class="bl_slide">
+    <div class="bl_slide_item one">1</div>
+    <div class="bl_slide_item two">2</div>
+    <div class="bl_slide_item three">3</div>
+    <div class="bl_slide_item one">4</div>
+    <div class="bl_slide_item two">5</div>
+    <div class="bl_slide_item three">6</div>
+    <div class="bl_slide_item one">7</div>
+    <div class="bl_slide_item two">8</div>
+    <div class="bl_slide_item three">9</div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    const $pagination = $('.pagination');
+    const $bl_slide = $('.bl_slide');
+
+    $bl_slide.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+      const i = (currentSlide ? (currentSlide / 3) + 1 : 1);
+      $pagination.text(i + '/' + slick.slideCount / 3);
+      console.log(currentSlide)
+    });
+
+    $bl_slide.slick({
+      dots: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+    });
+  </script>
+</body>
+
+</html>

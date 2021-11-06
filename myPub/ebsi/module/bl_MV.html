@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_MV */
+    .bl_MV_wrap {
+      position: relative;
+      margin-bottom: var(--xs-bl-gap);
+    }
+
+    .bl_MV_imgWrap {
+      display: block;
+      position: relative;
+      padding-top: 53.333%;
+    }
+
+    .bl_MV_img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+
+    .bl_MV_nav {
+      position: absolute;
+      left: 5.2%;
+      bottom: 12%;
+      width: 100%;
+    }
+
+    .bl_MV_nav .bl_MV_pagination {
+      width: auto;
+    }
+
+    .bl_MV_dotWrap {
+      display: flex;
+      position: absolute;
+      bottom: 20%;
+      left: 5.5%;
+      width: 17.2rem;
+    }
+
+    .bl_MV_dotWrap>li {
+      margin-right: 0.8rem;
+      line-height: 0;
+    }
+
+    .bl_MV_dotWrap>li:last-child {
+      margin-right: 0;
+    }
+
+    .bl_MV_dotWrap>li>button {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      font-size: 0;
+      background: #fff;
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+
+    .bl_MV_dotWrap>li>button[aria-selected='true'] {
+      width: 3.2rem;
+      border-radius: 8rem;
+      opacity: 1;
+    }
+
+    .bl_MV_custBtnUnit {
+      position: absolute;
+    }
+
+    .bl_MV_custBtn {
+      background: transparent;
+    }
+
+    .bl_MV_custBtn.is_on::before {
+      display: block;
+    }
+
+    .bl_MV_custBtn::before {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .bl_MV_custBtn__pause::before {
+      content: '\f04c';
+    }
+
+    .bl_MV_custBtn__play::before {
+      content: '\f04b';
+    }
+
+    .bl_MV_pagination {
+      display: none;
+    }
+
+    @media (min-width: 720px) {
+      .bl_MV_dotWrap {
+        width: 22.8rem;
+      }
+
+      .bl_MV_dotWrap>li>button {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      .bl_MV_dotWrap>li>button[aria-selected='true'] {
+        width: 6rem;
+        border-radius: 8rem;
+      }
+
+      .bl_MV_custBtn::before {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bl_MV_wrap {
+        max-width: 2625px;
+        min-width: 1280px;
+      }
+
+      .bl_MV_imgWrap {
+        overflow: hidden;
+        height: 58rem;
+        padding-top: 0;
+      }
+
+      .bl_MV_img {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .bl_MV_dotWrap>li>button {
+        visibility: hidden;
+      }
+
+      .bl_MV_btn {
+        display: block;
+        position: absolute;
+        top: 40rem;
+        left: 50%;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-top: 0;
+        background: transparent;
+        transform: translateX(-50%);
+      }
+
+      .bl_MV_btn::after {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url(/image/common/main_sprite_arrow_large.png);
+        background-repeat: no-repeat;
+        background-size: 200%;
+        content: '';
+      }
+
+      .bl_MV_btn__prev {
+        z-index: 1;
+        margin-left: -60rem;
+      }
+
+      .bl_MV_btn__prev::after {
+        background-position: left 0;
+      }
+
+      .bl_MV_btn__next {
+        z-index: 1;
+        margin-left: -51.8rem;
+      }
+
+      .bl_MV_btn__next::after {
+        background-position: right 0;
+      }
+
+      .bl_MV_pagination {
+        display: block;
+        position: absolute;
+        top: 40rem;
+        left: 50%;
+        margin-left: -57.2rem;
+        color: #fff;
+      }
+
+      .bl_MV_custBtnUnit {
+        top: 40.3rem !important;
+        left: 50% !important; 
+        margin-left: -492px;
+      }
+    }
+
+    /* //bl_MV */
+  </style>
+</head>
+
+<body>
+  <div class="bl_MV_wrap">
+    <div class="bl_MV">
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/20210929163201056.jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210929163145223.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210929163145223.jpg"
+              alt="단계별로 추천하는 나만의 맞춤 학습. 단추. 빅데이터와 인공지능 기술로 자기주도학습을 돕습니다.">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580[20210812172946131].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210812172741315.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210812172741315.jpg"
+              alt="EBSi만의 수준별 맞춤형 강좌! 나에게 딱 맞는 강의로 공부하자!">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580[20210819135123486].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210819135036409.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210819135036409.jpg"
+              alt="수능 EBS, EBS연계학습이 답이다. 수능 EBS 연계율 50%, 완벽한 수능 학습의 축!">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580[20210916102318841].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210916102235521.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210916102235521.jpg"
+              alt="2022고난도 시크릿X 봉투모의고사 실전 끝판왕, 프리미엄 모의고사">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580[20210916141436805].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210916141350895.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210916141350895.jpg" alt="2022 만점마무리 봉투모의고사 Red Edition">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580[20210927141136459].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20210927141158672.jpg">
+            <img class="bl_MV_img" src="/image/upload/20210927141158672.jpg"
+              alt="2022 초압축 연계교재 특강. 수능완성과 수능특강의 고득점 비법 농축! 10강으로 끝내는 핵심정리!">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/1920x580_쌤[20211013085054912].jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20211013085124649.jpg">
+            <img class="bl_MV_img" src="/image/upload/20211013085124649.jpg"
+              alt="고3 10월 12일 시행. 10월 학력평가 풀서비스. 실력을 정확하게 진단하고, 약점을 제대로 보완하자!">
+          </picture>
+        </a>
+      </div>
+      <div class="bl_MV_item">
+        <a class="bl_MV_link" href="">
+          <picture class="bl_MV_imgWrap">
+            <source media="(min-width: 1024px)" srcset="/image/upload/20211012163714506.jpg">
+            <source media="(min-width: 1023px)" srcset="/image/upload/20211012163705288.jpg">
+            <img class="bl_MV_img" src="/image/upload/20211012163705288.jpg"
+              alt="2021 월간 입시 10월호, 수.당.당 고3 되는법 외 이번 학식은! 단국대학교!">
+          </picture>
+        </a>
+      </div>
+    </div>
+    <div class="bl_MV_custBtnUnit">
+      <button class="bl_MV_custBtn bl_MV_custBtn__pause is_on"><span class="hp_a11y">Pause</span></button>
+      <button class="bl_MV_custBtn bl_MV_custBtn__play"><span class="hp_a11y">Play</span></button>
+    </div>
+    <div class="bl_MV_pagination"></div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    $(function () {
+      const breakPC = 1024;
+      const breakTA = 720;
+
+
+      $('.bl_MV').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        const i = (currentSlide ? currentSlide : 0) + 1;
+        $('.bl_MV_pagination').text(i + ' / ' + slick.slideCount);
+      });
+
+      $('.bl_MV').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dotsClass: 'bl_MV_dotWrap',
+        arrows: true,
+        prevArrow: "<button type='button' class='bl_MV_btn bl_MV_btn__prev slick-prev'><span class='hp_a11y'>이전</span></button>",
+        nextArrow: "<button type='button' class='bl_MV_btn bl_MV_btn__next slick-next'><span class='hp_a11y'>다음</span></button>",
+        dots: true,
+        // autoplay: true,
+        pauseOnHover: false,
+        responsive: [{
+          breakpoint: breakPC,
+          settings: {
+            arrows: false,
+          }
+        }]
+      });
+
+      // 대상의 위치 값을 찾아서 요소에 top, left값 적용하는 함수
+      function setElePosition(ele, target, nthChild,
+        property) { // ele: 값을 적용할 요소, target: 대상의 position 값, nthChild: 몇번째 자식, property: css 속성
+        const target_top = target.css('top')
+        let target_gap, target_left;
+
+
+        if (!(nthChild === undefined)) {
+          target_gap = target.children().eq(nthChild).css(property).replace(/[^-\d\.]/g, ''); // 간격
+          target_left = target.offset().left + target.width() + Number(target_gap); // left
+        } else {
+          target_left = target.offset().left + target.width(); // left
+        }
+
+        ele.css({
+          top: target_top,
+          left: target_left
+        });
+      }
+
+      setElePosition($('.bl_MV_custBtnUnit'), $('.bl_MV_dotWrap'), 0, 'margin-right');
+
+      // .bl_MV 정지 버튼
+      $('.bl_MV_custBtn__pause').on('click', function () {
+        $('.bl_MV').slick('slickPause');
+        $(this).removeClass('is_on');
+        $(this).next().addClass('is_on');
+      });
+
+      // .bl_MV 재생 버튼
+      $('.bl_MV_custBtn__play').on('click', function () {
+        $('.bl_MV').slick('slickPlay');
+        $(this).removeClass('is_on');
+        $(this).prev().addClass('is_on');
+      });
+
+      $(window).resize(function () {
+        setElePosition($('.bl_MV_custBtnUnit'), $('.bl_MV_dotWrap'), 0, 'margin-right');
+      })
+    })
+  </script>
+</body>
+
+</html>
