@@ -1,0 +1,22 @@
+@mixin media($screen__width, $screen__wrap-width: 'none') {
+  @if $screen__width == 'tablet' {
+    @media screen and (min-width: 601px) {
+      @content;
+    }
+  } @else if $screen__width == 'desktop' {
+    @media screen and (min-width: $desktop--respon) {
+      // wraper
+      @if $screen__wrap-width == 'wrap' {
+        width: $desktop--respon;
+        margin: 0 auto;
+        @content;
+      } 
+      @content;
+      
+    }
+  } @else if $screen__width == 'big-desktop' {
+    @media screen and (min-width: $bigDesktop--respon) {
+      @content;
+    }
+  }
+}

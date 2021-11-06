@@ -1,0 +1,75 @@
+// respon
+$desktop--respon: 980px;
+$bigDesktop--respon: 1600px;
+
+// mobile margin & padding
+$mobile-gap--large: 36px;
+$mobile-gap--medium: 30px;
+$mobile-gap--small: 16px;
+$mobile-gap--xsmall: 12px;
+$mobile-gap--xxsmall: 08px;
+
+
+// mobile margin & padding respon
+$mobile-gap--large--respon: 0.36rem;
+$mobile-gap--medium--respon: 0.30rem;
+$mobile-gap--small--respon: 0.16rem;
+$mobile-gap--xsmall--respon: 0.12rem;
+$mobile-gap--xxsmall--respon: 0.08rem;
+
+
+// desktop margin & padding
+$desktop-gap--large: 40px;
+$desktop-gap--medium: 32px;
+$desktop-gap--small: 24px;
+$desktop-gap--xsmall: 16px;
+$desktop-gap--xxsmall: 8px;
+
+
+// font size
+$fontSize--xxlarge: 34px;
+$fontSize--xlarge: 30px;
+$fontSize--large: 24px;
+$fontSize--medium: 16px;
+$fontSize--small: 14px;
+$fontSize--xsmall: 12px;
+$fontSize--xxsmall: 10px;
+
+
+// font size respon
+$fontSize--xlarge--respon: 0.30rem;
+$fontSize--large--respon: 0.24rem;
+$fontSize--medium--respon: 0.16rem;
+$fontSize--small--respon: 0.14rem;
+$fontSize--xsmall--respon: 0.12rem;
+$fontSize--xxsmall--respon: 0.10rem;
+
+
+// color
+$color--main: #222;
+$color--link: #345CCD;
+$color--gray: #777;
+$color--light-gray: #7a7a7a;
+
+
+// line color
+$lineColor--dark-black: #000;
+$lineColor--black: #222;
+$lineColor--light-black: #343434;
+$lineColor--gray: #ddd;
+$lineColor--light-gray: #eee;
+
+
+// background color
+$primaryColor--green: #07b53b;
+$primaryColor--light-green: #9FEDBC;
+$primaryColor--light-gray: #f5f5f5;
+
+
+// letter-spacing
+$letterSpacing: -0.05em;
+
+
+// animation speed
+$aniTime--default: 1s;
+$aniTime--fast: 300ms;

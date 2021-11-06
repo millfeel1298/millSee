@@ -1,0 +1,7 @@
+/* base.css */
+body {font-family:NanumGothic, '나눔고딕', NG, '돋움', Dotum, AppleGothic, sans-serif; font-size:13px; color:#666;}
+a:link, a:visited{color:#666; text-decoration:none;}
+a:hover, a:focus{text-decoration:underline;}
+
+.skip_nav a {display:block;position:absolute;left:0;top:-100px;z-index:1000;width:100px;padding:10px;font-weight:bold;text-align:center;text-decoration:none;color:#fff;background-color:#000}
+.skip_nav a:focus, .skip_nav a:active {top:0}

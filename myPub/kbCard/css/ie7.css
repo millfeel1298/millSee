@@ -1,0 +1,86 @@
+/* ****** index.html start ****** */
+/* margin-top 적용안됨 */
+.event_wrap {margin:0 auto;padding-top:30px}
+
+
+/* border-box start */
+.row.r1 .a4.a43 {width:238px}
+.banner1 a,  .banner2 a,  .row.r1 .a4.a43 {height:359px}
+.row.r2 .a4.a4142 {width:479px;height:318px}
+.arow.ar1 {height:159px}
+.arow.ar2 {height:158px}
+.a4.a43 .arow.ar1,  .a4.a43 .arow.ar2 {width:238px}
+.a4.a43 .arow.ar1 {height:79px}
+.a4.a43 .arow.ar2 {height:158px}
+.cardType {height:73px}
+.cardList {height:604px}
+.ci_list.num3 {width:129px}
+.ci_list a,  .cardInfo .ci_list.num3 {height:79px}
+.cardInfo .num3.ci_list,  .ci_list.num4 a {height:64px}
+.starShop {height:444px}
+.row.r1 .a3, .row.r2 .a3 {width:349px}
+.row.r1 .a3 {height:379px}
+.row.r1 .a3.a33, .row.r2 .a3.a33 {width:258px}
+.row.r2 .a3 {height:298px}
+.serviceMenu .service_list {height:78px}
+.r1.row .a42.a4 {width:239px}
+/* border-box END */
+
+/* position */
+.footerbutton {top:20px}
+
+/* 유지, 보수 */
+.cl_list .two_line {padding-top:0}
+.arow1.ar1 {height:161px}
+.r2.row .a4142.a4 {height:322px}
+.cl_list a:hover .card_hover {margin-bottom:0;padding-bottom:0}
+#search_input {line-height:50px}
+.search_btn_box {height:26px}
+#search_btn {display:block;height:26px}
+.slider_btn .slider_list {margin-top:0}
+.total_array {width:16.4%}
+.num3.toLi .total_array {width:21.4%}
+.num5.toLi .total_array, .num7.toLi .total_array {width:29.7%}
+
+
+.num6.ct_list .num1.card_hover .ch, .num6.ct_list .num2.card_hover .ch, .num6.ct_list .num1.card_hover .ch, .num6.ct_list .num4.card_hover .ch {width:49.5%} {width:49.5%}
+/* ****** index.html END ****** */
+
+
+
+
+/* ****** login.html start ****** */
+.lb_list {width:33.4%}
+.lb_list.num3 {width:33.2%}
+.login .tabInput_wrap {width:444px}
+.login .tabInput_wrap .radius_box {margin-left:32px}
+.login .tabInput_wrap .radius_box input {width:106%}
+.login .top.tabInput input, .login .bottom.tabInput input {line-height:40px}
+.login .RB21.RB2 {width:186px}
+
+
+/* ****** login.html END ****** */
+
+
+
+
+/* ****** manual.html start ****** */
+.um_tit {width:49.9%}
+/* ****** manual.html END ****** */
+
+
+
+
+/* ****** card01.html start ****** */
+/* ie7 width %값 수치 변경 */
+.card_info {width:33.1%}
+.card_info .info_tel span {width:49.8%}
+
+/* ie7 : inline(top/bottom) 적용 안돼서 핵 사용, w*h값을 잡기 때문에 padding값 삭제 */
+.CK_list .titImg, .card_info ul li a .bg_images, .card_info .info_search a .bg_images  {display:inline-block;zoom:1;*display:inline;padding:0}
+
+/* inline속성이 inline-block속성이 돼서 w*h값 다시 잡기 */
+.CK_list .titImg {width:24px;height:28px} 
+.card_info ul li a .bg_images {width:6px;height:8px}
+.card_info .info_search a .bg_images {width:22px;height:24px}
+/* ****** manual.html END ****** */

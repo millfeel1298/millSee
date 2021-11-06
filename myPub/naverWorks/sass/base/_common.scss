@@ -1,0 +1,30 @@
+.blind {
+  overflow: hidden;
+  display: inline-block;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0 none;
+  clip-path: inset(50%);
+}
+
+.line-break {
+  display: block;
+
+  @include media('tablet') {
+    display: inline;
+  }
+}
+
+.divide-line {
+  height: 2px;
+  background: $lineColor--dark-black;
+
+  &--bold {
+    height: 4px;
+  }
+
+  &--light-gray {
+    background: $lineColor--light-gray;
+  }
+}

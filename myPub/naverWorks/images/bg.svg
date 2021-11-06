@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="415" viewBox="0 0 375 415">
+    <defs>
+        <linearGradient id="8se8x3cwjb" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="100%" stop-opacity=".5"/>
+        </linearGradient>
+        <filter id="2fppg0ohgd" width="125.7%" height="235.6%" x="-12.8%" y="-67.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="13.562"/>
+        </filter>
+        <path id="wzbfce88ya" d="M0 0H375V415H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g transform="translate(0 -115) translate(0 115)">
+                <mask id="16c6uyiujc" fill="#fff">
+                    <use xlink:href="#wzbfce88ya"/>
+                </mask>
+                <use fill="#FFF" xlink:href="#wzbfce88ya"/>
+                <path fill="url(#8se8x3cwjb)" d="M0 0H375V279H0z" mask="url(#16c6uyiujc)" opacity=".03" transform="matrix(1 0 0 -1 0 279)"/>
+                <g mask="url(#16c6uyiujc)">
+                    <g transform="translate(125.672 206)">
+                        <g fill="#F5F5F5">
+                            <path d="M28.004 166.428c-1.545-.046-2.784-1.313-2.784-2.869 0-.637.207-1.226.559-1.702l-.02.033c.887-1.333 1.83-2.749 2.83-4.248l1.017-1.527.523-.785 1.255-1.884 5.952-8.93.863-1.297.622-.932 1.267-1.903 6.114-9.174 1.535-2.305 7.656-11.488 2.335-3.505C22.478 111.882 0 86.766 0 59.62 0 26.385 24.777 0 62.581 0 99.62 0 125.93 26.385 125.93 59.62c0 17.76-4.853 31.205-29.12 66.724L71.435 163.56c-.024.036-.052.07-.081.101-1.008 1.659-2.831 2.767-4.913 2.767-.286 0-.566-.02-.84-.06l-.04.06H28.005zM61.357 38.463c-11.808 0-21.356 9.537-21.356 21.081 0 11.545 9.548 21.081 21.356 21.081 11.81 0 21.608-9.536 21.608-21.08 0-11.545-9.799-21.082-21.608-21.082z" transform="translate(20.35)"/>
+                            <path d="M177.58 0c38.701 0 66.556 35.22 66.063 83.09.493 48.118-26.622 83.338-64.091 83.338-38.209 0-66.064-35.22-66.064-83.09C113.488 35.22 140.604 0 177.58 0zm.252 37.627c-14.743 0-24.572 18.037-24.572 45.464 0 27.673 10.074 45.71 25.555 45.71 15.48 0 25.063-18.037 25.063-45.463 0-27.426-9.829-45.71-26.046-45.71z" transform="translate(20.35)"/>
+                        </g>
+                        <rect width="317.129" height="60.01" y="135.616" fill="#FFF" filter="url(#2fppg0ohgd)" rx="30.005"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

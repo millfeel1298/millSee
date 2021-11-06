@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <style>
+    .un_intro_nightSky {
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+      background: #012038 url(/images/un_intro_star.svg) center / 50%;
+    }
+
+    .un_intro_moon {
+      position: absolute;
+      left: 50%;
+      top: 38%;
+      transform: translateX(-50%) scale(2.5);
+    }
+
+    .un_intro_smCloud {
+      position: absolute;
+      transform: scale(1.8);
+    }
+
+    .un_intro_smCloud__l {
+      left: 38.5%;
+      top: 34%
+    }
+
+    .un_intro_smCloud__r {
+      left: 52%;
+      top: 49%
+    }
+
+    .un_intro_bigCloud {
+      position: absolute;
+      left: 10%;
+      bottom: 4%;
+      transform: scale(4.5);
+    }
+
+    .un_intro_bigCloud02 {
+      position: absolute;
+      right: 10%;
+      bottom: 4%;
+      transform: scale(4.5);
+    }
+
+    .un_intro_bubble {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      padding: 18px;
+      border-radius: 10px;
+      font-family: 'UhBeeSeulvely', 'Courier New', Courier, monospace;
+      font-size: 20px;
+      background: #fff;
+      transform: translateX(-50%);
+      opacity: 0.8;
+    }
+
+    .un_intro_bubble:after {
+      content: '';
+      position: absolute;
+      border-style: solid;
+      border-width: 27px 9px 0;
+      border-color: #fff transparent;
+      display: block;
+      width: 0;
+      z-index: 1;
+      bottom: -27px;
+      left: 275px;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <div class="un_intro">
+    <div class="un_intro_nightSky">
+      <div class="un_intro_bubble un_intro_txt">
+        <!-- <span class="un_intro_txt_greet">안녕하세요. 퍼블리셔 <strong>"김미라"</strong> 입니다.</span> -->
+        <!-- <span class="un_intro_txt_greet">제 홈페이지에 방문해 주셔서 감사해요~</span> -->
+        <span class="un_intro_txt_greet">저에 대해 궁금하시다면 "달님"을 클릭해주세요!</span>
+      </div>
+      <img class="un_intro_moon" src="/images/un_intro_moon.svg" alt="">
+      <img class="un_intro_smCloud un_intro_smCloud__l" src="/images/un_intro_smCloud.svg" alt="">
+      <img class="un_intro_smCloud un_intro_smCloud__r" src="/images/un_intro_smCloud.svg" alt="">
+      <img class="un_intro_bigCloud" src="/images/un_intro_bigCloud.svg" alt="">
+      <img class="un_intro_bigCloud02" src="/images/un_intro_bigCloud02.svg" alt="">
+    </div>
+  </div>
+  <script>
+    document.body.addEventListener('mousemove', function (e) {
+      const $un_intro_moon = document.querySelector('.un_intro_moon');
+      const $un_intro_smCloud__l = document.querySelector('.un_intro_smCloud__l');
+      const $un_intro_smCloud__r = document.querySelector('.un_intro_smCloud__r');
+      const $un_intro_bigCloud = document.querySelector('.un_intro_bigCloud');
+      const $un_intro_bigCloud02 = document.querySelector('.un_intro_bigCloud02');
+      const posX = e.clientX / 1000;
+      const posY = e.clientY / 1500;
+
+      $un_intro_moon.style.left = `${50 - posX}%`;
+      $un_intro_moon.style.top = `${38 - posY}%`;
+      $un_intro_smCloud__l.style.left = `${38.5 + posX}%`;
+      $un_intro_smCloud__l.style.top = `${34 + posY}%`;
+      $un_intro_smCloud__r.style.left = `${52 + posX}%`;
+      $un_intro_smCloud__r.style.top = `${49 + posY}%`;
+      $un_intro_bigCloud.style.left = `${10 + posX}%`;
+      $un_intro_bigCloud.style.bottom = `${4 + posY}%`;
+      $un_intro_bigCloud02.style.right = `${10 - posX}%`;
+      $un_intro_bigCloud02.style.bottom = `${4 - posY}%`;
+    })
+  </script>
+</body>
+
+</html>

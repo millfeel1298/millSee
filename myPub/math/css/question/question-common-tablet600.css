@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+/* 
+    // 검색 
+    #01 header 영역
+    #02 activate 영역
+    #03 content 영역
+*/
+
+
+
+
+
+@media (min-width:600px) and (max-width:767px) {
+
+    .questionContent .container {
+        max-width: 520px;
+        width: 100%;
+    }
+
+    .questionContent .directions {
+        margin-bottom: 24px;
+    }
+
+    .questionContent .directions p {
+        word-break: keep-all;
+    }
+
+    .exbox-default-style,
+    .exbox-default-style-gray {
+        width: 44px;
+        height: 44px;
+    }
+
+    .exbox-default-style2 {
+        width: 58px;
+        height: 44px;
+    }
+
+
+    /* 설명 안에 있는 i */
+    /* .ans_txt 위치 */
+    .questionContent .ans_txt.left {
+        right: 54px;
+    }
+
+    .questionContent .ans_txt.right {
+        left: 53px;
+    }
+
+    /* ans 박스 */
+    .questionContent .ans {
+        width: 52px;
+        height: 52px;
+        border-radius: 8px;
+    }
+
+    .questionContent .ans2 {
+        width: 64px;
+        height: 52px;
+        border-radius: 6px;
+    }
+
+    /* fake ans스타일 */
+    .questionContent .fake-ans {
+        width: 52px;
+        height: 52px;
+        border-radius: 8px;
+    }
+
+    .questionContent .fake-ans2 {
+        width: 64px;
+        height: 52px;
+        border-radius: 6px;
+    }
+
+    /* ans_txt */
+    .questionContent .ans_txt {
+        top: -12px;
+    }
+
+    .questionContent .ans_txt.bottom {
+        bottom: -15px;
+    }
+
+    /* 채점 */
+    .questionContent .scoring {
+        height: 56px;
+    }
+
+
+
+
+    /*------------------------------------*\
+    #01 header 공통 영역
+    \*------------------------------------*/
+    /* 페이지 이동 화살 */
+    .header-default-style .pageArr-box a {
+        width: 44px;
+    }
+
+    .header-default-style .pageArr-box img {
+        height: 16px;
+    }
+
+    /* 타이머, 성취율 */
+    .questionCheck {
+        top: 1px;
+        max-width: 600px;
+        height: 48px;
+    }
+
+    .questionCheck.timer {
+        padding-left: 56px;
+    }
+
+    .questionCheck.achieve {
+        padding-left: 124px;
+    }
+
+    /* 타이틀 */
+    .questionHeader .tit_box {
+        margin-left: 194px;
+    }
+
+    /* 유저 이름 */
+    .header-default-style .user_name {
+        width: 80px;
+    }
+
+    /* 햄버거바 */
+    .header-default-style .totalMenu {
+        width: 44px;
+    }
+
+    .header-default-style .totalMenu a {
+        font-size: 1.142857142857143rem;
+    }
+
+
+
+
+
+    /*------------------------------------*\
+    #02 activate 공통 영역
+    \*------------------------------------*/
+    .questionActivate {
+        height: 48px;
+    }
+
+    /* lnb */
+    .questionHeader .lnb_box {
+        top: 62px;
+        left: 42px;
+        margin-left: 0;
+    }
+
+    /* 버튼 */
+    .questionActivate>.container {
+        max-width: 528px;
+        padding: 14px 0;
+    }
+
+    .activateBtn_box {
+        margin-right: 8px;
+    }
+
+    /* 설명 */
+    .questionContent .directions p > i:first-child {
+        margin-top: 4px;
+        margin-right: 4px;
+    }
+}

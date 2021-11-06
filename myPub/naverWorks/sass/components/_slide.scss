@@ -1,0 +1,232 @@
+.main-slide {
+  height: 100%;
+
+  &__content {
+    padding: $mobile-gap--small--respon;
+  }
+
+  &__info {
+    font-size: $fontSize--medium;
+  }
+
+  .content__tit {
+    margin: 16px 0 26px 0;
+    font-size: $fontSize--xxlarge;
+    letter-spacing: $letterSpacing;
+  }
+
+  &__link {
+    display: block;
+    width: 114px;
+    padding: 10px 12px;
+    border: 2px solid $lineColor--black;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: $fontSize--small;
+    background: url(/myPub/naverWorks/images/bt-14-linkarrow-222222.svg) no-repeat;
+    background-position: 94px center;
+  }
+
+  &__images {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  [data-swiper-slide-index='0'] &__images {
+    background: url(/myPub/naverWorks/images/naver-banner-01-m.jpg) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
+    @include media('tablet') {
+      background-position: 0 70%;
+    }
+  }
+
+  [data-swiper-slide-index='1'] &__images {
+    background: url(/myPub/naverWorks/images/bg.svg) no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+
+    @include media('tablet') {
+      background-position: center 72%;
+    }
+  }
+
+  [data-swiper-slide-index='2'] &__images {
+    background: #f2fcfd;
+  }
+
+  [data-swiper-slide-index='2'] &__images img:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: 104px;
+  }
+
+  [data-swiper-slide-index='2'] &__images img:nth-child(2) {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 247px;
+
+    @include media('tablet') {
+      width: 314px;
+      bottom: 16px;
+    }
+  }
+
+  & &__pagination {
+    bottom: 22px;
+
+    & .swiper-pagination-bullet-active {
+      background: #000;
+    }
+  }
+}
+
+.client__tit {
+  padding: 0 $mobile-gap--small--respon;
+}
+
+.client-slide {
+  padding: $mobile-gap--large--respon 0;
+
+  @include media('tablet') {
+    padding: 40px 0;
+  }
+
+  &__cover {
+    overflow: hidden;
+    position: relative;
+    height: 1.72rem;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 0 0 ($mobile-gap--small--respon * 2) 0;
+    background: $primaryColor--light-gray
+  }
+
+  &__img {
+    position: relative;
+    height: 0.64rem;
+  }
+
+  &__new {
+    position: absolute;
+    top: 0;
+    right: $mobile-gap--small--respon;
+    width: 0.6rem;
+    height: 0.6rem;
+    transform: translateY(-80%);
+  }
+
+  &__logo {
+    width: auto;
+    height: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    padding: 0 $mobile-gap--small--respon;
+
+    & li {
+      display: flex;
+      align-items: center;
+
+      & ~ li {
+        margin: 0 0 0 $mobile-gap--xsmall--respon;
+      }
+
+      & ~ li::before {
+        position: relative;
+        top: 0;
+        left: ($mobile-gap--xsmall--respon / 2) * -1;
+        display: inline-block;
+        width: 2px;
+        height: 100%;
+        background: $lineColor--gray;
+        transform: translateX(50%);
+        content: '';
+      }
+    }
+  }
+
+  &__link {
+    font-size: $fontSize--xsmall--respon;
+    color: $color--gray;
+  }
+
+  &__company {
+    padding: $mobile-gap--small--respon $mobile-gap--small--respon $mobile-gap--xxsmall--respon;
+    font-weight: 700;
+    font-size: $mobile-gap--small--respon;
+  }
+
+  &__summary {
+    overflow: hidden;
+    display: -webkit-box;
+    height: 0.72rem;
+    padding: 0 $mobile-gap--small--respon;
+    font-size: $fontSize--xsmall--respon;
+    color: $color--gray;
+    letter-spacing: -0.05em;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    &::after {
+      position: absolute;
+      bottom: $mobile-gap--small--respon;
+      right: $mobile-gap--small--respon;
+      width: 29px;
+      height: 20px;
+      background: url(/myPub/naverWorks/images/bt-24-linkarrow-345-ccd.svg) no-repeat;
+      content: '';
+    }
+  }
+}
+
+.client__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: $mobile-gap--large--respon $mobile-gap--small--respon 0;
+
+  & li {
+    flex: 0 0 auto;
+    max-width: 84px;
+    margin: 0 12px;
+  }
+}
+
+.swiper-pagination-bullet {
+  @include media('tablet') {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.pagination--default .swiper-pagination-bullet-active {
+  width: 24px;
+  border-radius: 8px;
+  background: $primaryColor--green;
+
+  @include media('tablet') {
+    width: 46px;
+    height: 14px;
+  }
+}

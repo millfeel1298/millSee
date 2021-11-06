@@ -1,0 +1,141 @@
+.header__mobile-nav {
+  z-index: 100;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0.6rem;
+  bottom: 0;
+  left: 100vw;
+  width: 100%;
+  margin-bottom: 0.56rem + ($mobile-gap--small--respon * 2);
+  background-color: #fff;
+  transition: $aniTime--fast;
+
+  &.show {
+    left: 0;
+  }
+}
+
+.mobile-menu {
+  padding-bottom: 0.6rem;
+
+  &__tit {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $fontSize--small--respon;
+    border-bottom: 0.01rem solid $lineColor--light-gray;
+
+    & strong {
+      font-weight: 700;
+      font-size: 0.18rem;
+    }
+  }
+
+  &__ico {
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-left: 0.08rem;
+    background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+    background-position: 0 -19.98rem;
+    background-size: 0.8rem auto;
+
+    &.animated {
+      background-position: 0 -20.99rem;
+    }
+  }
+
+  &-depth2 {
+    overflow: hidden;
+    height: 0;
+    border-bottom: 0 solid $lineColor--light-gray;
+    transition: $aniTime--fast ease-in-out;
+    box-sizing: border-box;
+
+    &.show {
+      height: auto;
+      padding: $fontSize--small--respon 0;
+      border-bottom-width: 1px;
+    }
+
+    &__item {
+      padding: $fontSize--small--respon;
+    }
+  }
+}
+
+.site-map {
+  &__item {
+    background: $lineColor--light-black;
+    box-sizing: border-box;
+    transition: 500ms ease-in-out;
+  }
+
+  &__item.active &__tit {
+    border-bottom: 0 none;
+  }
+
+  &__item.active &__tit button::after {
+    background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+    background-position: -9px -2597px;
+    background-size: 90px 3862px;
+  }
+
+  &__item.active &__depth2 {
+    height: auto;
+    padding: $mobile-gap--small--respon;
+    border-bottom: 1px solid $lineColor--black;
+  }
+
+  &__tit {
+    position: relative;
+    height: 0.6rem;
+    border-bottom: 1px solid $lineColor--black;
+  }
+
+  &__tit button {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: $mobile-gap--small $mobile-gap--small--respon;
+    font-size: $fontSize--medium--respon;
+    color: #fff;
+    box-sizing: border-box;
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: $mobile-gap--small;
+      width: 16px;
+      height: 16px;
+      background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+      background-position: -9px -2483px;
+      background-size: 90px 3862px;
+      transform: translateY(-50%);
+      content: '';
+    }
+  }
+
+  &__depth2 {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    height: 0;
+    padding: 0 $mobile-gap--small--respon;
+    box-sizing: border-box;
+    transition: 300ms ease-in-out;
+
+    & > li {
+      flex: 0 0 auto;
+      margin: 0 $mobile-gap--medium--respon 0 0;
+    }
+  }
+
+  &__link {
+    color: #888;
+    line-height: 2.5;
+    text-decoration: underline;
+  }
+}

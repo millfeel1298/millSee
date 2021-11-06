@@ -1,0 +1,316 @@
+.content {
+  position: relative;
+
+  &__container {
+    @include media('tablet') {
+      width: 980px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+  }
+
+  &__front-banner {
+    margin: -1px 0 0 0;
+    padding: $mobile-gap--small $mobile-gap--small--respon;
+    border-top: 1px solid $lineColor--light-gray;
+  }
+
+  &__slide {
+    height: 415px;
+    @include media('desktop') {
+      padding-top: 72px;
+    }
+  }
+
+  &__tab .pagination--default,
+  &__client .pagination--default {
+    position: relative;
+  }
+
+  &__tab .pagination--default {
+    bottom: -24px;
+  }
+
+  &__notice {
+    padding: $mobile-gap--xsmall--respon $mobile-gap--small--respon;
+    background: $primaryColor--light-gray;
+  }
+
+  &__tab,
+  &__credit,
+  &__client {
+    padding: 80px 0 0;
+
+    @include media('tablet') {
+      padding: 100px 0 0;
+    }
+  }
+
+  .contnet__line {
+    padding: 80px $mobile-gap--small--respon 0;
+
+    @include media('tablet') {
+      padding: 100px $mobile-gap--small--respon 0;
+    }
+  }
+
+  &__client .pagination--default {
+    bottom: -16px;
+  }
+
+  &__download {
+    padding: 80px $mobile-gap--small--respon;
+  }
+
+  &__btn {
+    height: 56px;
+    margin: $fontSize--medium 0 0;
+
+    & .btn {
+      font-weight: 700;
+      font-size: $fontSize--medium;
+    }
+  }
+
+  &__info {
+    padding: 80px $mobile-gap--small--respon;
+    background: $primaryColor--light-gray;
+  }
+
+  &__start {
+    padding: 80px $mobile-gap--small--respon;
+    background: $primaryColor--green;
+  }
+
+  &__inquiry {
+    z-index: 50;
+    position: fixed;
+    bottom: $mobile-gap--small--respon;
+    right: $mobile-gap--small--respon;
+  }
+}
+
+.front-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: $fontSize--small;
+
+    @include media('tablet') {
+      font-size: $fontSize--medium;
+    }
+    
+
+    & strong {
+      display: flex;
+      align-items: center;
+      margin: 0 0.2em 0 0;
+      color: $primaryColor--green;
+
+      &::before {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        margin: 0 0.4em 0 0;
+        content: '';
+        background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+        background-position: 0 -1384px;
+        background-size: 79px 3390px;
+      }
+    }
+  }
+
+  &__btn {
+    width: 20px;
+    height: 20px;
+
+    @include media('tablet') {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.notice {
+  position: relative;
+  font-size: $fontSize--medium; /* 반응형 높이 제어용 font-size */
+
+  &__theme {
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: $fontSize--medium;
+    color: $primaryColor--green;
+  }
+  &__tit {
+    font-weight: 700;
+    font-size: $fontSize--medium;
+    letter-spacing: $letterSpacing;
+    word-break: keep-all;
+  }
+  &__link {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    font-size: $fontSize--small;
+    color: $color--link;
+
+    &::after {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin: 0 0 0 4px;
+      background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+      background-position: 0 -3407px;
+      background-size: 88px 3776px;
+      content: '';
+    }
+  }
+}
+
+.credit {
+  &__list {
+    @include media('desktop', 'wrap') {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 $desktop-gap--medium;
+    }
+  }
+
+  &__tit {
+    padding: 0 $mobile-gap--small--respon;
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media('desktop') {
+      height: 174px;
+    }
+
+    & img {
+      width: 72%;
+
+      @include media('desktop') {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &__txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & b {
+      font-weight: 700;
+      font-size: $fontSize--small;
+
+      @include media('tablet') {
+        font-size: $fontSize--medium;
+      }
+    }
+
+    & .content__tit {
+      margin: 8px 0 12px;
+
+      & span {
+        font-size: $fontSize--xsmall;
+      }
+    }
+  }
+}
+
+.info {
+  &__tit {
+    margin: 0 0 $mobile-gap--small--respon;
+  }
+
+  &__list > li ~ li {
+    margin: $fontSize--medium 0 0;
+  }
+
+  &__cover {
+    overflow: hidden;
+    position: relative;
+    height: 1.72rem;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: $mobile-gap--small--respon $mobile-gap--small--respon ($mobile-gap--small--respon * 3);
+    background-color: #fff;
+  }
+
+  &__hashtag-list {
+    display: flex;
+
+    & li ~ li {
+      margin: 0 0 0 $mobile-gap--xxsmall;
+    }
+  }
+
+  &__link {
+    font-size: $fontSize--xsmall;
+    color: $color--link;
+
+    @include media('tablet') {
+      font-size: $fontSize--medium;
+    }
+  }
+
+  &__content-tit {
+    margin: $mobile-gap--small 0;
+    font-weight: 700;
+    font-size: $fontSize--medium--respon;
+    word-break: keep-all;
+    line-height: 1.5;
+
+    @include media('tablet') {
+      font-size: $fontSize--xsmall--respon;
+    }
+  }
+  
+  &__meta-list {
+    display: flex;
+
+    &::after {
+      position: absolute;
+      bottom: $mobile-gap--small;
+      right: $mobile-gap--small;
+      width: 29px;
+      height: 20px;
+      background: url(/myPub/naverWorks/images/bt-24-linkarrow-345-ccd.svg) no-repeat;
+      content: '';
+    }
+
+    & li {
+      font-size: $fontSize--xsmall;
+      color: $color--gray;
+
+      @include media('tablet') {
+        font-size: $fontSize--small;
+      }
+
+      & ~ li {
+        margin: 0 0 0 $mobile-gap--small;
+      }
+    }
+  }
+}

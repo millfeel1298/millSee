@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+/* reset.css */
+* {margin:0; padding:0}
+li {list-style:none}
+img, fieldset {border:0 none}
+address {font-style:normal;font-weight:normal}
+input, select, textarea, button {vertical-align:middle}
+strong {font-weight:normal}
+em {font-style:normal}

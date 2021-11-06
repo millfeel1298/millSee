@@ -1,0 +1,171 @@
+.header__hamburger-menu {
+  margin-left: 0.16rem;
+  outline: none;
+  cursor: pointer;
+
+  input[id='hamburger-menu-ico'] {
+    display: none;
+  }
+  input[id='hamburger-menu-ico'] + label {
+    position: relative;
+    display: block;
+    width: 0.3rem;
+    height: 0.24rem;
+  }
+  input[id='hamburger-menu-ico'] + label span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0.04rem;
+    border-radius: 5px;
+    background-color: #000;
+    transition: $aniTime--fast;
+  }
+  input[id='hamburger-menu-ico'] + label span:nth-child(1) {
+    top: 0;
+  }
+  input[id='hamburger-menu-ico'] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  input[id='hamburger-menu-ico'] + label span:nth-child(3) {
+    bottom: 0%;
+  }
+
+  input[id='hamburger-menu-ico']:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  input[id='hamburger-menu-ico']:checked + label span:nth-child(2) {
+    opacity: 0;
+  }
+  input[id='hamburger-menu-ico']:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0.5em;
+  font-size: 0.16rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+
+  @include media('desktop') {
+    border-radius: 0.3em;
+  }
+
+  &.btn--font-small {
+    @include media('desktop') {
+      font-size: $fontSize--small;
+    }
+  }
+
+  &--font-small {
+    font-size: 0.12rem;
+  }
+
+  &--white {
+    color: $primaryColor--green;
+    background-color: #fff;
+  }
+
+  &--green {
+    color: #fff;
+    background-color: $primaryColor--green;
+  }
+
+  &-border {
+    border: 2px solid #fff;
+  }
+
+  &--close {
+    background: url(/myPub/naverWorks/images/cs-btn-delete-grey-1.svg) no-repeat;
+    background-size: contain;
+  }
+}
+
+.mobile-download {
+  position: fixed;
+  left: 100vw;
+  bottom: 0;
+  width: 100%;
+  height: 0.88rem;
+  padding: $mobile-gap--small--respon;
+  background-color: #fff;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  transition: $aniTime--fast;
+
+  & .btn {
+    font-size: 0.16rem;
+  }
+}
+
+
+.start__btn {
+  height: 56px;
+  margin: $mobile-gap--small 0 0;
+
+  & .btn {
+    font-weight: 700;
+    font-size: $fontSize--medium;
+  }
+}
+
+.to-top {
+  position: absolute;
+  bottom: $mobile-gap--small--respon;
+  right: $mobile-gap--small--respon;
+  width: 0.48rem;
+  height: 0.48rem;
+  max-width: 64px;
+  max-height: 64px;
+  border-radius: 50%;
+  background: #000 url(/myPub/naverWorks/images/icon-top-mobile.svg) no-repeat;
+  background-position: center;
+  opacity: 0.5;
+}
+
+.inquiry {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  padding: 14px 14px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.1);
+  transition: $aniTime--fast ease-in-out;
+
+  &.active {
+    width: 94px;
+    padding: 14px 22px;
+  }
+
+  &.active &__link {
+    opacity: 1;
+    display: inline;
+  }
+
+  &__btn {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px 0 0;
+    outline: none;
+    background: url(/myPub/naverWorks/images/icon-cs.svg) no-repeat;
+  }
+
+  &__link {
+    opacity: 0;
+    display: none;
+    flex: 0 0 auto;
+    font-weight: 700;
+    font-size: $mobile-gap--small;
+    transition: $aniTime--fast;
+  }
+}

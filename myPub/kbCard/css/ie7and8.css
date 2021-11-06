@@ -1,0 +1,83 @@
+/* 시맨틱 태그 */
+header , footer , section , article,nav, aside{display:block;}
+
+/* ****** index.html start ****** */
+.bg_overlay {background:rgba(0, 0, 0, 0.5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000)}
+/* ****** index.html END ****** */
+
+
+
+
+/* ****** main.html start ****** */
+/* card:hover start */
+.cl_list a:link {text-decoration:none}
+.cl_list a:hover .tit {text-decoration:underline;}
+.cl_list a:hover .card_hover{border:0 none;background:url(../images/card_border.png) no-repeat}
+.ch {width:82.5px}
+.ch.b33 {width:83px}
+/* card:hover END */
+/* ****** main.html END ****** */
+
+
+
+
+
+/* ****** login.html start ****** */
+.rbtop a, .login .rbtop a {background:url(../images/login_radius.png) no-repeat}
+.rbbottom a {border:0 none;background:url(../images/app_radius.png) no-repeat}
+.safety_list.num1 a {border:0 none;background:url(../images/virtual_radius.png) no-repeat}
+.mem_join a {border:0 none;background:url(../images/join_radius.png) no-repeat}
+.safety_list a {border:0 none;background:url(../images/join1_radius.png) no-repeat}
+.faq p {background:url(../images/more_radius.png) no-repeat}
+.faq p a {border:0 none}
+.faq .more a {border:0 none}
+.safety_list .selected {border:0 none}
+.safety .safety_list a {border:0 none}
+
+/* ****** login.html END ****** */
+
+
+
+
+/* ****** join1.html start ****** */
+.join1 input, .join1 select {line-height:40px}
+.cardNum_box {background:url(../images/ie/bg_cardNumbg.gif) no-repeat center}
+.cardNum.row2 {background:url(../images/bg_cardNum.gif) no-repeat 30px 0}
+.cvc2Code {background:url(../images/ie/bg_cardNum_cvc_ie.png) no-repeat center}
+.cvc2Code input {margin-top:17px}
+.cvc2Code input[type='button'] {margin-right:37px}
+.join1 .next_page a {background:url(../images/ie/next_page_ie.gif) no-repeat center}
+.virtualPad a {border:0 none;background:url(../images/virtual_radius.png) no-repeat center}
+.join1 select {height:auto}
+/* ****** join1.html END ****** */
+
+
+
+
+/* ****** manual.html start ****** */
+.box_radius {padding:10px 10px}
+.manual .sstDes {padding-right:11%}
+.mat.uDep3 .ms_list {padding:10px 5px}
+.mat.uDep3 .ms_list a, .box_radius a {border:0 none;}
+.mat.uDep3 .ms_list.num1 {background:url(../images/ie/manual_sate_box01.gif) no-repeat 9px center}
+.mat.uDep3 .ms_list.num1 a {background-position:171px center}
+.mat.uDep3 .ms_list.num2 {background:url(../images/ie/manual_sate_box02.gif) no-repeat 9px center}
+.mat.uDep3 .ms_list.num2 a {background-position:202px center}
+.mat.uDep3 .ms_list.num3 {background:url(../images/ie/manual_sate_box03.gif) no-repeat 9px center}
+.mat.uDep3 .ms_list.num3 a {background-position:212px center}
+.mat.uDep3 .ms_list.num4 {background:url(../images/ie/manual_sate_box04.gif) no-repeat 9px center}
+.mat.uDep3 .ms_list.num4 a {background-position:190px center}
+
+.box_radius.site1 {background:url(../images/ie/manual_sate_box05.gif) no-repeat center}
+.box_radius.site2 {background:url(../images/ie/manual_sate_box06.gif) no-repeat center}
+/* ****** manual.html END ****** */
+
+
+
+
+/* ****** card01.html start ****** */
+
+/* border-radius 미적용돼서 background-image로 교체 */
+.card_info .info_search a {background:url(../images/ie/card01_box.png) no-repeat}
+
+/* ****** manual.html END ****** */

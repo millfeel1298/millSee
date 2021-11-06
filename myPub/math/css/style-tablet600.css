@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+@media ( min-width:600px ) and (max-width:767px)	{
+    /* ***** reset 시작 ***** */
+    :root   {
+        font-size: 14px
+    }
+
+    body    {
+        font-size: 1rem;
+    }
+
+    /* ***** reset 끝 ***** */
+
+    /* ***** common 시작 ***** */
+    .directions-wordbrake   {
+        margin-left: 20px;
+    }
+
+    /* header */
+    .header-default-style   {
+        height: 48px;
+    }
+
+    .header-default-style > .container  {
+        max-width: 600px;
+    }
+
+    .header-default-style .study_tit {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: calc(100% - 96px);
+    }
+    /* ***** common 끝 ***** */
+
+
+
+
+    /* ***** 목차 시작 ***** */
+    .contents-wrap .container,
+    .unitWrap .container,
+    .achieveView-wrap .container   {
+        width: 520px;
+    }
+
+    .contents-wrap .unit-list li    {
+        width: 116px;
+        height: 160px;
+    }
+
+    .contents-wrap .unit-list h4    {
+        height: 32px;
+    }
+
+    .contents-wrap .unit-list h5    {
+        height: 36px;
+    }
+
+    .contents-wrap .unit-list li > a > div  {
+        padding: 6px 8px;
+    }
+
+    .contents-wrap h3 em    {
+        font-size: 1.714285714285714rem;
+    }
+
+    .contents-wrap > div > ul   {
+        margin-top: 16px;
+    }
+
+    .contents-wrap .unit-list dt    {
+        margin-bottom: 4px;
+    }
+
+    .contents-wrap > div > ul > li  {
+        margin-bottom: 20px;
+    }
+
+    .contents-wrap .gaugebar-wrap p {
+        margin-top: 6px;
+    }
+    /* ***** 목차 끝 ***** */
+
+
+
+
+    /* ***** 목차 리스트 시작 ***** */
+    .unitList-box > ul > li > div   {
+        width: 216px;
+    }
+
+    .unitNumber-box li  {
+        border: 4px solid #a99f99;
+    }
+    /* ***** 목차 리스트 끝 ***** */
+
+
+
+
+    /* ***** 목차 리스트 성취율보기 시작 ***** */
+    .achieveList-box .box   {
+        width: 300px;
+    }
+    /* ***** 목차 리스트 성취율보기 끝 ***** */
+
+}
+

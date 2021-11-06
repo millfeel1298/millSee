@@ -1,0 +1,222 @@
+.tab {
+  &__tit {
+    position: relative;
+    padding: 0 $mobile-gap--small--respon $mobile-gap--medium--respon ;
+
+    @include media('tablet') {
+      padding: 0 $mobile-gap--small--respon 40px ;
+    }
+  }
+  &__container {
+    overflow-x: hidden;
+  }
+}
+
+.tab-menu {
+  padding: 0 $mobile-gap--small--respon;
+  @include media('tablet') {
+    
+  }
+
+  &__container {
+    transition: $aniTime--fast;
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    width: auto !important;
+    font-size: $fontSize--medium;
+    outline: none;
+    transition: $aniTime--fast ease-in-out;
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+
+  &__item ~ &__item {
+    margin: 0 0 0 $mobile-gap--medium;
+  }
+
+  &__item.active &__bar {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  &__bar {
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background: $primaryColor--green;
+    transform: translateX(-50%) scaleX(0);
+    transition: transform 300ms ease-in-out;
+  }
+
+  &__control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &--prev::after,
+  &--next::after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 25px;
+    content: '';
+  }
+
+  &--prev {
+    position: absolute;
+    left: 0;
+    margin: 0;
+  }
+
+  &--next {
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+
+  &--prev::after {
+    left: 0;
+    background: url(/myPub/naverWorks/images/tabSlideArrow_prev.png) no-repeat;
+    background-size: contain;
+  }
+
+  &--next::after {
+    right: 0;
+    background: url(/myPub/naverWorks/images/tabSlideArrow_next.png) no-repeat;
+    background-size: contain;
+  }
+
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+}
+
+.tab-content {
+  padding: $mobile-gap--large--respon 0 $mobile-gap--large;
+  
+  @include media('tablet') {
+    padding: 40px 0 40px;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__imgs {
+    padding: 0 $mobile-gap--small--respon $mobile-gap--small--respon;
+  }
+
+  &__txts {
+    position: relative;
+    padding: 0 $mobile-gap--small--respon;
+  }
+
+  &__tit {
+    padding: 0 0 $mobile-gap--small 0;
+
+    & strong {
+      font-size: $fontSize--xsmall;
+      color: $primaryColor--green;
+
+      @include media('tablet') {
+        font-size: $fontSize--medium;
+      }
+    }
+
+    & .content__tit {
+      margin: $mobile-gap--xsmall 0 0;
+    }
+  }
+
+  &__summary {
+    padding: 0 0 $mobile-gap--small;
+    line-height: 1.5;
+    word-break: keep-all;
+
+    @include media('tablet') {
+      font-size: $fontSize--medium;
+      line-height: 1.8;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $color--link;
+
+    @include media('tablet') {
+      font-size: $fontSize--medium;
+    }
+
+    &::after {
+      display: inline-block;
+      width: 33px;
+      height: 14px;
+      margin: 0 0 0 8px;
+      background: url(/myPub/naverWorks/images/img-sprite.svg) no-repeat;
+      background-position: 0 -1247px;
+      background-size: 83px 3561px;
+      content: '';
+    }
+  }
+
+  &__control button {
+    display: none;
+  }
+}
+
+.tab__business {
+  & .tab-content__txts .content__tit {
+    z-index: 1;
+    position: relative;
+    top: -40px;
+    left: 0;
+
+    @include media('tablet') {
+      top: -46px;
+    }
+  }
+
+  & .tab-content__imgs {
+    overflow: hidden;
+    max-height: 460px;
+    padding: 0 0 $mobile-gap--small--respon;
+
+    @include media('tablet') {
+      max-height: 680px;
+    }
+  }
+
+  & .tab-content__txts::after {
+    position: absolute;
+    top: -56px;
+    left: 0;
+    width: 3rem;
+    height: 64px;
+    background: #fff;
+    content: '';
+
+    @include media('tablet') {
+      top: -62px;
+      width: 1.9rem;
+    }
+  }
+
+  & .tab-content__summary {
+    margin: -8px 0 0;
+
+    @include media('tablet') {
+      margin: -24px 0 0;
+    }
+  }
+}

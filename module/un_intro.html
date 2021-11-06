@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <style>
+    .wrap {
+      background: url(/images/mirasee_bg.png)
+    }
+
+    .un_intro_txt_wrap,
+    .un_intro_txt_wrap_copy {
+      z-index: 1;
+      position: absolute;
+      top: 48%;
+      left: 23%;
+    }
+
+    .un_intro_txt {
+      display: none;
+      font-family: 'UhBeeSeulvely', 'Courier New', Courier, monospace;
+      font-size: 2.5vw;
+    }
+
+    .un_intro_txt_wrap_copy .is_show {
+      display: inline-block;
+      animation: ani_intro_txt_cursor 0.3s infinite;
+    }
+
+    @keyframes ani_intro_txt_cursor {
+      0% { border-right: 2px solid #fff }
+      50% { border-right: 2px solid #000 }
+      100% { border-right: 2px solid #fff}
+    }
+
+    .un_intro_txt_strong {
+      color: #c75876;
+    }
+
+    .un_intro_sticker {
+      z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 4rem;
+      width: 12%;
+      padding-top: 14%;
+      background: transparent url(/images/un_intro_heart.svg) no-repeat left bottom;
+      background-size: 84.5%;
+      animation: ani_intro_sticker 1s infinite alternate cubic-bezier(.68,-0.6,.32,1.6);
+    }
+
+    .un_intro_sticker:hover {
+      background-image: url(/images/un_intro_heart_hover.svg);
+      background-size: 100%;
+      animation-play-state: paused;
+    }
+
+    @keyframes ani_intro_sticker {
+      0% { transform: rotate(10deg);}
+      100% { transform: rotate(-10deg);}
+    }
+
+    .un_intro_sticker_txt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 85%;
+      height: 100%;
+      padding-top:15%;
+      font-family: 'UhBeeSeulvely', 'Courier New', Courier, monospace;
+      font-size: 2.5vw;
+    }
+
+    .un_intro_bg {
+      overflow: hidden;
+      position: relative;
+      height: 100vh;
+    }
+
+    .un_intro_bg img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      transition: 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="un_intro">
+      <div class="un_intro_txt_wrap">
+        <p class="un_intro_txt">안녕하세요! millSee에 방문해 주셔서 감사합니다.</p>
+        <p class="un_intro_txt">제 포트폴리오가 궁금하시다면...</p>
+        <p class="un_intro_txt">"heart"를 "Click"해 주세요~♥♥♥</p>
+      </div>
+      <div class="un_intro_txt_wrap_copy">
+        <p class="un_intro_txt"></p>
+        <p class="un_intro_txt"></p>
+        <p class="un_intro_txt"></p>
+      </div>
+      <button class="un_intro_sticker" type="button">
+        <span class="un_intro_sticker_txt">pick</span>
+      </button>
+      <figure class="un_intro_bg">
+        <img src="/images/intro.abedc531.jpg" alt="">
+      </figure>
+    </div>
+
+
+  </div>
+
+  <script>
+    const $un_intro = document.querySelector('.un_intro');
+    const $un_intro_sticker = document.querySelector('.un_intro_sticker');
+    const $un_intro_bg = document.querySelector('.un_intro_bg img');
+    const $un_intro_txt_wrap = document.querySelector('.un_intro_txt_wrap');
+    const $un_intro_txt = document.querySelector('.un_intro_txt');
+    const $un_intro_txt_wrap_copy = document.querySelector('.un_intro_txt_wrap_copy');
+
+    // intro 소멸 이벤트
+    $un_intro_sticker.addEventListener('click', function () {
+      const delay = 1000;
+      $un_intro_bg.style.transform = `translate(-50%, -50%) scale(3)`;
+      $un_intro_bg.style.opacity = 0;
+      setTimeout(() => {
+        $un_intro.style.display = 'none';
+      }, delay);
+    })
+
+    // intro 타이핑 효과 
+    let typing_int = null;
+    let typing_bool = false;
+    let typing_para_idx = 0
+    let typing_idx = 0;
+
+
+    let typing_txt = $un_intro_txt_wrap.children[typing_para_idx].textContent; //타이핑될 텍스트를 가져온다.
+    typing_txt = typing_txt.split(''); //한글자씩 자른다.
+
+    if (typing_bool === false) {
+      typing_bool = true;
+      typing_int = setInterval(typing_fun, 100);
+    }
+
+    function typing_fun() {
+      const typing_paraArr = $un_intro_txt_wrap_copy.children;
+      const typing_parLength = typing_paraArr.length;
+      const checkEng = /[a-zA-Z]/g;
+
+      for (let i = 0; i < typing_parLength; i++) { // 전체 문단에서 .is_show 삭제
+        typing_paraArr[i].classList.remove('is_show');
+      }
+
+      typing_paraArr[typing_para_idx].classList.add('is_show'); // 현재 문단에 .is_show 추가
+
+      if (typing_idx < typing_txt.length) {
+        if (checkEng.test(typing_txt[typing_idx])) { // 영어와 한글 구분 
+          $un_intro_txt_wrap_copy.children[typing_para_idx].insertAdjacentHTML('beforeend',
+            `<strong class='un_intro_txt_strong'>${typing_txt[typing_idx]}</strong>`); // 영어만 태그 삽입
+        } else {
+          $un_intro_txt_wrap_copy.children[typing_para_idx].append(typing_txt[typing_idx]);
+        }
+        typing_idx++;
+      } else {
+        if (typing_para_idx < typing_parLength - 1) {
+          //다음문장으로  가기위해 인덱스를 1증가
+          typing_para_idx++;
+          //다음문장을 타이핑하기위한 셋팅
+          typing_idx = 0;
+          typing_bool = false;
+          typing_txt = $un_intro_txt_wrap.children[typing_para_idx].textContent;
+
+          //다음문장 타이핑전 1초 쉰다
+          clearInterval(typing_int);
+          //타이핑종료
+
+          setTimeout(function () {
+            //1초후에 다시 타이핑 반복 시작
+            typing_int = setInterval(typing_fun, 100);
+          }, 1000);
+        } else if (typing_para_idx == typing_parLength - 1) {
+
+          //마지막 문장까지 써지면 반복종료
+          clearInterval(typing_int);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

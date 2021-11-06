@@ -1,0 +1,46 @@
+/* layout.css */
+
+#wrapper{}
+header	{}
+#main	{}			
+footer	{}
+
+.container {width:960px;height:100%;margin:0 auto} /* overflow:hidden 높이값을 인식하게 만들기 위해 사용 */
+
+.headertop {height:70px;background-color:#fff}
+nav	{height:50px;background-color:#ffdf01}
+
+.sect		{}
+.sect.s1 {height:680px;margin-bottom:40px;padding-top:160px}
+.sect.s2 {height:680px;margin-bottom:40px}
+.sect.s3 {height:680px;margin-bottom:70px}
+
+.sect.s1 .row.r1 {height:360px;}
+.sect.s1 .row.r2 {height:320px;}
+.sect.s2 .row.r1 {height:720px;}
+.sect.s3 .row.r1 {height:380px;}
+.sect.s3 .row.r2 {height:300px;}
+
+
+/* .sect.s1 */
+.row.r1 .a4, .row.r2 .a4 {float:left;width:240px;height:100%}
+.row.r1 .a4.a42 {border-top:1px solid #cecece;border-left:1px solid #cecece;box-sizing:border-box}  /* IE7 호환 안함 */
+.row.r1 .a4.a4142, .row.r2 .a4.a4142 {width:480px}
+.row.r1 .a4.a43 {background-color:#f9f9fa}
+.row.r2 .a4.a4142 {background-color:#f2f2f3}
+
+
+/* .sect.s2 */
+.a2 {float:left}
+.a2.a21 {width:700px}
+.a2.a22 {width:260px;background-color:#fafafa}
+
+
+/* .sect.s3 */
+.row.r1 .a3, .row.r2 .a3 {float:left;width:350px;height:100%}
+.row.r1 .a3.a33, .row.r2 .a3.a33 {width:260px}
+
+
+.footertop,  .footermiddle {border-top:1px solid #ccc;box-sizing:border-box} /* IE7 호환 안함 */
+.footertop {height:290px}  
+.footerbottom {height:80px;background-color:#f5f6f7} 

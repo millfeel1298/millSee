@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <style>
+    .bl_textSlide_wrap {
+      overflow: hidden;
+    }
+
+    .bl_textSlide {
+      position: relative;
+      height: 100%;
+      background: #eee;
+    }
+
+    .bl_textSlide_item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 2rem;
+      background: pink;
+      font-family: '국립박물관문화재단클래식B', 'Courier New', Courier, monospace;
+      font-size: 6.6rem;
+      text-align: center;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bl_textSlide_wrap">
+    <ul class="bl_textSlide">
+      <li class="bl_textSlide_item">재미있다.</li>
+      <li class="bl_textSlide_item">배고프다.</li>
+      <li class="bl_textSlide_item">슬프다</li>
+    </ul>
+  </div>
+  <script>
+    function textroulette() {
+      const $bl_textSlide = document.querySelector('.bl_textSlide');
+      const $bl_textSlide_spped = 1000;
+      let children = null;
+      let width = 0;
+      let height = 0;
+      let curIdx = 0;
+
+      // 요소 복제, 삽입
+      const firstChild = $bl_textSlide.firstElementChild.cloneNode(true);
+      const lastChild = $bl_textSlide.lastElementChild.cloneNode(true);
+      $bl_textSlide.append(firstChild)
+
+      // 슬라이드 아이템 갯수 재정의
+      children = $bl_textSlide.children;
+
+      // 슬라이드 아이템 중 width/height 값이 가장 긴 값을 찾는다.
+      for (let i = 0; i < children.length; i++) {
+        width = Math.max(children[i].offsetWidth, width);
+        height = Math.max(children[i].offsetHeight, height);
+      }
+
+      // 슬라이드 아이템에 가장 긴 값을 할당한다.
+      for (let i = 0; i < children.length; i++) {
+        children[i].style.width = `${width + 1}px`; // offsetWidth/height가 소수점을 제거하고 큰 값을 반환하다보니 크기가 미묘하게 작아서 +1을 줌
+        children[i].style.top = `${i * 100}%`;
+      }
+
+      // 슬라이드 최상위 부모에게 크기를 할당한다. (자식들이 absolute라 크기가 존재하지 않기 때문에)
+      $bl_textSlide.parentElement.style.width = `${width}px`;
+      $bl_textSlide.parentElement.style.height = `${height}px`;
+
+
+      const setTextSlide_timer = setInterval(() => {
+        $bl_textSlide.style.transition = `${$bl_textSlide_spped}ms transform`;
+        $bl_textSlide.style.transform = `translate3d(0, ${curIdx * -100}%, 0)`;
+        curIdx++;
+
+        if (curIdx === children.length - 1) {
+          setTimeout(() => {
+            $bl_textSlide.style.transition = 'none';
+            $bl_textSlide.style.transform = `translate3d(0, 0%, 0)`;
+            curIdx = 1;
+          }, $bl_textSlide_spped * 2);
+        }
+      }, $bl_textSlide_spped);
+
+      $bl_textSlide.addEventListener('click', function (e) {
+        clearInterval(setTextSlide_timer);
+      })
+    }
+
+
+
+    window.addEventListener('load', function () {
+      textroulette();
+    })
+  </script>
+</body>
+
+</html>

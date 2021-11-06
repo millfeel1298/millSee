@@ -1,0 +1,7 @@
+@media screen and (max-width: $desktop--respon - 1) {
+  .only-desktop { display: none; }
+}
+
+@media screen and (min-width: $desktop--respon) {
+  .only-mobile { display: none; }
+}
