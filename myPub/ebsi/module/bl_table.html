@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_vertTable */
+    .bl_vertTable {
+      overflow-x: auto;
+      border-top: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+    }
+
+    .bl_vertTable table {
+      width: auto;
+      min-width: 100%;
+    }
+
+    .bl_vertTable th,
+    .bl_vertTable td {
+      padding: 1.6rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .bl_vertTable th {
+      border-right: 0 none;
+      border-bottom: 1px solid #d9d9d9;
+      border-left: 1px solid #d9d9d9;
+      font-weight: 500;
+
+
+      background: #f6f6f6;
+    }
+
+    .bl_vertTable td {
+      border-left: 1px solid #d9d9d9;
+      border-bottom: 1px solid #d9d9d9;
+      font-weight: 300;
+      background: #fff;
+    }
+
+    .bl_vertTable tbody tr td:first-child {
+      border-left: 0;
+    }
+
+    .bl_vertTable tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .bl_vertTable td strong {
+      font-weight: 500;
+    }
+
+    .bl_signUpAnno .bl_vertTable tbody tr:first-child td:last-child {
+      border-bottom: 0;
+    }
+
+    @media (min-width: 600px) {
+      .bl_vertTable {
+        border-right: 1px solid #d9d9d9;
+      }
+    }
+
+    /* //bl_vertTable */
+  </style>
+</head>
+
+<body style="padding: 40px">
+  <div class="bl_vertTable">
+    <table border="1" cellpadding="0" cellspacing="0" summary="수집목적, 수집항목, 보유기간 안내">
+      <caption class="hp_a11y">개인정보 수집 및 이용에 대한 안내 (필수)</caption>
+      <thead>
+        <tr>
+          <th scope="col">수집목적</th>
+          <th scope="col">수집항목</th>
+          <th scope="col">보유기간</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>이용자 식별 및 본인 여부 확인</td>
+          <td>아이디, 비밀번호, 이름, 생년월일, 이메일, 단말기 기기정보</td>
+          <td>회원탈퇴 시 까지</td>
+        </tr>
+        <tr>
+          <td>만14세 미만 가입 시 법정대리인 동의</td>
+          <td>법정대리인 이름, 법정대리인 휴대전화번호 혹은 아이핀</td>
+          <td><strong>회원탈퇴 시 까지</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bl_signUpAnno">
+    <div class="bl_vertTable">
+      <table border="1" cellpadding="0" cellspacing="0" summary="수집목적, 수집항목, 보유기간 안내">
+        <caption class="hp_a11y">개인정보 수집 및 이용에 대한 안내 (필수)</caption>
+        <thead>
+          <tr>
+            <th scope="col">수집목적</th>
+            <th scope="col">수집항목</th>
+            <th scope="col">보유기간</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>이용자 식별 및 본인 여부 확인</td>
+            <td>아이디, 비밀번호, 이름, 생년월일, 이메일, 단말기 기기정보</td>
+            <td rowspan="2"><strong>회원탈퇴 시 까지</strong></td>
+          </tr>
+          <tr>
+            <td>만14세 미만 가입 시 법정대리인 동의</td>
+            <td>법정대리인 이름, 법정대리인 휴대전화번호 혹은 아이핀</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

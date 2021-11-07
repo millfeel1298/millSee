@@ -65,6 +65,7 @@
                       <span class="hp_a11y"></span>
                     </button>`;
       $bl_pagenation.insertAdjacentHTML('beforeend', addElem);
+
     }
   }
 
@@ -96,12 +97,14 @@
 
   // load시 현재의 curScene 설정
   function set_curScene_idx() {
+    const scrollY = window.scrollY;
     const scene_heights = set_sceneHeight();
     let total_height = 0;
 
+
     for (let i = 0; i < scene_totals.length; i++) {
       total_height += scene_heights[i];
-      if (window.scrollY > total_height) {
+      if (scrollY > total_height) {
         curScene++;
       } else {
         break;
@@ -115,21 +118,23 @@
 
   // scroll시 curScene 업데이트
   function set_scroll_curScene() {
+    const scrollY = window.scrollY;
     const scene_heights = set_sceneHeight();
     let prev_height = 0;
     let total_height = 0;
+
 
     for (let i = 0; i <= curScene; i++) {
       total_height += scene_heights[i];
       prev_height = total_height - scene_heights[i];
     }
 
-    if (window.scrollY > total_height) {
+    if (scrollY > total_height) {
       curScene++
     }
 
-    if (window.scrollY < prev_height) {
-      if (curScene < 0) {
+    if (scrollY < prev_height) {
+      if (curScene === 0) {
         return curScene = 0;
       }
       --curScene
@@ -455,6 +460,7 @@
   window.addEventListener('resize', () => {
     set_sceneHeight();
     scroll_nav_show();
+    set_sceneHeight();
     if (window.outerWidth > brakePC) {
       ani_scroll_curScene();
     }

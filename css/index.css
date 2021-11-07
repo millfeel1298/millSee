@@ -1174,6 +1174,10 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .bl_project_wrap {
+    width: 64%;
+  }
+
   .bl_project {
     padding: 6rem;
   }
@@ -1983,7 +1987,7 @@ body {
 
 @media (min-width: 1200px) {
   .sub_header {
-    margin-right: -5.8rem;
+    margin-right: 10.2rem;
   }
 
   .sub_header_link {
