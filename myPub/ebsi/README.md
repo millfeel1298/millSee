@@ -8,7 +8,8 @@ ebsi 기술 상세서
 회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
 <b>millSee는 어떤 방법으로 재사용을 할까요?</b>
 
-<img scr="https://user-images.githubusercontent.com/61076742/140642569-772a4687-5a85-4b00-9876-d2ac0ceaed12.png" height="40">
+
+<img scr="https://user-images.githubusercontent.com/61076742/140642586-85f4b4c9-a22e-4694-a7e1-5e20dfdedf31.png" height="40">
 
 index.html에서 GNB 영역에 있는 링크 
 
