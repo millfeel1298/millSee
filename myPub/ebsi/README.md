@@ -11,6 +11,7 @@ ebsi 기술 상세서
 <br><br>
 
 ![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
+<br>
 index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 하겠습니다.
 
 ```HTML
