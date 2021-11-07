@@ -90,9 +90,9 @@ Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, �
     background-position: -58.8rem -57.6rem;
 }
 ```
-부모의 이름을 중접시켜서 사용에 제한을 주고, font-size, 크기, 이미지 설정을 해주었습니다.
+부모의 이름을 중접시켜서 사용에 제한을 주고, font-size, 크기, 이미지 설정을 해주었습니다.<br>
 결과물은 아래와 같습니다.
-<br>
+<br><br>
 ![image](https://user-images.githubusercontent.com/61076742/140644008-89b185e1-17f9-454c-a90a-1201bc8a1cdf.png)
 
 
