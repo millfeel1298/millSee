@@ -12,12 +12,13 @@ ebsi 기술 상세서
 
 ![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
 <br><br>
-index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 하겠습니다.
+index.html에서 GNB 영역에 있는 링크를 재사용하는 것을 보기 전에 재사용할 코드부터 확인하고 넘어가겠습니다.
 
 ```HTML
 <a class="el_leftIconBtn" href="">5분 개념</a>
 ```
 위와 같이 PRECSS를 사용하면, Calss Name을 통해 재사용 가능한 Element 요소이고, 아이콘이 왼쪽에 있으며 버튼 기능을 한다는 것을 알 수 있습니다.
+<br>
 
 ```CSS
 .el_leftIconBtn {
@@ -32,9 +33,72 @@ index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 하겠습
     content: '';
 }
 ```
+Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, 아이콘의 크기가 일정하지 않을 확률이 크기 때문에 (일정하다면, 설정하는게 편하겠죠?)
+재사용성을 위해 기본 크기 값을 설정하지 않았습니다.
+<br><br>
 
+```HTML
+<!-- 예시 -->
+<div class="bl_test">
+    <a class="el_leftIconBtn el_leftIconBtn__time" href="">5분 개념</a>
+</div>
+```
+위의 예시처럼 .bl_test에 el_leftIconBtn이 상속 돼 있다면
+<br><br>
 
+```CSS
+<!-- 예시 -->
+.bl_test .el_leftIconBtn::before {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.4rem;
+}
 
+.bl_navConts .el_leftIconBtn__time::before {
+    background-image: url(/myPub/ebsi/image/common/ico_gnb_time.png);
+}
+```
+부모에게 중첩시켜 크기 설정과 이미지를 설정합니다. 이렇게 사용하는 이유는 사용에 대한 제한을 하는 것입니다.
+<br><br>
+
+```HTML
+<div class="bl_test">
+    <a class="el_leftIconBtn el_leftIconBtn__time" href="">5분 개념</a>
+</div>
+```
+부모에게 중첩시켜 크기 설정에 대한 제한을 설정합니다.
+
+<br></br>
+본격적으로 재사용을 해 보겠습니다.
+
+```HTML
+<div class="bl_signUpAnno">
+    <a class="el_leftIconBtn el_leftIconBtn__iconSet" href="">이용약관 (필수)</a>
+</div>
+```
+부모의 이름이 바뀌고, icon에 사용할 이름이 변경되었습니다.
+<br><br>
+
+```CSS
+.bl_signUpAnno .el_leftIconBtn {
+    font-size: 2rem;
+}
+
+.bl_signUpAnno .el_leftIconBtn::before {
+    width: 1.2rem;
+    height: 2.2rem;
+    margin-right: 0.4rem;
+}
+
+.bl_signUpAnno .el_leftIconBtn__iconSet::before {
+    background-image: url(/myPub/ebsi/image/common/icon_set.png);
+    background-size: 60rem 60rem;
+    background-position: -58.8rem -57.6rem;
+}
+```
+부모의 이름을 중접시켜서 사용에 제한을 주고, font-size, 크기, 이미지 설정을 해주었습니다.
+결과물은 아래와 같습니다. 
+![image](https://user-images.githubusercontent.com/61076742/140644008-89b185e1-17f9-454c-a90a-1201bc8a1cdf.png)
 
 
 ## 02. CSS3
