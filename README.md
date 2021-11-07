@@ -62,7 +62,7 @@ function set_scroll_curScene() {
     }
 
     if (window.scrollY < prev_height) {
-        if (curScene === 0) {
+        if (curScene < 0) {
             return curScene = 0;
         }
             --curScene
@@ -72,11 +72,15 @@ function set_scroll_curScene() {
     document.body.classList.add(`js_scene_${curScene}`);
 }
 ```
-Load에서는 위 -> 아래로 흐르는 일방통행이기 때문에 Scene의 높이 값을 축척해서 scrollY과 비교해주면 비교적 쉽게 얻을 수 있었습니다.
+Load에서는 위 -> 아래로 흐르는 일방통행었기 때문에 Scene의 높이 값을 축척해 scrollY와 비교해주면 비교적 쉽게 얻을 수 있었습니다.
 하지만 scroll의 경우 양방향으로 움직일 수 있기 때문에 이전의 높이 값(prev_height)과 축척된 높이 값(total_height)값이 필요합니다.
 
 prev_height < scrollY < total_height <br>
-&nbsp;&nbsp;이전값 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 유지 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다음값
+&nbsp;&nbsp;이전값 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  유지 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 다음값 <br>
+    <br>
+위의 비교식처럼 상태를 유지하면 curScene의 값이 유지되지만, scrollY의 값이 total_height보다 크면 curScene이 증가합니다.
+반대로 scrollY 값이 prev_height 값보다 작으면 감소합니다. <br>
+그리고 curScene이 0보다 작아질 경우 0으로 설정하는 이유는 스크롤 속도가 빠르거나, 모바일에서 상단에 도착했을 때 음수 값이 될 수 있으므로, 방지차원차 사용했습니다.
 <br>
 <br>
     
