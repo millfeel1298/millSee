@@ -76,7 +76,7 @@ Load에서는 위 -> 아래로 흐르는 일방통행이기 때문에 Scene의 �
 하지만 scroll의 경우 양방향으로 움직일 수 있기 때문에 이전의 높이 값(prev_height)과 축척된 높이 값(total_height)값이 필요합니다.
 
 prev_height < scrollY < total_height <br>
-이전값          유지      다음값
+&nbsp;&nbsp;이전값 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 유지 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다음값
 <br>
 <br>
     
