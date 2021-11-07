@@ -9,7 +9,8 @@ ebsi 기술 상세서
 <b>millSee는 어떤 방법으로 재사용을 할까요?</b>
 
 <br>
-![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png) <br>
+
+![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
 
 index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 하겠습니다.
 
