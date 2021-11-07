@@ -5,8 +5,11 @@ ebsi 기술 상세서
 ### @ Element
 #### [ 재사용 ]
 <img src="https://user-images.githubusercontent.com/61076742/140642304-bafa3288-211e-488f-9089-495b7eb93ce6.png" height="40">
-회원가입 페이지에서 위와 같은 디자인을 만났습니다. __millSee는 어떤 방법으로 재사용을 할까요?__
-<img scr="https://user-images.githubusercontent.com/61076742/140642376-89615998-2ea6-427b-b9cb-bda51ab29458.png" height="40">
+회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
+<b>millSee는 어떤 방법으로 재사용을 할까요?</b>
+
+<img scr="https://user-images.githubusercontent.com/61076742/140642569-772a4687-5a85-4b00-9876-d2ac0ceaed12.png" height="40">
+
 index.html에서 GNB 영역에 있는 링크 
 
 
