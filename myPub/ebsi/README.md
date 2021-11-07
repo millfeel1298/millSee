@@ -1,4 +1,4 @@
-millSee 기술 상세서
+ebsi 기술 상세서
 ===
 ## 01. HTML5
 
