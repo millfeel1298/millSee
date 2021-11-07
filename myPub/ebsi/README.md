@@ -8,7 +8,7 @@ ebsi 기술 상세서
 회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
 <b>millSee는 어떤 방법으로 재사용을 할까요?</b>
 
-<br>
+<br><br>
 
 ![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
 <br><br>
