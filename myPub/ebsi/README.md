@@ -8,9 +8,29 @@ ebsi 기술 상세서
 회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
 <b>millSee는 어떤 방법으로 재사용을 할까요?</b>
 
-<br></br>
-![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
-index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 자.
+<br>
+![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png) <br>
+
+index.html에서 GNB 영역에 있는 링크를 재사용해 보도록 하겠습니다.
+
+```HTML
+<a class="el_leftIconBtn" href="">5분 개념</a>
+```
+위와 같이 PRECSS를 사용하면, Calss Name을 통해 재사용 가능한 Element 요소이고, 아이콘이 왼쪽에 있으며 버튼 기능을 한다는 것을 알 수 있습니다.
+
+```CSS
+.el_leftIconBtn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+}
+
+.el_leftIconBtn::before {
+    display: inline-block;
+    background-repeat: no-repeat;
+    content: '';
+}
+```
 
 
 
