@@ -1130,7 +1130,7 @@ body {
 @media (min-width: 600px) {
   .bl_project_wrap {
     top: 3.8rem;
-    width: 86%;
+    width: 72%;
     margin: 0 auto;
     padding: 0;
   }
@@ -1168,7 +1168,7 @@ body {
   }
 
   .bl_project_link {
-    width: 46%;
+    width: 21rem;
     margin: 0 0.8rem 0 0;
   }
 }
@@ -1200,7 +1200,14 @@ body {
     transform: translateX(2rem)
   }
 
-  
+  .bl_project_info > div {
+    flex: 1 1 auto;
+    margin: 0 4rem 0 0;
+  }
+
+  .bl_project_info {
+    margin-bottom: 2.4rem;
+  }
 }
 /* //bl_project */
 
@@ -1983,7 +1990,7 @@ body {
 
 @media (min-width: 1200px) {
   .sub_header {
-    margin-right: -5.8rem;
+    margin-right: 2.1em;
   }
 
   .sub_header_link {
