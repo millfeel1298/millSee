@@ -1,10 +1,43 @@
 ebsi 기술 상세서
 ===
 ## 01. HTML5
+### @ Nameing 규칙
+millSee는 PRECSS라는 네이밍 규칙을 사용하고 있습니다.
+PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(접두어)를 붙이는 것이 특징으로 OOCSS, SMACSS, BEM에 많은 영향을 받았다고 합니다.
+
+<b>Q. BEM을 사용하지 않는 이유가 있나요?</b> <br>
+아래의 코드를 봐주세요.
+
+```HTML
+<!-- BEM 설계기법 -->
+<div id="wrap">
+    <header class="header"></header> 
+    <main class="cont"></main>
+    <footer class="footer"></footer>
+    <div class="popBanner"></div> 
+    <div class="danchooBtn"></div> 
+</div>
+
+<!-- PRECSS 설계기법 -->
+<div id="wrap">
+    <header class="ly_header"></header> 
+    <main class="ly_cont"></main>
+    <footer class="ly_footer"></footer>
+    <div class="bl_popBanner"></div> 
+    <div class="un_danchooBtn"></div> 
+</div>
+```
+.header와 .ly_header를 비교했을 때 header의 용도는 잘 모르겠지만 ly_이 붙어있으니 layout으로 추측은 가능합니다.
+HTML은 퍼블리셔 혼자보는 문서가 아닙니다. 디자이너, 개발자, 불특정 다수가 볼 수 있는 문서입니다.
+그렇기 때문에 설계기법을 몰라도 이것이 어떤 용도인지 알 수 있어야 한다고 생각하기에 PRECSS를 채용했습니다.
+*BEM이 나쁘다는 것이 아닌 취향차라는 것과 PRECSS의 문법 안에 BEM이 녹아져 있기 때문에 배제하는 것이 아닙니다!
+
+
+
 ### @ Block
 #### [ 재사용 ]
 <img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br><br>
-재사용에 대한 설명을 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
+재사용에 대한 설명을 하기 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
 [공통점]
 - title은 전체 Page에서 공통으로 사용하는 Style
 - 모든 형태가 list를 이루고 있다.
@@ -17,6 +50,34 @@ ebsi 기술 상세서
 - 라벨의 유무
 - 가로 정령 & 세로 정렬
 
+<br><br>
+```HTML
+<div class="bl_board_wrap">
+    <h2 class="el_pageLv2Ttl">알림방</h2>
+    <ul class="bl_board bl_board__border_2pxSolid000">
+      <li class="bl_board_item bl_board_item__lst_disc">
+        <a class="bl_board_link bl_board__flex" href="">
+          <div class="bl_board_label bl_board_label__notice">공지</div>
+          <div class="bl_board_ttl hp_textOmit">[당첨자발표] 9월 학모평 풀채점 이벤트</div>
+          <div class="bl_board_date">21.09.29</div>
+        </a>
+      </li>
+    </ul>
+    <a class="bl_board_more" href="">더보기</a>
+</div>
+```
+[공통된 스타일에 다른점 보완하기]
+- 더보기가 on / off로 나누어져 있다. -> <b>더보기는 컨텐츠이기 때문에 필요 없으면 삭제하면 됨.</b>
+- border는 on/off로 나누어져있다. -> <b>.bl_board__border_2pxSolid000를 통해서 on / off 가능.</b>
+- 블릿의 유무 -> <b>.bl_board_item__lst_disc를 사용해 on / off 가능.</b>
+- 라벨의 유무 -> <b>.bl_board_label 사용해 on / off 가능, __notice로 상태를 추가해 아이콘 변경 가능.</b>
+- 가로 정령 & 세로 정렬 -> <b>.bl_board__flex를 붙이면 가로 정렬, 삭제하면 세로 정렬이 됨.</b>
+
+<br>
+
+<b> 이러한 방법으로 하나의 공통 스타일을 설계해 재사용하기 쉬운 코드를 설계하도록 millSee는 노력하고 있습니다.</b>
+
+<br><br>
 
 ### @ Element
 #### [ 재사용 ]
