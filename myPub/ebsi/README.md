@@ -196,8 +196,26 @@ ebsi 사이트는 모바일 퍼스트로 작업되었습니다.
 <br> <br>
 
 ## 03. JS
-### 자바스크립트를 사용해서 구현한 메가 메뉴
+### 자바스크립트를 사용해서 구현한 것들
+
+- 메가 메뉴
+
 ![img_nav](https://user-images.githubusercontent.com/61076742/140704102-81a5cccc-9e8a-41f9-9c24-81a5c56244cb.gif)
+
+<br>
+- 모바일 메뉴(+탭기능)
+- 
+![mo_nav](https://user-images.githubusercontent.com/61076742/140709572-441db5a7-feab-4cce-8e5a-0962ce0d3f9b.gif)
+
+<br>
+- 팝업 닫기
+- 
+![popup_close](https://user-images.githubusercontent.com/61076742/140709584-7f02f0dd-2ac3-456d-8689-446c28740687.gif)
+
+<br>
+- 검색창 클릭시 연관 검색어 박스가 오픈되고, 검색어 박스를 제외한 곳을 클릭하면 창이 닫힙니다.
+- 
+![search](https://user-images.githubusercontent.com/61076742/140709585-b6a5dad8-b6bc-4b0d-af88-7b9483289aa8.gif)
 
 <br><br> 
 ---
@@ -208,5 +226,6 @@ ebsi 사이트는 모바일 퍼스트로 작업되었습니다.
 
 ![img_slider](https://user-images.githubusercontent.com/61076742/140704014-0515a451-c79c-43df-be88-8422617ec863.gif)
 ![img_MV](https://user-images.githubusercontent.com/61076742/140704052-0a135ef7-6bf9-4823-b362-4dc3faa5a9fd.gif)
+
 
 
