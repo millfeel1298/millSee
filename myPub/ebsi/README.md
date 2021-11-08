@@ -2,6 +2,22 @@ ebsi 기술 상세서
 ===
 ## 01. HTML5
 ### @ Block
+#### [ 재사용 ]
+<img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br>
+위 3가지의 이미지의 공통점과 다른점을 살펴보도록 하겠습니다.<br>
+[공통점]
+- title은 전체 Page에서 공통으로 사용하는 Style
+- 모든 형태가 list를 이루고 있다.
+- 컨텐츠 구조는 모두 동일하다.
+
+[다른점]
+- 더보기가 on / off로 나누어져 있다.
+- border는 on/off로 나누어져있다.
+- 블릿의 유무
+- 라벨의 유무
+- 가로 정령 & 세로 정렬
+
+
 ### @ Element
 #### [ 재사용 ]
 <img src="https://user-images.githubusercontent.com/61076742/140642304-bafa3288-211e-488f-9089-495b7eb93ce6.png" height="40">
