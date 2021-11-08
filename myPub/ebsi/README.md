@@ -3,8 +3,8 @@ ebsi 기술 상세서
 ## 01. HTML5
 ### @ Block
 #### [ 재사용 ]
-<img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br>
-위 3가지의 이미지의 공통점과 다른점을 살펴보도록 하겠습니다.<br>
+<img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br><br>
+재사용에 대한 설명을 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
 [공통점]
 - title은 전체 Page에서 공통으로 사용하는 Style
 - 모든 형태가 list를 이루고 있다.
