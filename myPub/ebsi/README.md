@@ -3,7 +3,7 @@ ebsi 기술 상세서
 - [01. HTML5](#01-html5)
   * [@ Nameing 규칙](#--nameing---)
     + [Q 어떤 장점이 있나요?](#q------------)
-  * [@ Block](#--block)
+  * [@ Block](### @ Block)
     + [[ 확장 ]](#------)
   * [@ Element](#--element)
     + [[ 확장 ]](#-------1)
@@ -77,7 +77,8 @@ PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(
 
 <b> 이러한 방법으로 하나의 공통 스타일을 설계해 확장하기 쉬운 코드를 설계하도록 millSee는 노력하고 있습니다.</b>
 
-<br><br> ---
+<br><br> 
+---
 
 ### @ Element
 #### [ 확장 ]
@@ -86,8 +87,6 @@ PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(
 <b>millSee는 어떤 방법으로 확장을 할까요?</b>
 
 <br><br>
-
----
 
 ![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
 <br><br>
