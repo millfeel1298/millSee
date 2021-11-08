@@ -1,22 +1,6 @@
 ebsi 기술 상세서
 ===
-- [01. HTML5](#01-html5)
-  * [@ Nameing 규칙](#--nameing---)
-    + [Q 어떤 장점이 있나요?](#q------------)
-  * [@ Block](### @ Block)
-    + [[ 확장 ]](#------)
-  * [@ Element](#--element)
-    + [[ 확장 ]](#-------1)
-  * [@ module](#--module)
-- [02. CSS3](#02-css3)
-- [03. JS](#03-js)
-  * [01-01. 스크롤 이벤트 - Current Scene 설정](#01-01-----------current-scene---)
-    + [&#64; Scene의 높이 값 배열에 저장하기](#--64--scene---------------)
-    + [&#64; Scene 높이 값을 활용해 Load시 Current Scene 찾기](#--64--scene-----------load--current-scene---)
-    + [&#64; Scene 높이 값을 활용해 Scroll했을  Current Scene 찾기](#--64--scene-----------scroll----current-scene---)
-    + [&#64; Scene 높이 값을 활용해 Scroll했을  Current Scene 찾기](#--64--scene-----------scroll----current-scene----1)
-  * [01-02. 스크롤 이벤트 - Pagenation 설정](#01-02-----------pagenation---)
-    + [&#64; Scene의 갯수에 따라 Pagenation Dot 자동 생성](#--64--scene---------pagenation-dot------)
+
 
 
 ## 01. HTML5
@@ -34,6 +18,8 @@ PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(
 ---
 
 ### @ Block
+Block이란, 특정한 콘텐츠에 의존하지 않으며 어디에서도 재사용할 수 있는 모듈입니다.
+
 #### [ 확장 ]
 <img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br><br>
 확장에 대한 설명을 하기 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
@@ -50,7 +36,8 @@ PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(
 - 라벨의 유무
 - 가로 정령 & 세로 정렬
 
-<br><br>
+<br>
+
 ```HTML
 <div class="bl_board_wrap">
     <h2 class="el_pageLv2Ttl">알림방</h2>
@@ -81,6 +68,8 @@ PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(
 ---
 
 ### @ Element
+Element란, 모듈의 최소 단위로 어디에나 삽입 가능한 모듈입니다.
+
 #### [ 확장 ]
 <img src="https://user-images.githubusercontent.com/61076742/140642304-bafa3288-211e-488f-9089-495b7eb93ce6.png" height="40">
 회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
@@ -139,7 +128,6 @@ Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, �
 부모에게 중첩시켜 크기 설정과 이미지를 설정합니다. 이렇게 사용하는 이유는 사용에 대한 제한을 하는 것입니다.
 <br><br>
 
-
 <br></br>
 본격적으로 확장을 해 보겠습니다.
 
@@ -174,6 +162,7 @@ Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, �
 ![image](https://user-images.githubusercontent.com/61076742/140644008-89b185e1-17f9-454c-a90a-1201bc8a1cdf.png)
 
 ---
+
 ### @ module 관리
 <img src="https://user-images.githubusercontent.com/61076742/140695003-e1d76f3a-ed30-43ac-8818-37d15c37c97f.png" height="500" />
 millSee는 확장이 필요한 요소들은 별도의 module 폴더에서 관리하고 있습니다. <br>
@@ -182,6 +171,9 @@ style, srcript는 같은 문서 안에 관리하고, 필요할 때 복사해서 
 
 
 ## 02. CSS3
+<img src="https://user-images.githubusercontent.com/61076742/140700213-2cbd6f1d-cbbb-4d73-850e-66b1eccc37e3.png" height="500" />
+<img src="https://user-images.githubusercontent.com/61076742/140700572-9b20711d-0588-4340-9134-ae9249301e31.png" height="500" />
+
 
 ## 03. JS
 ### 01-01. 스크롤 이벤트 - Current Scene 설정
