@@ -9,7 +9,7 @@ ebsi 기술 상세서
 - title은 전체 Page에서 공통으로 사용하는 Style
 - 모든 형태가 list를 이루고 있다.
 - 컨텐츠 구조는 모두 동일하다.
-
+<br><br>
 [다른점]
 - 더보기가 on / off로 나누어져 있다.
 - border는 on/off로 나누어져있다.
