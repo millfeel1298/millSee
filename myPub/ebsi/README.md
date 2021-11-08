@@ -1,48 +1,48 @@
 ebsi 기술 상세서
 ===
+- [01. HTML5](#01-html5)
+  * [@ Nameing 규칙](#--nameing---)
+    + [Q 어떤 장점이 있나요?](#q------------)
+  * [@ Block](#--block)
+    + [[ 확장 ]](#------)
+  * [@ Element](#--element)
+    + [[ 확장 ]](#-------1)
+  * [@ module](#--module)
+- [02. CSS3](#02-css3)
+- [03. JS](#03-js)
+  * [01-01. 스크롤 이벤트 - Current Scene 설정](#01-01-----------current-scene---)
+    + [&#64; Scene의 높이 값 배열에 저장하기](#--64--scene---------------)
+    + [&#64; Scene 높이 값을 활용해 Load시 Current Scene 찾기](#--64--scene-----------load--current-scene---)
+    + [&#64; Scene 높이 값을 활용해 Scroll했을  Current Scene 찾기](#--64--scene-----------scroll----current-scene---)
+    + [&#64; Scene 높이 값을 활용해 Scroll했을  Current Scene 찾기](#--64--scene-----------scroll----current-scene----1)
+  * [01-02. 스크롤 이벤트 - Pagenation 설정](#01-02-----------pagenation---)
+    + [&#64; Scene의 갯수에 따라 Pagenation Dot 자동 생성](#--64--scene---------pagenation-dot------)
+
+
 ## 01. HTML5
 ### @ Nameing 규칙
 millSee는 PRECSS라는 네이밍 규칙을 사용하고 있습니다.
-PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(접두어)를 붙이는 것이 특징으로 OOCSS, SMACSS, BEM에 많은 영향을 받았다고 합니다.
+PRECSS란, 모든 Class에 이름에 역할을 의미하는 두글자의 Prefix(접두어)를 붙이는 것이 특징으로 OOCSS, SMACSS, BEM에 많은 영향을 받았다고 합니다. <br>
 
-<b>Q. BEM을 사용하지 않는 이유가 있나요?</b> <br>
-아래의 코드를 봐주세요.
-
-```HTML
-<!-- BEM 설계기법 -->
-<div id="wrap">
-    <header class="header"></header> 
-    <main class="cont"></main>
-    <footer class="footer"></footer>
-    <div class="popBanner"></div> 
-    <div class="danchooBtn"></div> 
-</div>
-
-<!-- PRECSS 설계기법 -->
-<div id="wrap">
-    <header class="ly_header"></header> 
-    <main class="ly_cont"></main>
-    <footer class="ly_footer"></footer>
-    <div class="bl_popBanner"></div> 
-    <div class="un_danchooBtn"></div> 
-</div>
-```
-.header와 .ly_header를 비교했을 때 header의 용도는 잘 모르겠지만 ly_이 붙어있으니 layout으로 추측은 가능합니다.<br>
-HTML은 퍼블리셔 혼자보는 문서가 아닙니다. 디자이너, 개발자, 불특정 다수가 볼 수 있는 문서입니다.<br>
-그렇기 때문에 설계기법을 몰라도 이것이 어떤 용도인지 알 수 있어야 한다고 생각하기에 PRECSS를 채용했습니다.<br><br>
-<i>BEM이 나쁘다는 것이 아닌 취향차라는 것과 PRECSS의 문법 안에 BEM이 녹아져 있기 때문에 배제하는 것이 아닙니다!</i>
-
-
+#### Q 어떤 장점이 있나요?
+<img src="https://user-images.githubusercontent.com/61076742/140693138-d7cee9c0-1f4a-420d-96aa-5af2353bf335.png" height="500"/><br><br>
+- 특성을 쉽게 파악할 수 있습니다. (ly_ 레이아웃, bl_ 블록, el_ 엘리먼트, un_ 유니크 등)
+- 영향 범위를 지나치게 넓히지 않습니다. (CSS는 JS와 비교하면 전체가 전역 객체와도 같습니다. 원활한 관리를 위해선 사용 범위에 적당한 제한을 주고 있습니다.)
+- 부모의 이름을 상속받아 사용 범위를 쉽게 파악할 수 있습니다.
+- 형태, 기능, 역할을 쉽게 파악할 수 있습니다.
+- 멀티 클래스를 채용해 확장하기 쉽습니다.
+---
 
 ### @ Block
-#### [ 재사용 ]
+#### [ 확장 ]
 <img src="https://user-images.githubusercontent.com/61076742/140684024-bc078e3b-ef82-46db-8fa0-ff441a3e3791.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684035-47eadbb8-c4ca-45ce-8f26-0dba1742c5fe.png" width="33.3%" /><img src="https://user-images.githubusercontent.com/61076742/140684039-aeb8dec4-5670-489c-a82d-481851a451ef.png" width="33.3%" /><br><br>
-재사용에 대한 설명을 하기 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
+확장에 대한 설명을 하기 위해서 위 3가지의 이미지의 공통점과 다른점을 살펴보고 진행하도록 하겠습니다.<br><br>
 [공통점]
 - title은 전체 Page에서 공통으로 사용하는 Style
 - 모든 형태가 list를 이루고 있다.
 - 컨텐츠 구조는 모두 동일하다.
-<br><br>
+<br><br>   
+
 [다른점]
 - 더보기가 on / off로 나누어져 있다.
 - border는 on/off로 나누어져있다.
@@ -75,26 +75,28 @@ HTML은 퍼블리셔 혼자보는 문서가 아닙니다. 디자이너, 개발�
 
 <br>
 
-<b> 이러한 방법으로 하나의 공통 스타일을 설계해 재사용하기 쉬운 코드를 설계하도록 millSee는 노력하고 있습니다.</b>
+<b> 이러한 방법으로 하나의 공통 스타일을 설계해 확장하기 쉬운 코드를 설계하도록 millSee는 노력하고 있습니다.</b>
 
-<br><br>
+<br><br> ---
 
 ### @ Element
-#### [ 재사용 ]
+#### [ 확장 ]
 <img src="https://user-images.githubusercontent.com/61076742/140642304-bafa3288-211e-488f-9089-495b7eb93ce6.png" height="40">
 회원가입 페이지에서 위와 같은 디자인을 만났습니다. <br>
-<b>millSee는 어떤 방법으로 재사용을 할까요?</b>
+<b>millSee는 어떤 방법으로 확장을 할까요?</b>
 
 <br><br>
+
+---
 
 ![이미지 4](https://user-images.githubusercontent.com/61076742/140642631-6b136175-4b5f-4621-bc15-0ab4f8ed02f1.png)
 <br><br>
-index.html에서 GNB 영역에 있는 링크를 재사용하는 것을 보기 전에 재사용할 코드부터 확인하고 넘어가겠습니다.
+index.html에서 GNB 영역에 있는 링크를 확장하는 것을 보기 전에 확장할 코드부터 확인하고 넘어가겠습니다.
 
 ```HTML
 <a class="el_leftIconBtn" href="">5분 개념</a>
 ```
-위와 같이 PRECSS를 사용하면, Calss Name을 통해 재사용 가능한 Element 요소이고, 아이콘이 왼쪽에 있으며 버튼 기능을 한다는 것을 알 수 있습니다.
+위와 같이 PRECSS를 사용하면, Calss Name을 통해 확장 가능한 Element 요소이고, 아이콘이 왼쪽에 있으며 버튼 기능을 한다는 것을 알 수 있습니다.
 <br><br>
 
 ```CSS
@@ -111,7 +113,7 @@ index.html에서 GNB 영역에 있는 링크를 재사용하는 것을 보기 �
 }
 ```
 Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, 아이콘의 크기가 일정하지 않을 확률이 크기 때문에 (일정하다면, 설정하는게 편하겠죠?)
-재사용성을 위해 기본 크기 값을 설정하지 않았습니다.
+확장을 하기 위해 기본 크기 값을 설정하지 않았습니다.
 <br><br>
 
 ```HTML
@@ -140,7 +142,7 @@ Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, �
 
 
 <br></br>
-본격적으로 재사용을 해 보겠습니다.
+본격적으로 확장을 해 보겠습니다.
 
 ```HTML
 <div class="bl_signUpAnno">
@@ -171,6 +173,13 @@ Point는 before에 크기를 설정하지 않는 것입니다. 그 이유는, �
 결과물은 아래와 같습니다.
 <br><br>
 ![image](https://user-images.githubusercontent.com/61076742/140644008-89b185e1-17f9-454c-a90a-1201bc8a1cdf.png)
+
+---
+### @ module 관리
+<img src="https://user-images.githubusercontent.com/61076742/140695003-e1d76f3a-ed30-43ac-8818-37d15c37c97f.png" height="500" />
+millSee는 확장이 필요한 요소들은 별도의 module 폴더에서 관리하고 있습니다. <br>
+style, srcript는 같은 문서 안에 관리하고, 필요할 때 복사해서 사용합니다. <br>
+
 
 
 ## 02. CSS3
