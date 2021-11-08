@@ -174,9 +174,10 @@ style, srcript는 같은 문서 안에 관리하고, 필요할 때 복사해서 
 ### @ 그리드를 활용한 구현
 <img src="https://user-images.githubusercontent.com/61076742/140700213-2cbd6f1d-cbbb-4d73-850e-66b1eccc37e3.png" height="500" /> <img src="https://user-images.githubusercontent.com/61076742/140700572-9b20711d-0588-4340-9134-ae9249301e31.png" height="500" />
 
-<br>
-
 디자인의 그리드를 체크한 뒤, 부트스트랩의 col을 채용해 반응형에 쉽게 대응하려고 노력했습니다.
+
+<br><br> 
+---
 
 ### @ 반응형
 ebsi 사이트는 모바일 퍼스트로 작업되었습니다.
@@ -199,23 +200,26 @@ ebsi 사이트는 모바일 퍼스트로 작업되었습니다.
 ### 자바스크립트를 사용해서 구현한 것들
 
 - 메가 메뉴
+<img src="https://user-images.githubusercontent.com/61076742/140704102-81a5cccc-9e8a-41f9-9c24-81a5c56244cb.gif">
 
-![img_nav](https://user-images.githubusercontent.com/61076742/140704102-81a5cccc-9e8a-41f9-9c24-81a5c56244cb.gif)
+<br><br> 
+---
 
-<br>
 - 모바일 메뉴(+탭기능)
-- 
-![mo_nav](https://user-images.githubusercontent.com/61076742/140709572-441db5a7-feab-4cce-8e5a-0962ce0d3f9b.gif)
+<img src="https://user-images.githubusercontent.com/61076742/140709572-441db5a7-feab-4cce-8e5a-0962ce0d3f9b.gif">
 
-<br>
+<br><br> 
+---
+
 - 팝업 닫기
-- 
-![popup_close](https://user-images.githubusercontent.com/61076742/140709584-7f02f0dd-2ac3-456d-8689-446c28740687.gif)
+<img src="https://user-images.githubusercontent.com/61076742/140709584-7f02f0dd-2ac3-456d-8689-446c28740687.gif">
 
-<br>
+<br><br> 
+---
+
 - 검색창 클릭시 연관 검색어 박스가 오픈되고, 검색어 박스를 제외한 곳을 클릭하면 창이 닫힙니다.
-- 
-![search](https://user-images.githubusercontent.com/61076742/140709585-b6a5dad8-b6bc-4b0d-af88-7b9483289aa8.gif)
+
+<img src="https://user-images.githubusercontent.com/61076742/140709585-b6a5dad8-b6bc-4b0d-af88-7b9483289aa8.gif">
 
 <br><br> 
 ---
