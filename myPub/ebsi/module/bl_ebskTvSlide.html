@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_ebskTvSlide */
+
+    .bl_ebskTvSlide {
+      position: relative;
+    }
+
+    .bl_ebskTvSlide_head {
+      margin-bottom: 1.2rem;
+    }
+
+    .bl_ebskTvSlide_desc {
+      margin-top: 0.8rem;
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: #666;
+    }
+
+    .bl_ebskTvSlide_more {
+      position: absolute;
+      top: 1rem;
+      right: 0;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #757575;
+    }
+
+    .bl_ebskTvSlide_item {
+      position: relative;
+      padding-top: 7.57%
+    }
+
+    .bl_ebskTvSlide_item img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+    }
+
+    .bl_ebskTvSlide_footer {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.2rem;
+      background: #000;
+      opacity: 0.8;
+    }
+
+    .bl_ebskTvSlide_subTtl {
+      margin-right: 1.2rem;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .bl_ebskTvSlide_subDesc {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #fff;
+      opacity: 0.8;
+    }
+
+    .bl_ebskTvSlide_prev,
+    .bl_ebskTvSlide_next {
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      width: 1.8rem;
+      height: 4.4rem;
+      background: url(/myPub/ebsi/image/common/ico_arrow_dunatv.png) no-repeat 0 center / auto;
+    }
+
+    .bl_ebskTvSlide_prev {
+      left: 2%;
+      transform: translateY(-77%);
+    }
+
+    .bl_ebskTvSlide_next {
+      right: 2%;
+      transform: translateY(-77%) rotate(180deg);
+    }
+
+    @media (min-width: 720px) {
+      .bl_ebskTvSlide_desc {
+        font-size: 1.8rem;
+      }
+
+      .bl_ebskTvSlide_more {
+        top: 1.2rem;
+        font-size: 1.6rem;
+      }
+
+      .bl_ebskTvSlide_footer {
+        padding: 2rem;
+      }
+
+      .bl_ebskTvSlide_subTtl {
+        font-size: 1.5rem;
+      }
+
+      .bl_ebskTvSlide_subDesc {
+        font-size: 1.5rem;
+      }
+
+      .bl_ebskTvSlide_prev,
+      .bl_ebskTvSlide_next {
+        width: 3.6rem;
+        height: 5.6rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bl_ebskTvSlide_desc {
+        margin-left: 0.8rem;
+        font-size: 1.4rem;
+      }
+
+      .bl_ebskTvSlide_more {
+        font-size: 1.3rem;
+      }
+
+      .bl_ebskTvSlide_head {
+        display: flex;
+        margin-bottom: 0;
+      }
+    }
+
+    /* //bl_ebskTvSlide */
+  </style>
+</head>
+
+<body>
+  <div class="bl_ebskTvSlide">
+    <div class="bl_ebskTvSlide_head">
+      <h2 class="el_pageLv2Ttl" id="ebskTv">듀냐TV</h2>
+      <div class="bl_ebskTvSlide_desc">선생님의 홍보영상 또는 강의 속 재미있는 영상들을 확인할 수 있습니다.</div>
+    </div>
+    <div class="bl_ebskTvSlide_slide slick">
+      <div class="bl_ebskTvSlide_item">
+        <img src="/myPub/ebsi/image/upload/20201126162635476.jpg" alt="본캐:EBSi 사회탐구영역 선생님, 부캐: 학생, 특기: 세계사 완전 잘함">
+        <dl class="bl_ebskTvSlide_footer">
+          <dt class="bl_ebskTvSlide_subTtl">사회김준우</dt>
+          <dd class="bl_ebskTvSlide_subDesc">세계사 그것이 알고싶다.</dd>
+        </dl>
+      </div>
+      <div class="bl_ebskTvSlide_item">
+        <img src="/myPub/ebsi/image/upload/20201207161143985.png" alt="아니, 날 몰라?">
+        <dl class="bl_ebskTvSlide_footer">
+          <dt class="bl_ebskTvSlide_subTtl">사회이진웅</dt>
+          <dd class="bl_ebskTvSlide_subDesc">한국 지리는 사설이라고?</dd>
+        </dl>
+      </div>
+      <div class="bl_ebskTvSlide_item">
+        <img src="/myPub/ebsi/image/upload/ebsiTV_some_T0344_08.jpg" alt="2021학년도 EBS 수능 한국지리 담당. 전성오">
+        <dl class="bl_ebskTvSlide_footer">
+          <dt class="bl_ebskTvSlide_subTtl">사회전성오</dt>
+          <dd class="bl_ebskTvSlide_subDesc">홍보영상 듀나TV</dd>
+        </dl>
+      </div>
+    </div>
+    <a class="bl_ebskTvSlide_more" href="">더보기 +</a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    $('.bl_ebskTvSlide_slide').slick({
+      infinite: true, //무한 반복 옵션	 
+      slidesToShow: 1, // 한 화면에 보여질 컨텐츠 개수
+      slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+      arrows: true, // 옆으로 이동하는 화살표 표시 여부 (기본값: true)
+      prevArrow: "<button type='button' class='bl_ebskTvSlide_prev'><span class='hp_a11y'>Previous</span></button>", // 이전 화살표 모양 설정
+      nextArrow: "<button type='button' class='bl_ebskTvSlide_next'><span class='hp_a11y'>Next</span></button>", // 다음 화살표 모양 설정
+      draggable: true, //드래그 가능 여부 
+    });
+  </script>
+</body>
+
+</html>

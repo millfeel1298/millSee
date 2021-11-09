@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_lnb */
+    .bl_lnb_ttl {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 12.7rem;
+      font-size: 2.4rem;
+      color: #fff;
+      background: #062f67;
+    }
+
+    .bl_lnb_ttl::before {
+      display: block;
+      width: 6.4rem;
+      height: 6.4rem;
+      margin-bottom: 0.8rem;
+      border-radius: 50%;
+      background-color: #0b408a;
+      background-repeat: no-repeat;
+      background-size: 50.4rem 6.3rem;
+      background-image: url(/myPub/ebsi/image/common/ico_lnb_pc.png);
+      content: '';
+    }
+
+    .bl_lnb_ttl__teacher::before {
+      background-position: 0.2rem center;
+    }
+
+    .bl_lnb_item {
+      padding: 2rem 2rem 2rem 1.6rem;
+      border-right: 1px solid #ebebeb;
+      border-bottom: 1px solid #ebebeb;
+      border-left: 1px solid #ebebeb;
+    }
+
+    .bl_lnb_link {
+      font-weight: 300;
+    }
+
+    .bl_lnb_item.is_active .bl_lnb_link {
+      font-weight: 500;
+    }
+
+    /* //bl_lnb */
+  </style>
+</head>
+
+<body>
+  <div class="bl_lnb">
+    <div class="bl_lnb_ttl bl_lnb_ttl__teacher"> 선생님 </div>
+    <ul class="bl_lnb_list">
+      <li class="bl_lnb_item is_active"><a class="bl_lnb_link" href="">고3·N수 선생님</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">국어</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">수학</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">영어</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">한국사</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">사회</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">과학</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">직업</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">제2외국어</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">일반/진로/교양</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">대학별고사</a></li>
+    </ul>
+  </div>
+</body>
+
+</html>

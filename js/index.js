@@ -1,71 +1,41 @@
 (() => {
   const brakePC = 1200;
   const brakeTablet = 600;
+  const $bl_burgerBtn = document.querySelector('.bl_burgerBtn');
   const $el_dim = document.querySelector('.el_dim');
   const $bl_nav = document.querySelector('.bl_nav');
   const $bl_nav_links = document.querySelectorAll('.bl_nav_link');
+  const $bl_pagenation = document.querySelector('.bl_pagenation');
   const $bl_moNav = document.querySelector('.bl_moNav');
-  const $bl_textSlide = document.querySelector('.bl_textSlide');
+  const $un_topBtn = document.querySelector('.un_topBtn');
   const scene_totals = document.querySelectorAll('.bl_scene');
+  const $bl_textSlide = document.querySelector('.bl_textSlide');
+  const $bl_textSlide_spped = 1000;
+  let children = null;
   let curIdx = 0;
   let curScene = 0;
   let prevScroll = 0;
   let scene_heights = null;
 
-  // .bl_burgerBtn 유무에 따라 실행 여부가 달라진다.
-  if (document.querySelector('.bl_burgerBtn')) {
-    const $bl_burgerBtn = document.querySelector('.bl_burgerBtn')
 
-    // 햄버거 버튼 클릭시 동작하는 이벤트
-    $bl_burgerBtn.addEventListener('click', function () {
-      this.parentElement.classList.toggle('is_active');
-      this.parentElement.parentElement.classList.toggle('is_active');
+  // 메인 텍스트 슬라이드 - 무한반복
+  const setTextSlide_timer = setInterval(() => {
+    $bl_textSlide.style.transition = `${$bl_textSlide_spped}ms transform`;
+    $bl_textSlide.style.transform = `translate3d(0, ${curIdx * -100}%, 0)`;
+    curIdx++;
 
-      if (!$el_dim.classList.contains('is_show')) {
-        $el_dim.classList.add('is_show');
-        document.body.classList.add('hp_scrollDisable');
-        $el_dim.style.display = 'block';
-        set_scroll_disable();
-        setTimeout(() => {
-          $el_dim.style.opacity = '0.5';
-        }, 100);
-      } else {
-        $el_dim.classList.remove('is_show');
-        document.body.classList.remove('hp_scrollDisable');
-        $el_dim.style.opacity = '0';
-        set_scroll_able();
-        setTimeout(() => {
-          $el_dim.style.display = 'none';
-        }, 500);
-      }
-    })
-  }
-
-  // .un_topBtn 유무에 따라 실행 여부가 달라진다.
-  if (document.querySelector('.un_topBtn')) {
-    const $un_topBtn = document.querySelector('.un_topBtn')
-    // Top버튼 클릭시 상단으로 올라가는 이벤트
-    $un_topBtn.addEventListener('click', () => {
-      let timer = setInterval(() => {
-        if (window.scrollY > 0) {
-          window.scrollBy(0, -1000);
-        } else {
-          clearInterval(timer);
-        }
-      }, 50);
-    });
-  }
-
-  // 문서에 선택한 요소가 있으면 실행하고, 없으면 실행하지 않는다. - addEventListener은 제외, 함수만 사용 가능
-  function set_eleUseCheck(ele, func) {
-    if (document.querySelector(ele)) {
-      const $ele = document.querySelector(ele);
-      func($ele);
+    if (curIdx === children.length - 1) {
+      setTimeout(() => {
+        $bl_textSlide.style.transition = 'none';
+        $bl_textSlide.style.transform = `translate3d(0, 0%, 0)`;
+        curIdx = 1;
+      }, $bl_textSlide_spped * 2);
     }
-  }
+  }, $bl_textSlide_spped);
 
-  // 텍스트 슬라이드 - 첫번째 요소 복제 삽입
-  function textSlide_eleCreation(ele) {
+  // 메인 텍스트 슬라이드
+  function slide_mvEle_creation() {
+    // 요소 복제, 삽입
     const firstChild = $bl_textSlide.firstElementChild.cloneNode(true);
     $bl_textSlide.append(firstChild)
 
@@ -76,33 +46,6 @@
     for (let i = 0; i < children.length; i++) {
       children[i].style.transform = `translate3d(0, ${i * 100}%, 0)`;
     }
-
-    textSlide_timer(children);
-  }
-
-  // 텍스트 슬라이드 타이머
-  function textSlide_timer() {
-    const $bl_textSlide_spped = 1000;
-
-    // 메인 텍스트 슬라이드 - 무한반복
-    const setTextSlide_timer = setInterval(() => {
-      $bl_textSlide.style.transition = `${$bl_textSlide_spped}ms transform`;
-      $bl_textSlide.style.transform = `translate3d(0, ${curIdx * -100}%, 0)`;
-      curIdx++;
-
-      if (curIdx === children.length - 1) {
-        setTimeout(() => {
-          $bl_textSlide.style.transition = 'none';
-          $bl_textSlide.style.transform = `translate3d(0, 0%, 0)`;
-          curIdx = 1;
-        }, $bl_textSlide_spped * 2);
-      }
-    }, $bl_textSlide_spped);
-
-    // 메인 텍스트 슬라이드 - 클릭시 멈춤
-    $bl_textSlide.addEventListener('click', function (e) {
-      clearInterval(setTextSlide_timer);
-    })
   }
 
   // .bl_scene의 height 값을 배열에 저장
@@ -115,51 +58,50 @@
   }
 
   // pagenation dot 자동 생성
-  function creation_pagenationDot(ele) {
+  function creation_pagenationDot() {
     // pagenation dot 자동 생성 & .bl_scene의 height 값을 배열에 저장
     for (let i = 0; i < scene_totals.length; i++) {
       const addElem = `<button class="bl_pagenation_dot" role="tab" aria-label="${i + 1} of ${scene_totals.length}" tabindex="" type="button">
                       <span class="hp_a11y"></span>
                     </button>`;
-      ele.insertAdjacentHTML('beforeend', addElem);
+      $bl_pagenation.insertAdjacentHTML('beforeend', addElem);
     }
   }
 
   // Pagenation curScene 업데이트, 웹 접근성 준수 
-  function set_curPagenation(ele) {
-    for (let i = 0; i < ele.children.length; i++) {
-      ele.children[i].setAttribute('tabindex', -1);
-      ele.children[i].classList.remove('is_active');
+  function set_curPagenation() {
+    for (let i = 0; i < $bl_pagenation.children.length; i++) {
+      $bl_pagenation.children[i].setAttribute('tabindex', -1);
+      $bl_pagenation.children[i].classList.remove('is_active');
     }
-    ele.children[curScene].classList.add('is_active');
-    ele.children[curScene].setAttribute('tabindex', '0');
+    $bl_pagenation.children[curScene].classList.add('is_active');
+    $bl_pagenation.children[curScene].setAttribute('tabindex', '0');
   }
 
   // 네비게이션 curScene 업데이트
-  // function set_curNav() {
-  //   const $bl_moManu_links = document.querySelectorAll('.bl_moManu_link');
+  function set_curNav() {
+    const $bl_moManu_links = document.querySelectorAll('.bl_moManu_link');
 
-  //   for (let i = 0; i < $bl_pagenation.children.length - 1; i++) {
-  //     $bl_moManu_links[i].classList.remove('is_active');
-  //   }
+    for (let i = 0; i < $bl_pagenation.children.length - 1; i++) {
+      $bl_moManu_links[i].classList.remove('is_active');
+    }
 
-  //   if (curScene !== 0) {
-  //     $bl_moManu_links[curScene - 1].classList.add('is_active');
-  //   } else {
-  //     return;
-  //   }
-  // }
+    if (curScene !== 0) {
+      $bl_moManu_links[curScene - 1].classList.add('is_active');
+    } else {
+      return;
+    }
+
+  }
 
   // load시 현재의 curScene 설정
   function set_curScene_idx() {
-    const scrollY = window.scrollY;
     const scene_heights = set_sceneHeight();
     let total_height = 0;
 
-
     for (let i = 0; i < scene_totals.length; i++) {
       total_height += scene_heights[i];
-      if (scrollY > total_height) {
+      if (window.scrollY > total_height) {
         curScene++;
       } else {
         break;
@@ -167,13 +109,12 @@
     }
 
     document.body.classList.add(`js_scene_${curScene}`);
-    set_eleUseCheck('.bl_pagenation', set_curPagenation);
-    // set_curNav();
+    set_curPagenation();
+    set_curNav();
   }
 
   // scroll시 curScene 업데이트
   function set_scroll_curScene() {
-    const scrollY = window.scrollY;
     const scene_heights = set_sceneHeight();
     let prev_height = 0;
     let total_height = 0;
@@ -183,12 +124,12 @@
       prev_height = total_height - scene_heights[i];
     }
 
-    if (scrollY > total_height) {
+    if (window.scrollY > total_height) {
       curScene++
     }
 
-    if (scrollY < prev_height) {
-      if (curScene === 0) {
+    if (window.scrollY < prev_height) {
+      if (curScene < 0) {
         return curScene = 0;
       }
       --curScene
@@ -196,8 +137,8 @@
 
     document.body.removeAttribute('class');
     document.body.classList.add(`js_scene_${curScene}`);
-    set_eleUseCheck('.bl_pagenation', set_curPagenation);
-    // set_curNav();
+    set_curPagenation();
+    set_curNav();
   }
 
   // 자손 선택자들에게 스타일을 한꺼번에 사용할 때 사용
@@ -350,6 +291,7 @@
 
   // 스크롤 유도 아이콘 스크롤 값에 따라 hide
   function scroll_induce_hide() {
+    const $el_scroll_induce = document.querySelector('.el_scroll_induce');
     const scene_heights = set_sceneHeight();
     let prev_height = 0;
     let prev_heights = [];
@@ -364,11 +306,112 @@
     const last_idx = prev_heights.length - 1;
 
     if (document.body.classList.contains('js_scene_4')) {
-      ele.classList.add('is_hide');
+      $el_scroll_induce.classList.add('is_hide');
     } else {
-      ele.classList.remove('is_hide');
+      $el_scroll_induce.classList.remove('is_hide');
     }
   }
+
+  // 메인 텍스트 슬라이드 - 클릭시 멈춤
+  $bl_textSlide.addEventListener('click', function (e) {
+    clearInterval(setTextSlide_timer);
+  })
+
+  // 햄버거 버튼 클릭시 동작하는 이벤트
+  $bl_burgerBtn.addEventListener('click', function () {
+    this.parentElement.classList.toggle('is_active');
+    this.parentElement.parentElement.classList.toggle('is_active');
+
+    if (!$el_dim.classList.contains('is_show')) {
+      $el_dim.classList.add('is_show');
+      document.body.classList.add('hp_scrollDisable');
+      $el_dim.style.display = 'block';
+      set_scroll_disable();
+      setTimeout(() => {
+        $el_dim.style.opacity = '0.5';
+      }, 100);
+    } else {
+      $el_dim.classList.remove('is_show');
+      document.body.classList.remove('hp_scrollDisable');
+      $el_dim.style.opacity = '0';
+      set_scroll_able();
+      setTimeout(() => {
+        $el_dim.style.display = 'none';
+      }, 500);
+    }
+  })
+
+  // 페이지네이션 클릭시 씬의 위치로 이동
+  $bl_pagenation.addEventListener('click', function (e) {
+    // 버튼 외의 클릭은 모두 무시
+    if (!e.target.classList.contains('bl_pagenation_dot')) return;
+
+    const attr = e.target.getAttribute('aria-label');
+    const scrollY = window.scrollY;
+    const idx = attr[0] - 1;
+    let totalHeight = 0;
+    let totalHeight_arr = [];
+    let timer = null;
+
+    // 씬의 구간의 값을 배열로 저장
+    for (let i = 0; i < scene_heights.length; i++) {
+      if (i !== 0) {
+        totalHeight += scene_heights[i - 1];
+        totalHeight_arr.push(totalHeight);
+      } else {
+        totalHeight_arr.push(0)
+      }
+    }
+
+    // 위로 올라가는 경우 - 스크롤링
+    if (scrollY < totalHeight_arr[idx]) {
+      const speed = 10;
+      let height = totalHeight_arr[idx] - scrollY;
+      const num = 20;
+      let value = (height + 50) / num; // 높이 값을 제대로 인식 못해서 +50
+      let count = 0
+
+      setInterval(() => {
+        if (count < num) {
+          count++;
+          window.scrollBy(0, value);
+        } else {
+          clearInterval(timer)
+        }
+      }, speed);
+    }
+
+    // 아래로 내려가는 경우 - 스크롤링
+    if (scrollY > totalHeight_arr[idx]) {
+      const speed = 10;
+      let height = scrollY - totalHeight_arr[idx];
+      const num = 20;
+      let value = (height - 50) / num; // 높이 값을 제대로 인식 못해서 +50
+      let count = 0
+
+      setInterval(() => {
+        if (count < num) {
+          count++;
+          window.scrollBy(0, -value);
+        } else {
+          clearInterval(timer)
+        }
+      }, speed);
+    }
+
+    // set_curScene_idx();
+  });
+
+  // Top버튼 클릭시 상단으로 올라가는 이벤트
+  $un_topBtn.addEventListener('click', () => {
+    let timer = setInterval(() => {
+      if (window.scrollY > 0) {
+        window.scrollBy(0, -1000);
+      } else {
+        clearInterval(timer);
+      }
+    }, 50);
+  });
 
   // IOS 스크롤 방지 
   function set_scroll_disable() {
@@ -401,29 +444,26 @@
   }
 
   window.addEventListener('DOMContentLoaded', () => {
-    set_eleUseCheck('.bl_textSlide_wrap', textSlide_eleCreation);
-    set_eleUseCheck('.bl_pagenation', creation_pagenationDot);
+    creation_pagenationDot();
     set_sceneHeight();
     set_curScene_idx();
     set_scroll_curScene();
+    slide_mvEle_creation();
     scroll_nav_show();
-
-
   });
 
   window.addEventListener('resize', () => {
     set_sceneHeight();
     scroll_nav_show();
-    set_sceneHeight();
     if (window.outerWidth > brakePC) {
       ani_scroll_curScene();
     }
   })
 
   window.addEventListener('scroll', () => {
-    set_eleUseCheck('.el_scroll_induce', scroll_induce_hide);
     scroll_topBtn_show();
     scroll_nav_show();
+    scroll_induce_hide();
     set_scroll_curScene();
     ani_scroll_winCoor();
 

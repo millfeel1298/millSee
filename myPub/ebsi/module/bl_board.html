@@ -8,6 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="../css/base.css">
   <style>
+    /* bl_board */
     .bl_board_wrap {
       display: grid;
       grid: repeat(2, auto) / repeat(2, auto);
@@ -64,12 +65,16 @@
     .bl_board_label {
       display: inline-block;
       margin-right: 0.4rem;
-      margin-bottom: 0.8rem;
       padding: 0.2rem 0.8rem 0.4rem;
       border: 1px solid currentColor;
       border-radius: 2rem;
       font-size: 1.2rem;
       color: #424242;
+    }
+
+    .bl_board_label__blue {
+      border-color: currentColor;
+      color: #5c85be;
     }
 
 
@@ -93,11 +98,14 @@
     }
 
     .bl_board_ttl {
-      width: 10rem;
       margin-right: 1.6rem;
       margin-bottom: 0.2rem;
       font-size: 1.4rem;
       color: #666;
+    }
+
+    .bl_board_ttl.hp_textOmit {
+      width: 10rem;
     }
 
     .bl_board_item__lst_disc {
@@ -142,6 +150,41 @@
       content: '';
     }
 
+    .bl_board_head {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.8rem;
+    }
+
+    .bl_board__grayTheme {
+      padding: 0.8rem 1.6rem;
+      border-top: 2px solid #000;
+      border-right: 1px solid #e4e4e4;
+      border-bottom: 1px solid #e4e4e4;
+      border-left: 1px solid #e4e4e4;
+      background: #F9F9F9;
+    }
+
+    .bl_board__grayTheme .bl_board_item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    .bl_board__grayTheme>*:last-child {
+      border-bottom: 0;
+    }
+
+    .bl_board_name {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+
+    .bl_board_desc {
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
     @media (min-width: 720px) {
       .bl_board_subject {
         font-size: 2.4rem;
@@ -153,6 +196,18 @@
 
       .bl_board_date {
         font-size: 2.4rem;
+      }
+
+      .bl_board_name {
+        font-size: 2.4rem;
+      }
+
+      .bl_board_desc {
+        font-size: 1.8rem;
+      }
+
+      .bl_board__grayTheme .bl_board_item {
+        padding: 1.6rem 0;
       }
     }
 
@@ -168,7 +223,21 @@
       .bl_board_date {
         font-size: 1.6rem;
       }
+
+      .bl_board_name {
+        font-size: 1.6rem;
+      }
+
+      .bl_board_desc {
+        font-size: 1.4rem;
+      }
+
+      .bl_board__grayTheme .bl_board_item {
+        padding: 1.2rem 0;
+      }
     }
+
+    /* //bl_board */
   </style>
 </head>
 
@@ -211,6 +280,50 @@
       </li>
     </ul>
     <a class="bl_board_more" href="">더보기</a>
+  </div>
+
+  <div class="bl_newNews">
+    <div class="bl_board_wrap">
+      <h2 class="el_pageLv2Ttl">새소식</h2>
+      <ul class="bl_board bl_board__border_2pxSolid000 bl_board__grayTheme">
+        <li class="bl_board_item">
+          <a class="bl_board_link" href="">
+            <div class="bl_board_head">
+              <div class="bl_board_label bl_board_label__blue">공지</div>
+              <div class="bl_board_name">정선아 선생님</div>
+            </div>
+            <div class="bl_board_desc">★ 파이널 체크포인트 공지 및 인사 ★</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link" href="">
+            <div class="bl_board_head">
+              <div class="bl_board_label bl_board_label__blue">공지</div>
+              <div class="bl_board_name">박봄 선생님</div>
+            </div>
+            <div class="bl_board_desc">1. ♡♥ 강의 안내 & 강의 자료</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link" href="">
+            <div class="bl_board_head">
+              <div class="bl_board_label bl_board_label__blue">공지</div>
+              <div class="bl_board_name">류성완 선생님</div>
+            </div>
+            <div class="bl_board_desc">여러분~ 올해 수능 여기에서 나옵니다^^</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link" href="">
+            <div class="bl_board_head">
+              <div class="bl_board_label bl_board_label__blue">공지</div>
+              <div class="bl_board_name">강승희 선생님</div>
+            </div>
+            <div class="bl_board_desc">[1] 생윤러 동지님들 :)</div>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 
