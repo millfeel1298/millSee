@@ -1770,6 +1770,7 @@ body {
 }
 
 .bl_burgerBtn_barWrap {
+  display: block;
   position: relative;
   height: 100%;
 }

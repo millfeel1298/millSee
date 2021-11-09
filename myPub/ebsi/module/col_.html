@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.6rem;
+    }
+
+    /* //default */
+
+
+    /* style */
+    .sample .row>.col,
+    .sample .row>[class^="col-"] {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      border: 1px solid rgba(39, 41, 43, 0.1);
+      background: rgba(39, 41, 43, 0.03);
+    }
+
+    /* //style */
+
+
+    .container {
+      width: 100%;
+      max-width: 1024px; /* 별도 설정 필요 */
+      padding-left: var(--bs-gutter-x, .75rem);
+      padding-right: var(--bs-gutter-x, .75rem);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: calc(-1 * var(--bs-gutter-x));
+    }
+
+    .row {
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: calc(-1 * var(--bs-gutter-y)); /* row 컨트롤 요소라 top의 간격을 0으로 reset함 */
+      margin-right: calc(-0.5 * var(--bs-gutter-x));
+      margin-left: calc(-0.5 * var(--bs-gutter-x));
+    }
+
+    .row>* {
+      flex-shrink: 0;
+      width: 50%;
+      max-width: 100%;
+      padding-right: calc(var(--bs-gutter-x) * .5);
+      padding-left: calc(var(--bs-gutter-x) * .5);
+      margin-top: var(--bs-gutter-y);
+    }
+
+    .col {
+      flex: 1 0 0%; /* widtn < flex basis 0%가 적용된다. 참고로 basis가 auto이면 width가 적용된다. */
+    }
+
+    /* ------------------ col: 100 / col의 갯수 = width (예: 1은 100 / 12 이고, 12는 100 / 1이다.) ------------------ */
+    /* 브레이크 포인트 필요 */
+    .col-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    .col-1 {
+      flex: 0 0 auto;
+      width: 8.333%;
+    }
+
+    .col-2 {
+      flex: 0 0 auto;
+      width: 16.666%;
+    }
+
+    .col-3 {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+
+    .col-4 {
+      flex: 0 0 auto;
+      width: 33.333%;
+    }
+
+    .col-5 {
+      flex: 0 0 auto;
+      width: 41.666%;
+    }
+
+    .col-6 {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+
+    .col-7 {
+      flex: 0 0 auto;
+      width: 58.333%;
+    }
+
+    .col-8 {
+      flex: 0 0 auto;
+      width: 66.666%;
+    }
+
+    .col-9 {
+      flex: 0 0 auto;
+      width: 75%;
+    }
+
+    .col-10 {
+      flex: 0 0 auto;
+      width: 83.333%;
+    }
+
+    .col-11 {
+      flex: 0 0 auto;
+      width: 91.666%;
+    }
+
+    .col-12 {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    /* ------------------ //col ------------------ */
+
+
+    /* ------------------ cols: 100 / col의 갯수 = width ------------------ */
+    /* 브레이크 포인트 필요 */
+    .row-cols-auto>* {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    .row-cols-1>* {
+      flex: 0 0 auto;
+      width: 100%;
+    }
+
+    .row-cols-2>* {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+
+    .row-cols-3>* {
+      flex: 0 0 auto;
+      width: 33.333%;
+    }
+
+    .row-cols-4>* {
+      flex: 0 0 auto;
+      width: 25%;
+    }
+
+    .row-cols-5>* {
+      flex: 0 0 auto;
+      width: 20%;
+    }
+
+    .row-cols-6>* {
+      flex: 0 0 auto;
+      width: 16.666%;
+    }
+
+    .row-cols-7>* {
+      flex: 0 0 auto;
+      width: 14.285%;
+    }
+
+    .row-cols-8>* {
+      flex: 0 0 auto;
+      width: 12.5%;
+    }
+
+    .row-cols-9>* {
+      flex: 0 0 auto;
+      width: 11.111%;
+    }
+
+    .row-cols-10>* {
+      flex: 0 0 auto;
+      width: 10%;
+    }
+
+    .row-cols-11>* {
+      flex: 0 0 auto;
+      width: 9.909%;
+    }
+
+    .row-cols-12>* {
+      flex: 0 0 auto;
+      width: 8.333%;
+    }
+
+    /* ------------------ //cols ------------------ */
+
+
+    /* ------------------ row의 수평 정렬 ------------------ */
+    .justify-content-start {
+      justify-content: flex-start !important;
+    }
+
+    .justify-content-center {
+      justify-content: center !important;
+    }
+
+    .justify-content-end {
+      justify-content: flex-end !important;
+    }
+
+    .justify-content-around {
+      justify-content: space-around !important;
+    }
+
+    .justify-content-between {
+      justify-content: space-between !important;
+    }
+
+    .justify-content-evenly {
+      justify-content: space-evenly !important;
+    }
+
+    /* ------------------ //row의 수평 정렬 ------------------ */
+
+
+    /* ------------------ row의 수직 정렬 ------------------ */
+    .align-items-start {
+      align-items: flex-start !important;
+    }
+
+    .align-items-center {
+      align-items: center !important;
+    }
+
+    .align-items-end {
+      align-items: flex-end !important;
+    }
+
+    /* ------------------ //row의 수직 정렬 ------------------ */
+
+
+    /* ------------------ row item의 수직 정렬 ------------------ */
+    .align-self-start {
+      align-self: flex-start !important;
+    }
+
+    .align-self-center {
+      align-self: center !important;
+    }
+
+    .align-self-end {
+      align-self: flex-end !important;
+    }
+
+    /* ------------------ //row item의 수직 정렬 ------------------ */
+
+
+    /* ------------------ 여백 ------------------ */
+    .w-100 {
+      width: 100% !important;
+    }
+
+    .d-none {
+      display: none !important;
+    }
+
+    .d-block {
+      /* 브레이크 포인트마다 필요 */
+      display: block !important;
+    }
+
+    /* ------------------ //열 분할 ------------------ */
+
+
+    /* ------------------ margin auto ------------------ */
+    /* 각각 브레이크 포인트마다 필요 */
+    .ms-auto {
+      margin-left: auto !important;
+    }
+
+    .me-auto {
+      margin-right: auto !important;
+    }
+
+    /* ------------------ //margin auto ------------------ */
+
+
+    /* ------------------ padding ------------------ */
+    /* padding 전체 브레이크 포인트 필요 */
+
+    /* container */
+    .px-0 {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+
+    .px-1 {
+      padding-right: 0.25rem !important;
+      padding-left: 0.25rem !important;
+    }
+
+    .px-2 {
+      padding-right: 0.5rem !important;
+      padding-left: 0.5rem !important;
+    }
+
+    .px-3 {
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+    }
+
+    .px-4 {
+      padding-right: 1.5rem !important;
+      padding-left: 1.5rem !important;
+    }
+
+    .px-5 {
+      padding-right: 3rem !important;
+      padding-left: 3rem !important;
+    }
+
+    /* //container */
+
+    /* x */
+    /* g는 x, y 모두 적용 됨. */
+    .g-0,
+    .gx-0 {
+      --bs-gutter-x: 0;
+    }
+
+    .g-1,
+    .gx-1 {
+      --bs-gutter-x: 0.25rem;
+    }
+
+    .g-2,
+    .gx-2 {
+      --bs-gutter-x: 0.5rem;
+    }
+
+    .g-3,
+    .gx-3 {
+      --bs-gutter-x: 1rem;
+    }
+
+    .g-4,
+    .gx-4 {
+      --bs-gutter-x: 1.5rem;
+    }
+
+    .g-5,
+    .gx-5 {
+      --bs-gutter-x: 3rem;
+    }
+
+    /* //x */
+
+    /* y */
+    /* g는 x, y 모두 적용 됨. */
+    .g-0,
+    .gy-0 {
+      --bs-gutter-y: 0;
+    }
+
+    .g-1,
+    .gy-1 {
+      --bs-gutter-y: 0.25rem;
+    }
+
+    .g-2,
+    .gy-2 {
+      --bs-gutter-y: 0.5rem;
+    }
+
+    .g-3,
+    .gy-3 {
+      --bs-gutter-y: 1rem;
+    }
+
+    .g-4,
+    .gy-4 {
+      --bs-gutter-y: 1.5rem;
+    }
+
+    .g-5,
+    .gy-5 {
+      --bs-gutter-y: 3rem;
+    }
+
+    /* //y */
+
+
+    /* ------------------ padding ------------------ */
+
+
+
+
+
+    @media (min-width: 720px) {}
+
+    @media (min-width: 1024px) {}
+  </style>
+</head>
+
+<body>
+  <!-- 수평 정렬 -->
+  <div class="container sample">
+    <div class="row">
+      <div class="col">column</div>
+      <div class="col">column</div>
+    </div>
+  </div>
+</body>
+
+</html>

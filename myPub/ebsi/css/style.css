@@ -100,9 +100,6 @@
     padding: var(--lg-bl-gap) 0;
   }
 
-  .ly_cont_bg .col_xs_12 > *:last-child {
-    margin-bottom: 0;
-  }
 
   .ly_footer_body {
     display: grid;
@@ -243,7 +240,7 @@
   background-image: url(/myPub/ebsi/image/common/ico_gnb_time.png);
 }
 
-.bl_navConts .el_leftIcon__time_light::before {
+.bl_hamburgeMenu .el_leftIcon__time_light::before {
   background-image: url(/myPub/ebsi/image/common/ico_gnb_time_light.png);
 }
 
@@ -251,7 +248,7 @@
   background-image: url(/myPub/ebsi/image/common/ico_gnb_calendar.png);
 }
 
-.bl_navConts .el_leftIcon__calendar_light::before {
+.bl_hamburgeMenu .el_leftIcon__calendar_light::before {
   background-image: url(/myPub/ebsi/image/common/ico_gnb_calendar_light.png);
 }
 
@@ -259,7 +256,7 @@
   background-image: url(/myPub/ebsi/image/common/ico_gnb_speed.png);
 }
 
-.bl_navConts .el_leftIcon__speed_light::before {
+.bl_hamburgeMenu .el_leftIcon__speed_light::before {
   background-image: url(/myPub/ebsi/image/common/ico_gnb_speed_light.png);
 }
 
@@ -790,6 +787,10 @@
 
 
 /* bl_hamburgeMenu */
+.bl_hamburgeMenu_wrap {
+  display: flex;
+}
+
 .bl_hamburgeMenu {
   z-index: 100;
   display: flex;
@@ -2263,7 +2264,7 @@
 }
 
 .bl_util_onair {
-  display: inline-block;
+  display: block;
   margin-left: 1.2rem;
   padding: 0.4rem 1.2rem;
   border-radius: 3rem;
