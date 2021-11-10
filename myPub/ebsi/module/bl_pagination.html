@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_pagination */
+
+    .bl_pagination {
+      display: flex;
+    }
+
+    .bl_pagination_btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border: 1px solid #ccc;
+    }
+
+    .bl_pagination_btn+.bl_pagination_btn {
+      margin-left: 0.4rem;
+    }
+
+    .bl_pagination_btn::after {
+      width: 1.4rem;
+      height: 1.4rem;
+      background-image: url(/myPub/ebsi/image/common/btn_pagination_all_dis.png);
+      background-repeat: no-repeat;
+      background-size: 340%;
+      background-position-y: center;
+      content: '';
+    }
+
+    .bl_pagination_btn__front::after {
+      background-position-x: 0;
+    }
+
+    .bl_pagination_btn__prev::after {
+      background-position-x: -1.2rem;
+    }
+
+    .bl_pagination_btn__next::after {
+      background-position-x: -2.1rem;
+    }
+
+    .bl_pagination_btn__back::after {
+      background-position-x: -3.5rem;
+    }
+
+    .bl_pagination_txt {
+      display: flex;
+      align-items: center;
+      margin: 0 3rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #a0a0a0;
+    }
+
+    .bl_pagination_curNum {
+      font-weight: 800;
+      color: #000;
+    }
+
+    @media (min-width: 720px) {
+      .bl_pagination_btn {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      .bl_pagination_btn::after {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .bl_pagination_btn__prev::after {
+        background-position-x: -1.7rem;
+      }
+
+      .bl_pagination_btn__next::after {
+        background-position-x: -3rem;
+      }
+
+      .bl_pagination_btn__back::after {
+        background-position-x: -4.8rem;
+      }
+
+      .bl_pagination_txt {
+        font-size: 2.4rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .bl_pagination_btn {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+
+      .bl_pagination_btn+.bl_pagination_btn {
+        margin-left: 0.4rem;
+      }
+
+      .bl_pagination_btn::after {
+        width: 1.4rem;
+        height: 1.4rem;
+      }
+
+      .bl_pagination_btn__prev::after {
+        background-position-x: -1.2rem;
+      }
+
+      .bl_pagination_btn__next::after {
+        background-position-x: -2.1rem;
+      }
+
+      .bl_pagination_btn__back::after {
+        background-position-x: -3.5rem;
+      }
+
+      .bl_pagination_txt {
+        margin: 0 2rem;
+        font-size: 1.6rem;
+      }
+    }
+
+    /* //bl_pagination */
+  </style>
+</head>
+
+<body>
+  <div class="bl_pagination">
+    <button class="bl_pagination_btn bl_pagination_btn__front" type="button"></button>
+    <button class="bl_pagination_btn bl_pagination_btn__prev" type="button"></button>
+    <p class="bl_pagination_txt"><span class="bl_pagination_curNum">1</span>/<span
+        class="bl_pagination_totalNum">13</span></p>
+    <button class="bl_pagination_btn bl_pagination_btn__next" type="button"></button>
+    <button class="bl_pagination_btn bl_pagination_btn__back" type="button"></button>
+  </div>
+</body>
+
+</html>

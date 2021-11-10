@@ -34,22 +34,67 @@
     }
 
     .bl_lnb_ttl__teacher::before {
-      background-position: 0.2rem center;
+      background-position: 0.3rem center;
     }
 
     .bl_lnb_item {
-      padding: 2rem 2rem 2rem 1.6rem;
       border-right: 1px solid #ebebeb;
       border-bottom: 1px solid #ebebeb;
       border-left: 1px solid #ebebeb;
     }
 
     .bl_lnb_link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 2rem 2rem 2rem 1.6rem;
       font-weight: 300;
+      font-size: 1.6rem;
+      background: transparent;
     }
 
     .bl_lnb_item.is_active .bl_lnb_link {
       font-weight: 500;
+    }
+
+    .bl_lnb_ttl__allCourse::before {
+      background-position: -6.1rem center;
+    }
+
+    .bl_lnb_link__icoR_arr::after {
+      overflow: hidden;
+      width: 1.1rem;
+      height: 0.6rem;
+      background: url(/myPub/ebsi/image/common/ico_lnb_depth.png) no-repeat;
+      background-position: top;
+      content: '';
+    }
+
+    .bl_lnb_item.is_active .bl_lnb_link__icoR_arr::after {
+      background-position: bottom;
+    }
+
+    .bl_lnb_depth2 {
+      overflow: hidden;
+      display: none;
+      height: 0;
+      padding: 0;
+      background: #f6f6f6;
+      transition: 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    .bl_lnb_depth2_link {
+      display: block;
+      padding: 0.6rem 0.6rem 0.6rem 1.6rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #898989;
+    }
+
+    .bl_lnb_depth2_link:hover {
+      color: #000;
+      text-decoration: underline;
     }
 
     /* //bl_lnb */
@@ -73,6 +118,90 @@
       <li class="bl_lnb_item"><a class="bl_lnb_link" href="">대학별고사</a></li>
     </ul>
   </div>
+
+  <div class="bl_lnb">
+    <div class="bl_lnb_ttl bl_lnb_ttl__allCourse"> 모든강좌 </div>
+    <ul class="bl_lnb_list">
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">전체 시리즈</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">수준별 맞춤형 시리즈</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">듀나위키</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">연계학습이 답이다</a></li>
+      <li class="bl_lnb_item">
+        <button class="bl_lnb_link bl_lnb_link__icoR_arr" type="button">시기별 추천 시리즈</button>
+        <ul class="bl_lnb_depth2">
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">2022 파이널 체크 포인트</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">초압축 연계교재 특강</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">2022 수능완성</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">2022 약점공략</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">2022 FINAL 실전모의고사</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">만점마무리 봉투모의고사</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">고난도 시크릿X 봉투모의고사</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">만점마무리 봉투모의고사 Red Edition</a></li>
+        </ul>
+      </li>
+      <li class="bl_lnb_item">
+        <button class="bl_lnb_link bl_lnb_link__icoR_arr" type="button">영어별 강좌</button>
+        <ul class="bl_lnb_depth2">
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">국어</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">수학</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">영어</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">한국사</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">사회</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">과학</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">직업</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">제2외국어</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">일반/진로/교양</a></li>
+        </ul>
+      </li>
+      <li class="bl_lnb_item">
+        <button class="bl_lnb_link bl_lnb_link__icoR_arr" type="button">대학별고사</button>
+        <ul class="bl_lnb_depth2">
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">입시컨설팅 솔루션</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">자기소개서</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">면접</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">논술</a></li>
+          <li class="bl_lnb_depth2_item"><a class="bl_lnb_depth2_link" href="">경찰대/사관학교</a></li>
+        </ul>
+      </li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">학/모평 해설강의</a></li>
+      <li class="bl_lnb_item"><a class="bl_lnb_link" href="">듀냐 맞춤형 멘토링</a></li>
+    </ul>
+  </div>
+  <script>
+    document.querySelector('.bl_lnb_list').addEventListener('click', function (e) {
+      const target = e.target;
+      const children = this.children;
+
+      if (!target.parentElement.classList.contains('is_active')) { // 클릭한 요소에 is_active가 없는 경우
+        for (let i = 0; i < children.length; i++) { // 클릭시 모든 is_active 삭제
+          children[i].classList.remove('is_active');
+          if (children[i].firstElementChild.classList.contains('bl_lnb_link__icoR_arr')) { //depth가 있는 경우 style 설정
+            children[i].lastElementChild.style.height = 0;
+            children[i].lastElementChild.style.padding = 0;
+            children[i].lastElementChild.style.display = 'none';
+          }
+        }
+
+        if (target.classList.contains('bl_lnb_link')) {
+          target.parentElement.classList.add('is_active');
+
+          if (target.classList.contains('bl_lnb_link__icoR_arr')) { //depth가 있는 경우 style 설정
+            target.nextElementSibling.style.display = 'block';
+            target.nextElementSibling.style.height = 'auto';
+            target.nextElementSibling.style.padding = '1.2rem 0';
+          }
+        }
+
+      } else { // 클릭한 요소에 is_active가 있는 경우
+        target.parentElement.classList.remove('is_active');
+        if (target.classList.contains('bl_lnb_link__icoR_arr')) { //depth가 있는 경우 
+          target.nextElementSibling.style.height = 0;
+          target.nextElementSibling.style.padding = 0;
+          target.nextElementSibling.style.display = 'none';
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

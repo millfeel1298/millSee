@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/base.css">
+  <style>
+    /* bl_listBar */
+    .bl_listBar {
+      display: flex;
+      align-items: center;
+    }
+
+    .bl_listBar_link {
+      position: relative;
+      padding: 0 1.2rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+      color: #a7a7a7;
+    }
+
+    .bl_listBar_link strong {
+      font-weight: 300;
+      color: #000;
+    }
+
+    .bl_listBar_link::before {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0.1rem;
+      height: 50%;
+      background: #a7a7a7;
+      transform: translateY(-50%);
+      content: '';
+    }
+
+    .bl_listBar>*:first-child::before {
+      content: none;
+    }
+
+    /* //bl_listBar */
+
+    @media (min-width: 720px) {}
+
+    @media (min-width: 1024px) {}
+  </style>
+</head>
+
+<body>
+  <div class="bl_listBar">
+    <a class="bl_listBar_link" href=""><strong>한국어</strong></a>
+    <a class="bl_listBar_link" href="">English</a>
+    <a class="bl_listBar_link" href="">汉语</a>
+    <a class="bl_listBar_link" href="">Tiếng Việt</a>
+  </div>
+</body>
+
+</html>

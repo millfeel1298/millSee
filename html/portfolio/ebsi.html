@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,6 +27,7 @@
   <link rel="stylesheet" href="/css/base.css">
   <link rel="stylesheet" href="/css/index.css">
 </head>
+
 <body>
   <div class="wrap">
     <header class="ly_header sub_header_wrap">
@@ -59,36 +61,109 @@
           <div class="bl_project_decWrap">
             <p class="bl_project_dec">
               <strong>Q. 어떤 점에 중점을 두셨나요?</strong>
-              최대한 똑같이 하면서 웹 표준과 웹 접근성을 준수하지 않은 부분은 수정하려고 노력했습니다.
+              HTML 구조와 CSS 설계를 통해서 유지, 보수와 확장이 쉬운 코드를 짜려고 노력했습니다.
             </p>
-            
+
             <p class="bl_project_dec">
               <strong>Q. 어떤 점이 가장 어려웠나요?</strong>
-              플러그인에서 이슈 해결하는 것이 어려웠습니다. 
+              네이밍 짓는게 어려웠습니다.
             </p>
 
             <p class="bl_project_dec">
               <strong>Q. 작업하면서 기억에 남는 일이 있나요?</strong>
-              메인 배너 슬라이드를 만드는 첫번째 시도는 Swiper 플러그인을 사용했습니다. 생각보다 순탄하게 진행이 됐는데 반응형에서 이슈가 생기고 말았습니다. <br>
-              ebsi에서는 모바일(태블릿)과 PC의 pagination의 디자인이 다른데 Swiper는 동시에 타입 2개를 지원하지 않기 때문입니다. <br>
-              모바일에서 Swiper를 삭제했다가 다시 생성하는 방법으로 재시도를 했습니다. 화면을 로드했을 때는 잘 작동하는 듯하나, 초기화 때문인지 resize를 하면 페이지 번호가 안맞는 이슈가로 변경 됐습니다. <br>
-              검색도 해보고, 질문도 남겨보고 이것저것 시도를 해봤지만 답이 보이지 않았고, 답안지를 보는 마음으로 ebsi를 보았고 slick라는 플러그인을 사용해 문제를 해결했습니다. <br>
-              이 일을 통해 정말 답이 보이지 않는다면 틀을 깨고 새로운 방법을 찾는 것도 하나의 방법이라는 것을 알았습니다.
+              확장이 쉬운이 코드를 짜려면 네이밍이 구조에 속박 돼 있으면 안되는데, 콘텐츠를 묶다보면 부득이하게 억지로 이름을 붙일 때가 있습니다. <br>
+              이 문제를 해결하고자 고민을 하다가 부트스트랩의 레이아웃 칼럼 개념이 생각 났습니다.
+              부트스트랩의 레이아웃 부분만 때어서 그룹 형식으로 사용하면 레이아웃에 별도의 이름을 짓는 일이 감소할 것이라고 판단했습니다.<br>
+              바로 실행에 옮겨 부트스트랩을 분석했고, layout.css col_그룹으로 관리를 하고, 포트폴리오 페이지에 적용을 해보았습니다.
+              여러 페이지 작업을 하지 않아서 확실하지는 않지만 나름 만족스러운 결과였습니다.<br>
+              나만의 스타일 가이드를 만들고 있다는 점과, 부트스트랩 분석하면서 알게된 정보들은 저에게 소중한 재산이 되었습니다.
             </p>
 
             <p class="bl_project_dec">
               <strong>Q. 작업을하면서 느낀 점을 말해주세요.</strong>
-              벤치마킹을 하다보면 가끔 &lt;ul&gt;의 직계 자식에게 &lt;div&gt;가 있는 경우를 볼 때가 있습니다.<br>
-              전에는 "실수인가?"하고 생각했다면 지금은 플러그인을 사용하시면서 자동으로 생성된 &lt;div&gt;라는 것을 알게됐습니다. <br>
-              아는 만큼 보인다는 것을 새삼 느끼며 
+              책의 이론만 가지고는 좋은 코드를 짠다는건 정말 어려운 일인 것 같습니다. 많이 격어보고 많이 만들어봐야 한다는 것을 새삼느꼇습니다.
             </p>
+          </div>
+          <div class="bl_vertTable">
+            <table>
+              <colgroup>
+                <col width="10%">
+                <col width="25%">
+                <col width="25%">
+                <col width="40%">
+                <col>
+              </colgroup>
+              <thead>
 
+                <tr>
+                  <th>그룹</th>
+                  <th>파일명(LINK)</th>
+                  <th>화면 내용</th>
+                  <th>비고</th>
+                </tr>
+
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="bl_vertTable_ttl">
+                    <strong>Main</strong>
+                  </td>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/index.html" target="_blank">index.html</a>
+                  </td>
+                  <td>메인 페이지</td>
+                  <td class="rmks">플러그인: slick, swiper 사용 / 메가, 모바일 메뉴 등 기능 구현 </td>
+                </tr>
+                <tr>
+                  <td class="bl_vertTable_ttl" rowspan="3">
+                    <strong>GNB</strong>
+                  </td>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/html/gnb_teacher.html" target="_blank">gnb_teacher.html</a>
+                  </td>
+                  <td>GNB 선생님 페이지</td>
+                  <td class="rmks">플러그인: slick, swiper 사용</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/html/gnb_prevQuestion.html"
+                      target="_blank">gnb_prevQuestion.html</a>
+                  </td>
+                  <td>GNB 기출문제 페이지</td>
+                  <td class="rmks"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/html/gnb_allCourse.html"
+                      target="_blank">gnb_allCourse.html</a>
+                  </td>
+                  <td>GNB 모든강좌 페이지</td>
+                  <td class="rmks"></td>
+                </tr>
+                <tr>
+                  <td class="bl_vertTable_ttl" rowspan="2">
+                    <strong>login</strong>
+                  </td>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/html/login.html" target="_blank">login.html</a>
+                  </td>
+                  <td>로그인 페이지</td>
+                  <td class="rmks"> </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a class="link" href="/myPub/ebsi/html/login_signUpAnno.html" target="_blank">login_signUpAnno.html</a>
+                  </td>
+                  <td>회원가입 페이지</td>
+                  <td class="rmks"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="bl_project_link_wrap">
-            <a class="bl_project_link bl_project_link__site" href="http://mirasee.dothome.co.kr/myPub/ebsi" target="_blank">사이트 바로가기</a>
-            <a class="bl_project_link bl_project_link__code" href="https://github.com/millfeel1298/millSee/tree/main/myPub/ebsi" target="_blank">코드 보러가기</a>
-          </div>
+          <a class="bl_project_link bl_project_link__code" href="https://github.com/millfeel1298/millSee/tree/main/myPub/ebsi" target="_blank" style="margin-top: 4rem">코드 & 기술상세서 보러가기</a>
+
         </div>
+
         <figure class="bl_projectImg">
           <img src="/html/portfolio/image/ebsi_ppt_01.jpg" alt="">
           <img src="/html/portfolio/image/ebsi_ppt_02.jpg" alt="">
@@ -104,6 +179,8 @@
           <img src="/html/portfolio/image/ebsi_ppt_12.jpg" alt="">
         </figure>
       </div>
+
+
     </div>
   </div>
 </body>

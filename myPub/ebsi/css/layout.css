@@ -1,0 +1,999 @@
+/* col_ */
+.col_cont {
+  width: 100%;
+  padding-left: var(--bs-gutter-x, 1rem);
+  padding-right: var(--bs-gutter-x, 1rem);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(-1 * var(--bs-gutter-x));
+}
+
+@media (min-width: 1024px) {
+  .col_cont {
+    max-width: 128rem;
+  }
+}
+
+.col_row {
+  --bs-gutter-x: 1.6rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  /* col_row 컨트롤 요소라 top의 간격을 0으로 reset함 */
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.col_row>* {
+  flex-shrink: 0;
+  width: 50%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+}
+
+.col__f {
+  flex: 1 0 0%;
+  /* widtn < flex basis 0%가 적용된다. 참고로 basis가 auto이면 width가 적용된다. */
+}
+
+/* ------------------ col: 100 / col의 갯수 = width (예: 1은 100 / 12 이고, 12는 100 / 1이다.) ------------------ */
+/* 기본 값 */
+.col__auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col__1 {
+  flex: 0 0 auto;
+  width: 8.333%;
+}
+
+.col__2 {
+  flex: 0 0 auto;
+  width: 16.666%;
+}
+
+.col__3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col__4 {
+  flex: 0 0 auto;
+  width: 33.333%;
+}
+
+.col__5 {
+  flex: 0 0 auto;
+  width: 41.666%;
+}
+
+.col__6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col__7 {
+  flex: 0 0 auto;
+  width: 58.333%;
+}
+
+.col__8 {
+  flex: 0 0 auto;
+  width: 66.666%;
+}
+
+.col__9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.col__10 {
+  flex: 0 0 auto;
+  width: 83.333%;
+}
+
+.col__11 {
+  flex: 0 0 auto;
+  width: 91.666%;
+}
+
+.col__12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col__md_auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col__md_1 {
+    flex: 0 0 auto;
+    width: 8.333%;
+  }
+
+  .col__md_2 {
+    flex: 0 0 auto;
+    width: 16.666%;
+  }
+
+  .col__md_3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col__md_4 {
+    flex: 0 0 auto;
+    width: 33.333%;
+  }
+
+  .col__md_5 {
+    flex: 0 0 auto;
+    width: 41.666%;
+  }
+
+  .col__md_6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col__md_7 {
+    flex: 0 0 auto;
+    width: 58.333%;
+  }
+
+  .col__md_8 {
+    flex: 0 0 auto;
+    width: 66.666%;
+  }
+
+  .col__md_9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col__md_10 {
+    flex: 0 0 auto;
+    width: 83.333%;
+  }
+
+  .col__md_11 {
+    flex: 0 0 auto;
+    width: 91.666%;
+  }
+
+  .col__md_12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* //태블릿 */
+}
+
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col__lg_auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col__lg_1 {
+    flex: 0 0 auto;
+    width: 8.333%;
+  }
+
+  .col__lg_2 {
+    flex: 0 0 auto;
+    width: 16.666%;
+  }
+
+  .col__lg_3 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col__lg_4 {
+    flex: 0 0 auto;
+    width: 33.333%;
+  }
+
+  .col__lg_5 {
+    flex: 0 0 auto;
+    width: 41.666%;
+  }
+
+  .col__lg_6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col__lg_7 {
+    flex: 0 0 auto;
+    width: 58.333%;
+  }
+
+  .col__lg_8 {
+    flex: 0 0 auto;
+    width: 66.666%;
+  }
+
+  .col__lg_9 {
+    flex: 0 0 auto;
+    width: 75%;
+  }
+
+  .col__lg_10 {
+    flex: 0 0 auto;
+    width: 83.333%;
+  }
+
+  .col__lg_11 {
+    flex: 0 0 auto;
+    width: 91.666%;
+  }
+
+  .col__lg_12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* //PC */
+}
+
+/* ------------------ //col ------------------ */
+
+
+/* ------------------ cols: 100 / col의 갯수 = width ------------------ */
+/* 기본 값 */
+.col_row_cols__auto>* {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col_row_cols__1>* {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.col_row_cols__2>* {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.col_row_cols__3>* {
+  flex: 0 0 auto;
+  width: 33.333%;
+}
+
+.col_row_cols__4>* {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.col_row_cols__5>* {
+  flex: 0 0 auto;
+  width: 20%;
+}
+
+.col_row_cols__6>* {
+  flex: 0 0 auto;
+  width: 16.666%;
+}
+
+.col_row_cols__7>* {
+  flex: 0 0 auto;
+  width: 14.285%;
+}
+
+.col_row_cols__8>* {
+  flex: 0 0 auto;
+  width: 12.5%;
+}
+
+.col_row_cols__9>* {
+  flex: 0 0 auto;
+  width: 11.111%;
+}
+
+.col_row_cols__10>* {
+  flex: 0 0 auto;
+  width: 10%;
+}
+
+.col_row_cols__11>* {
+  flex: 0 0 auto;
+  width: 9.909%;
+}
+
+.col_row_cols__12>* {
+  flex: 0 0 auto;
+  width: 8.333%;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_row_cols__md_auto>* {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col_row_cols__md_1>* {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .col_row_cols__md_2>* {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col_row_cols__md_3>* {
+    flex: 0 0 auto;
+    width: 33.333%;
+  }
+
+  .col_row_cols__md_4>* {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col_row_cols__md_5>* {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col_row_cols__md_6>* {
+    flex: 0 0 auto;
+    width: 16.666%;
+  }
+
+  .col_row_cols__md_7>* {
+    flex: 0 0 auto;
+    width: 14.285%;
+  }
+
+  .col_row_cols__md_8>* {
+    flex: 0 0 auto;
+    width: 12.5%;
+  }
+
+  .col_row_cols__md_9>* {
+    flex: 0 0 auto;
+    width: 11.111%;
+  }
+
+  .col_row_cols__md_10>* {
+    flex: 0 0 auto;
+    width: 10%;
+  }
+
+  .col_row_cols__md_11>* {
+    flex: 0 0 auto;
+    width: 9.909%;
+  }
+
+  .col_row_cols__md_12>* {
+    flex: 0 0 auto;
+    width: 8.333%;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_row_cols__lg_auto>* {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .col_row_cols__lg_1>* {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .col_row_cols__lg_2>* {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col_row_cols__lg_3>* {
+    flex: 0 0 auto;
+    width: 33.333%;
+  }
+
+  .col_row_cols__lg_4>* {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+
+  .col_row_cols__lg_5>* {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+
+  .col_row_cols__lg_6>* {
+    flex: 0 0 auto;
+    width: 16.666%;
+  }
+
+  .col_row_cols__lg_7>* {
+    flex: 0 0 auto;
+    width: 14.285%;
+  }
+
+  .col_row_cols__lg_8>* {
+    flex: 0 0 auto;
+    width: 12.5%;
+  }
+
+  .col_row_cols__lg_9>* {
+    flex: 0 0 auto;
+    width: 11.111%;
+  }
+
+  .col_row_cols__lg_10>* {
+    flex: 0 0 auto;
+    width: 10%;
+  }
+
+  .col_row_cols__lg_11>* {
+    flex: 0 0 auto;
+    width: 9.909%;
+  }
+
+  .col_row_cols__lg_12>* {
+    flex: 0 0 auto;
+    width: 8.333%;
+  }
+
+  /* //PC */
+}
+
+/* ------------------ //cols ------------------ */
+
+
+/* ------------------ row의 수평 정렬 ------------------ */
+/* 기본 값 */
+.col_row__justCont_start {
+  justify-content: flex-start !important;
+}
+
+.col_row__justCont_center {
+  justify-content: center !important;
+}
+
+.col_row__justCont_end {
+  justify-content: flex-end !important;
+}
+
+.col_row__justCont_around {
+  justify-content: space-around !important;
+}
+
+.col_row__justCont_between {
+  justify-content: space-between !important;
+}
+
+.col_row__justCont_evenly {
+  justify-content: space-evenly !important;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_row__md_justCont_start {
+    justify-content: flex-start !important;
+  }
+
+  .col_row__md_justCont_center {
+    justify-content: center !important;
+  }
+
+  .col_row__md_justCont_end {
+    justify-content: flex-end !important;
+  }
+
+  .col_row__md_justCont_around {
+    justify-content: space-around !important;
+  }
+
+  .col_row__md_justCont_between {
+    justify-content: space-between !important;
+  }
+
+  .col_row__md_justCont_evenly {
+    justify-content: space-evenly !important;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_row__md_justCont_start {
+    justify-content: flex-start !important;
+  }
+
+  .col_row__md_justCont_center {
+    justify-content: center !important;
+  }
+
+  .col_row__md_justCont_end {
+    justify-content: flex-end !important;
+  }
+
+  .col_row__md_justCont_around {
+    justify-content: space-around !important;
+  }
+
+  .col_row__md_justCont_between {
+    justify-content: space-between !important;
+  }
+
+  .col_row__md_justCont_evenly {
+    justify-content: space-evenly !important;
+  }
+
+  /* //PC */
+}
+
+/* ------------------ //row의 수평 정렬 ------------------ */
+
+
+/* ------------------ row의 수직 정렬 ------------------ */
+/* 기본 값 */
+.col_row__alignItems_start {
+  align-items: flex-start !important;
+}
+
+.col_row__alignItems_center {
+  align-items: center !important;
+}
+
+.col_row__alignItems_end {
+  align-items: flex-end !important;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_row__md_alignItems_start {
+    align-items: flex-start !important;
+  }
+
+  .col_row__md_alignItems_center {
+    align-items: center !important;
+  }
+
+  .col_row__md_alignItems_end {
+    align-items: flex-end !important;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_row__lg_alignItems_start {
+    align-items: flex-start !important;
+  }
+
+  .col_row__lg_alignItems_center {
+    align-items: center !important;
+  }
+
+  .col_row__lg_alignItems_end {
+    align-items: flex-end !important;
+  }
+
+  /* //PC */
+}
+
+/* ------------------ //row의 수직 정렬 ------------------ */
+
+
+/* ------------------ row item의 수직 정렬 ------------------ */
+/* 기본 값 */
+.col__alignSelf_start {
+  align-self: flex-start !important;
+}
+
+.col__alignSelf_center {
+  align-self: center !important;
+}
+
+.col__alignSelf_end {
+  align-self: flex-end !important;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col__md_alignSelf_start {
+    align-self: flex-start !important;
+  }
+
+  .col__md_alignSelf_center {
+    align-self: center !important;
+  }
+
+  .col__md_alignSelf_end {
+    align-self: flex-end !important;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col__lg_alignSelf_start {
+    align-self: flex-start !important;
+  }
+
+  .col__lg_alignSelf_center {
+    align-self: center !important;
+  }
+
+  .col__lg_alignSelf_end {
+    align-self: flex-end !important;
+  }
+
+  /* //PC */
+}
+
+/* ------------------ //row item의 수직 정렬 ------------------ */
+
+
+/* ------------------ padding ------------------ */
+/* padding 전체 브레이크 포인트 필요 */
+
+/* 기본 값 */
+.col_container__px_0 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.col_container__px_1 {
+  padding-right: 0.25rem !important;
+  padding-left: 0.25rem !important;
+}
+
+.col_container__px_2 {
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+}
+
+.col_container__px_3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.col_container__px_4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+}
+
+.col_container__px_5 {
+  padding-right: 3rem !important;
+  padding-left: 3rem !important;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_container__md_px_0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .col_container__md_px_1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .col_container__md_px_2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .col_container__md_px_3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .col_container__md_px_4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .col_container__md_px_5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_container__lg_px_0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .col_container__lg_px_1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+
+  .col_container__lg_px_2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+
+  .col_container__lg_px_3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+
+  .col_container__lg_px_4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
+
+  .col_container__lg_px_5 {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+  }
+
+  /* //PC */
+}
+
+
+/* x */
+/* g는 x, y 모두 적용 됨. */
+/* 기본 값 */
+.col_row__g_0,
+.col_row__gx_0 {
+  --bs-gutter-x: 0;
+}
+
+.col_row__g_1,
+.col_row__gx_1 {
+  --bs-gutter-x: 1rem;
+}
+
+.col_row__g_2,
+.col_row__gx_2 {
+  --bs-gutter-x: 2rem;
+}
+
+.col_row__g_3,
+.col_row__gx_3 {
+  --bs-gutter-x: 3rem;
+}
+
+.col_row__g_4,
+.col_row__gx_4 {
+  --bs-gutter-x: 4rem;
+}
+
+.col_row__g_5,
+.col_row__gx_5 {
+  --bs-gutter-x: 5rem;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_row__md_g_0,
+  .col_row__md_gx_0 {
+    --bs-gutter-x: 0;
+  }
+
+  .col_row__md_g_1,
+  .col_row__md_gx_1 {
+    --bs-gutter-x: 1rem;
+  }
+
+  .col_row__md_g_2,
+  .col_row__md_gx_2 {
+    --bs-gutter-x: 2rem;
+  }
+
+  .col_row__md_g_3,
+  .col_row__md_gx_3 {
+    --bs-gutter-x: 3rem;
+  }
+
+  .col_row__md_g_4,
+  .col_row__md_gx_4 {
+    --bs-gutter-x: 4rem;
+  }
+
+  .col_row__md_g_5,
+  .col_row__md_gx_5 {
+    --bs-gutter-x: 5rem;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_row__lg_g_0,
+  .col_row__lg_gx_0 {
+    --bs-gutter-x: 0;
+  }
+
+  .col_row__lg_g_1,
+  .col_row__lg_gx_1 {
+    --bs-gutter-x: 1rem;
+  }
+
+  .col_row__lg_g_2,
+  .col_row__lg_gx_2 {
+    --bs-gutter-x: 2rem;
+  }
+
+  .col_row__lg_g_3,
+  .col_row__lg_gx_3 {
+    --bs-gutter-x: 3rem;
+  }
+
+  .col_row__lg_g_4,
+  .col_row__lg_gx_4 {
+    --bs-gutter-x: 4rem;
+  }
+
+  .col_row__lg_g_5,
+  .col_row__lg_gx_5 {
+    --bs-gutter-x: 5rem;
+  }
+
+  /* //PC */
+}
+
+/* //x */
+
+/* y */
+/* g는 x, y 모두 적용 됨. */
+/* 기본 값 */
+.col_row__g_0,
+.col_row__gy_0 {
+  --bs-gutter-y: 0;
+}
+
+.col_row__g_1,
+.col_row__gy_1 {
+  --bs-gutter-y: 1rem;
+}
+
+.col_row__g_2,
+.col_row__gy_2 {
+  --bs-gutter-y: 2rem;
+}
+
+.col_row__g_3,
+.col_row__gy_3 {
+  --bs-gutter-y: 3rem;
+}
+
+.col_row__g_4,
+.col_row__gy_4 {
+  --bs-gutter-y: 4rem;
+}
+
+.col_row__g_5,
+.col_row__gy_5 {
+  --bs-gutter-y: 5rem;
+}
+
+/* //기본 값 */
+
+@media (min-width: 720px) {
+
+  /* 태블릿 */
+  .col_row__md_g_0,
+  .col_row__md_gy_0 {
+    --bs-gutter-y: 0;
+  }
+
+  .col_row__md_g_1,
+  .col_row__md_gy_1 {
+    --bs-gutter-y: 1rem;
+  }
+
+  .col_row__md_g_2,
+  .col_row__md_gy_2 {
+    --bs-gutter-y: 2rem;
+  }
+
+  .col_row__md_g_3,
+  .col_row__md_gy_3 {
+    --bs-gutter-y: 3rem;
+  }
+
+  .col_row__md_g_4,
+  .col_row__md_gy_4 {
+    --bs-gutter-y: 4rem;
+  }
+
+  .col_row__md_g_5,
+  .col_row__md_gy_5 {
+    --bs-gutter-y: 5rem;
+  }
+
+  /* //태블릿 */
+}
+
+@media (min-width: 1024px) {
+
+  /* PC */
+  .col_row__lg_g_0,
+  .col_row__lg_gy_0 {
+    --bs-gutter-y: 0;
+  }
+
+  .col_row__lg_g_1,
+  .col_row__lg_gy_1 {
+    --bs-gutter-y: 1rem;
+  }
+
+  .col_row__lg_g_2,
+  .col_row__lg_gy_2 {
+    --bs-gutter-y: 2rem;
+  }
+
+  .col_row__lg_g_3,
+  .col_row__lg_gy_3 {
+    --bs-gutter-y: 3rem;
+  }
+
+  .col_row__lg_g_4,
+  .col_row__lg_gy_4 {
+    --bs-gutter-y: 4rem;
+  }
+
+  .col_row__lg_g_5,
+  .col_row__lg_gy_5 {
+    --bs-gutter-y: 5rem;
+  }
+
+  /* //PC */
+}
+
+/* //y */
+/* ------------------ padding ------------------ */
+/* //col_ */

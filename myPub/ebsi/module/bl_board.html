@@ -77,7 +77,6 @@
       color: #5c85be;
     }
 
-
     .bl_board_label__notice {
       color: #fff;
       background: #212121;
@@ -88,7 +87,7 @@
       width: 1rem;
       height: 1rem;
       margin-right: 0.4rem;
-      background: url(/image/common/ico_notice.png) no-repeat center / contain;
+      background: url(/myPub/ebsi/image/common/ico_notice.png) no-repeat center / contain;
       content: '';
     }
 
@@ -157,6 +156,38 @@
       margin-bottom: 0.8rem;
     }
 
+    .bl_board_subject__en {
+      background: #e49362;
+    }
+
+    .bl_board_subject__so {
+      background: #7c82bd;
+    }
+
+    .bl_board_subject__kh {
+      background: #8d85bd;
+    }
+
+    .bl_board_subject__ko {
+      background: #deb75c;
+    }
+
+    .bl_board_subject__ma {
+      background: #a9c36d;
+    }
+
+    .bl_board_photo {
+      overflow: hidden;
+      width: 4.8rem;
+      height: 4.8rem;
+      border-radius: 50%;
+    }
+
+    .bl_board_photo img {
+      width: 100%;
+    }
+
+    /* Theme */
     .bl_board__grayTheme {
       padding: 0.8rem 1.6rem;
       border-top: 2px solid #000;
@@ -175,15 +206,76 @@
       border-bottom: 0;
     }
 
-    .bl_board_name {
+    .bl_board__grayTheme .bl_board_name {
       font-weight: 300;
       font-size: 1.5rem;
     }
 
-    .bl_board_desc {
+    .bl_board__grayTheme .bl_board_desc {
       font-weight: 300;
       font-size: 1.3rem;
     }
+
+    .bl_board__rankTheme .bl_board_item {
+      padding: 1.6rem 0;
+      border-bottom: 1px solid #dfdfdf;
+    }
+
+    .bl_board__rankTheme .bl_board_num {
+      padding: 0 2.4rem;
+      font-weight: 300;
+      font-size: 1.9rem;
+    }
+
+    .bl_board__rankTheme .bl_board_photo {
+      margin-right: 2.4rem;
+    }
+
+    .bl_board__rankTheme .bl_board_teacherInfo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+
+    .bl_board__rankTheme .bl_board_subject {
+      display: inline-block;
+      margin-right: 0.6rem;
+      padding: 0.2rem 0.4rem;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .bl_board__rankTheme .bl_board_name {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: #9e9e9e;
+    }
+
+    .bl_board__rankTheme .bl_board_desc {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+
+    .bl_board__rankTheme .bl_board_link {
+      font-weight: 300;
+      font-size: 1.6rem;
+    }
+
+    .bl_board_wrap_admissionsNews .bl_board_item {
+      display: flex;
+      margin-bottom: 0.8rem;
+      padding: 1rem;
+      border: 1px solid transparent;
+      background: #f9f9f9;
+    }
+
+    .bl_board_wrap_admissionsNews .bl_board_item:hover {
+      border-color: #000;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    /* //Theme */
 
     @media (min-width: 720px) {
       .bl_board_subject {
@@ -198,17 +290,83 @@
         font-size: 2.4rem;
       }
 
-      .bl_board_name {
+      /* Theme */
+      .bl_board__grayTheme .bl_board_name {
         font-size: 2.4rem;
       }
 
-      .bl_board_desc {
+      .bl_board__grayTheme .bl_board_desc {
         font-size: 1.8rem;
       }
 
       .bl_board__grayTheme .bl_board_item {
         padding: 1.6rem 0;
       }
+
+      .bl_board__rankTheme .bl_board_item {
+        padding: 3.6rem 0;
+      }
+
+      .bl_board__rankTheme .bl_board_teacherInfo {
+        margin-bottom: 1.2rem;
+      }
+
+      .bl_board__rankTheme .bl_board_num {
+        padding: 0 3rem;
+        font-size: 3.2rem;
+      }
+
+      .bl_board__rankTheme .bl_board_photo {
+        width: 8rem;
+        height: 8rem;
+        margin-right: 3rem;
+      }
+
+      .bl_board__rankTheme .bl_board_subject {
+        padding: 0.4rem 1.6rem;
+        font-size: 1.8rem;
+      }
+
+      .bl_board__rankTheme .bl_board_name {
+        font-size: 2.4rem;
+      }
+
+      .bl_board__rankTheme .bl_board_link {
+        font-weight: 300;
+        font-size: 2.6rem;
+      }
+
+      .bl_board_wrap_admissionsNews.bl_board_wrap {
+        grid: auto 1fr / repeat(2, auto);
+        margin-bottom: var(--xs-bl-gap);
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board {
+        padding-top: 0;
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board_inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board_ttl {
+        font-weight: 300;
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board>*:last-child,
+      .bl_board_wrap_admissionsNews .bl_board_inner>*:last-child {
+        margin-bottom: 0;
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board_item {
+        margin-bottom: 1.6rem;
+        padding: 2rem;
+      }
+
+      /* //Theme */
     }
 
     @media (min-width: 1024px) {
@@ -224,17 +382,64 @@
         font-size: 1.6rem;
       }
 
-      .bl_board_name {
+
+      /* Theme */
+      .bl_board__grayTheme .bl_board_name {
         font-size: 1.6rem;
       }
 
-      .bl_board_desc {
+      .bl_board__grayTheme .bl_board_desc {
         font-size: 1.4rem;
       }
 
       .bl_board__grayTheme .bl_board_item {
-        padding: 1.2rem 0;
+        padding: 1.6rem 0;
       }
+
+      .bl_board__rankTheme .bl_board_item {
+        padding: 2.4rem 0;
+      }
+
+      .bl_board__rankTheme .bl_board_teacherInfo {
+        margin-bottom: 0.8rem;
+      }
+
+      .bl_board__rankTheme .bl_board_num {
+        padding: 0 2rem;
+        font-size: 2rem;
+      }
+
+      .bl_board__rankTheme .bl_board_photo {
+        width: 5.4rem;
+        height: 5.4rem;
+        margin-right: 0.8rem;
+      }
+
+      .bl_board__rankTheme .bl_board_subject {
+        padding: 0.2rem 0.8rem;
+        font-size: 1.3rem;
+      }
+
+      .bl_board__rankTheme .bl_board_name {
+        font-size: 1.4rem;
+      }
+
+      .bl_board__rankTheme .bl_board_link {
+        font-weight: 300;
+        font-size: 1.6rem;
+      }
+
+      .bl_board_wrap_admissionsNews.bl_board_wrap {
+        height: 100%;
+        margin-bottom: 0;
+      }
+
+      .bl_board_wrap_admissionsNews .bl_board_item {
+        margin-bottom: 0;
+        padding: 1.6rem;
+      }
+
+      /* //Theme */
     }
 
     /* //bl_board */
@@ -242,6 +447,45 @@
 </head>
 
 <body>
+  <div class="bl_board_wrap bl_board_wrap_admissionsNews">
+    <h2 class="el_pageLv2Ttl" id="news">금주의 입시뉴스</h2>
+    <div class="bl_board">
+      <ul class="bl_board_inner">
+        <li class="bl_board_item">
+          <a class="bl_board_link bl_board__flex" href="">
+            <div class="bl_board_subject">대입뉴스</div>
+            <div class="bl_board_ttl hp_textOmit">[9월 학평성적 활용법] 고1·2 '백분위'로 정시 지원가능 대학 찾아보자!</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link bl_board__flex" href="">
+            <div class="bl_board_subject">대입뉴스</div>
+            <div class="bl_board_ttl hp_textOmit">[2022 수시] '120세 장수 시대' 유망계열 '치의대'…수시 경쟁률 완전분석!</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link bl_board__flex" href="">
+            <div class="bl_board_subject">대입뉴스</div>
+            <div class="bl_board_ttl hp_textOmit">[인·적성 면접] 수시 면접 시 자주 등장하는 질문 Top3!</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link bl_board__flex" href="">
+            <div class="bl_board_subject">대입뉴스</div>
+            <div class="bl_board_ttl hp_textOmit">수시 면접에서 내 역량 확실히 증명하는 법!</div>
+          </a>
+        </li>
+        <li class="bl_board_item">
+          <a class="bl_board_link bl_board__flex" href="">
+            <div class="bl_board_subject">대입뉴스</div>
+            <div class="bl_board_ttl hp_textOmit">경쟁률 100대 1의 논술, 합격에 필요한 3가지 공부법!</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a class="bl_board_more" href="">더보기</a>
+  </div>
+
   <div class="bl_board_wrap">
     <h2 class="el_pageLv2Ttl">알림방</h2>
     <ul class="bl_board bl_board__border_2pxSolid000">
@@ -322,6 +566,86 @@
             <div class="bl_board_desc">[1] 생윤러 동지님들 :)</div>
           </a>
         </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bl_ranking">
+    <div class="bl_board_wrap">
+      <h2 class="el_pageLv2Ttl"><span class="el_pageLv2Ttl__fw_thin">리얼 후기,</span> 주간 수강 후기 TOP 5</h2>
+      <ul class="bl_board bl_board__border_2pxSolid000 bl_board__rankTheme">
+        <li class="bl_board_item bl_board__flex">
+          <div class="bl_board_num">1</div>
+          <figure class="bl_board_photo">
+            <img src="/myPub/ebsi/image/upload/teacher_photo1.png" alt=",  선생님">
+          </figure>
+          <div class="bl_board_body">
+            <dl class="bl_board_teacherInfo">
+              <dt class="bl_board_subject bl_board_subject__en">영어</dt>
+              <dd class="bl_board_name">주혜연 선생님</dd>
+            </dl>
+            <a class="bl_board_link" href="">[2022 파이널 체크포인트] 최태성의 한국사</a>
+          </div>
+
+        </li>
+        <li class="bl_board_item bl_board__flex">
+          <div class="bl_board_num">1</div>
+          <figure class="bl_board_photo">
+            <img src="/myPub/ebsi/image/upload/teacher_photo1.png" alt=",  선생님">
+          </figure>
+          <div class="bl_board_body">
+            <dl class="bl_board_teacherInfo">
+              <dt class="bl_board_subject bl_board_subject__en">영어</dt>
+              <dd class="bl_board_name">주혜연 선생님</dd>
+            </dl>
+            <a class="bl_board_link" href="">[2022 파이널 체크포인트] 최태성의 한국사</a>
+          </div>
+
+        </li>
+        <li class="bl_board_item bl_board__flex">
+          <div class="bl_board_num">1</div>
+          <figure class="bl_board_photo">
+            <img src="/myPub/ebsi/image/upload/teacher_photo1.png" alt=",  선생님">
+          </figure>
+          <div class="bl_board_body">
+            <dl class="bl_board_teacherInfo">
+              <dt class="bl_board_subject bl_board_subject__en">영어</dt>
+              <dd class="bl_board_name">주혜연 선생님</dd>
+            </dl>
+            <a class="bl_board_link" href="">[2022 파이널 체크포인트] 최태성의 한국사</a>
+          </div>
+
+        </li>
+        <li class="bl_board_item bl_board__flex">
+          <div class="bl_board_num">1</div>
+          <figure class="bl_board_photo">
+            <img src="/myPub/ebsi/image/upload/teacher_photo1.png" alt=",  선생님">
+          </figure>
+          <div class="bl_board_body">
+            <dl class="bl_board_teacherInfo">
+              <dt class="bl_board_subject bl_board_subject__en">영어</dt>
+              <dd class="bl_board_name">주혜연 선생님</dd>
+            </dl>
+            <a class="bl_board_link" href="">[2022 파이널 체크포인트] 최태성의 한국사</a>
+          </div>
+
+        </li>
+        <li class="bl_board_item bl_board__flex">
+          <div class="bl_board_num">1</div>
+          <figure class="bl_board_photo">
+            <img src="/myPub/ebsi/image/upload/teacher_photo1.png" alt=",  선생님">
+          </figure>
+          <div class="bl_board_body">
+            <dl class="bl_board_teacherInfo">
+              <dt class="bl_board_subject bl_board_subject__en">영어</dt>
+              <dd class="bl_board_name">주혜연 선생님</dd>
+            </dl>
+            <a class="bl_board_link" href="">[2022 파이널 체크포인트] 최태성의 한국사</a>
+          </div>
+
+        </li>
+
+
       </ul>
     </div>
   </div>
